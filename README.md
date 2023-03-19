@@ -1,5 +1,6 @@
 # Lectures
-Notes and slides for weekly lectures for MPCS 52553 - Web Development, as taught Winter Quarter 2023
+Notes and slides for weekly lectures for MPCS 52553 - Web Development, as taught
+Spring Quarter 2023
 
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)

@@ -45,7 +45,6 @@ Double-click to open it with your browser.
 scp <yourname>.html student@uchicagowebdev.com:/var/www/html/helloclass
 ```
 
-The password is `mpcs52553`
 ---
 
 # Build a Web Page
