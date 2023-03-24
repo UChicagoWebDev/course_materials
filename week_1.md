@@ -1,7 +1,7 @@
 class: center, middle
 
 # Web Development
-## Winter 2022
+## Spring 2023
 MPCS 52553
 ---
 
