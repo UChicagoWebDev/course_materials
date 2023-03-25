@@ -42,7 +42,7 @@ Double-click to open it with your browser.
 ### Copy your file there:
 
 ```bash
-scp <yourname>.html student@uchicagowebdev.com:/var/www/html/helloclass
+scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 ```
 
 ---
