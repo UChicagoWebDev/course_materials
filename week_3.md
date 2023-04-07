@@ -260,7 +260,7 @@ VALUES ("Lair of Bones", 2, 2);`
 
 # Lab: Server-Side Rendering
 
-Copy the `<yourname>.html` file you uploaded to `http://uchicagowebdev.com/student/`
+Copy the `<yourname>.html` file you uploaded to `http://uchicagowebdev.com/students/`
 in Week 1 and rename the copy `<yourname>.php`
 
 Add some expressions to be evaluated server-side inside `<?php ?>` tags.
@@ -271,7 +271,7 @@ the value of `HTTP_USER_AGENT` and tell you what browser is visiting the page.
 
 Upload the result again with:
 ```bash
-scp <yourname>.php student@uchicagowebdev.com:/var/www/html/student/
+scp <yourname>.php student@uchicagowebdev.com:/var/www/html/students/
 ```
 
 The password is in Slack
