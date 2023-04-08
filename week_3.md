@@ -202,7 +202,10 @@ https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 [http://uchicagowebdev.com/examples/week_3/post_no_escape.php](http://uchicagowebdev.com/examples/week_3/post_no_escape.php)
 
 Try POSTing:
+
 `<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
+
+Copy your own php file up to the server with:
 
 `scp trevor.php student@uchicagowebdev.com:/var/www/html/student/`
 ---
