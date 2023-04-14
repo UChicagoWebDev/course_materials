@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Javascript Console Logging Examples</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+    var i =0;
+    function increment() {
+      i = i+1;
+      console.log(i);
+    }
+
+    function simple_alert() {
+      console.log("Click!");
+    }
+
+    function alert_event_handler(event) {
+      console.log(event.key);
+    }
+
+    function alert_element_handler(element) {
+      console.log(element.value);
+    }
+  </script>
+</head>
+<body>
+  <h1>Let's log to the console!</h1>
+  <div>
+    <input type="button" onclick="simple_alert();" value="Click Me!"></input>
+  </div>
+  <div>
+    <textarea onkeypress="alert_event_handler(event);" placeholder="Type a letter here!"></textarea>
+  </div>
+  <div>
+    <input onfocus="alert_element_handler(this);" value="A"></input>
+    <input onfocus="alert_element_handler(this);" value="B"></input>
+    <input onfocus="alert_element_handler(this);" value="C"></input>
+    <input onfocus="alert_element_handler(this);" value="D"></input>
+    <input onfocus="alert_element_handler(this);" value="E"></input>
+  </div>
+</body>
