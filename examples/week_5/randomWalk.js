@@ -17,10 +17,30 @@ function oneStep(query) {
   };
 
   let nextQuery = fetch(queryurl, myInit);
-  // TODO: .then(
+
+  return nextQuery
+    .then((result) => {
+      return result.json();
+    })
+    .then((data) => {
+      let related = data.relatedSearches;
+      let random = Math.floor(Math.random() * related.length);
+      let next = related[random].text;
+      console.log(next);
+      return next;
+    });
 }
 
 function walkFive() {
-  oneStep();
+  let query = document.querySelector("#input").value;
+  let stepOne = oneStep(query);
+  stepOne
+    .then((newQuery) => oneStep(newQuery))
+    .then((newQuery) => oneStep(newQuery))
+    .then((newQuery) => oneStep(newQuery))
+    .then((newQuery) => oneStep(newQuery))
+    .then((newQuery) => oneStep(newQuery))
+    .then((newQuery) => oneStep(newQuery))
+    .catch((error) => console.log(error));
   // TODO: Four more steps
 }
