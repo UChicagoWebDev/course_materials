@@ -78,6 +78,8 @@ in 1994.
 
 ## ![Network tab showing Google.com taking > 300ms to load](images/google_load.png)
 
+---
+
 # setTimeout
 
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
@@ -119,10 +121,14 @@ console.log("Howdy!");
 
 ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 
+---
+
 # Lab: Sequential Asynchronous Functions
 
 The time passed to setTimeout is a minimum, not a guarantee. What are some ways
 we could can we make asynchronous calls happen in succession?
+
+---
 
 # Callback Heck
 
@@ -145,6 +151,8 @@ let threeThings = setTimeout(function oneThing() {
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 ## ![Pinky Swear](images/promise.jpg)
+
+---
 
 # Promises
 
@@ -270,6 +278,8 @@ So errors propagate down the chain the way they would down the stack and you can
 handle them once at the end
 
 ## Here if any one of the functions fails you will hit the failureCallback
+
+---
 
 # Lab: Random Concept Walk
 
