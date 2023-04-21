@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Egg Timer</title>
+    </head>
+    <body>
+
+        <h3>In which we learn about asynchronous function calls</h3>
+        <p>
+            <input type="text" id="input">
+            <input type="button" value="Set Timer" onclick="waitForEggs()">
+        </p>
+        <script>
+            function waitForEggs() {
+                let wait = document.getElementById("input").value
+                let myGreeting = setTimeout(() => {
+                    console.log("Ding! "+ wait);
+                },wait);
+            }
+
+        </script>
+    </body>
+</html>
