@@ -3,6 +3,12 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
+#home {
+  width: 100px;
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
 textarea {
   display: none;
 }

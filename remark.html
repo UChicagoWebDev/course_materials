@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <div id="home"><a href="remark.html">⬅ Home</a></div>
+
     <header>
       <a href="remark.html?week=1">Week 1</a>
       <a href="remark.html?week=2">Week 2</a>
@@ -24,6 +26,8 @@
       const week = urlParams.get("week");
 
       if (week) {
+        document.querySelector("header").setAttribute("style", "display: none");
+        document.querySelector("#home").setAttribute("style", "display: block");
         let source = document.getElementById("source");
         while (source.firstChild) {
           source.removeChild(source.firstChild);
