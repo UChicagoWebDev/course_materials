@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>SPA: Single Page Application</title>
+  <link rel="stylesheet" type="text/css" href="static/style.css"></link>
+  <script src="static/script.js"></script>
+</head>
+<body>
+<div class="container">
+
+<div class="hero">
+  <h1>Who is best?</h1>
+</div>
+
+<div class="animals">
+  <a href="cat" class="animal cat">
+    {% if animal == "cat" %}
+    <div class="happy">
+      <h2>Cat is best!</h2>
+      <img src="static/happy_cat.jpeg">
+    </div>
+    {% else %}
+    <div class="sad">
+      <h2>Cat is not best. Cat is sad.</h2>
+      <img src="static/sad_cat.jpeg">
+    </div>
+    {% endif %}
+  </a>
+
+  <a href="dog" class="animal dog" onclick="makeBest('dog');">
+    {% if animal=="dog" %}
+    <div class="happy">
+      <h2>Dog is best!</h2>
+      <img src="static/happy_dog.jpeg">
+    </div>
+    {% else %}
+    <div class="sad">
+      <h2>Dog is not best. Dog is sad.</h2>
+      <img src="static/sad_dog.jpeg">
+    </div>
+    {% endif %}
+  </a>
+
+  <a href="bear" class="animal bear" onclick="makeBest('bear');">
+    {% if animal=="bear" %}
+    <div class="happy">
+      <h2>Bear is best!</h2>
+      <img src="static/happy_bear.jpeg">
+    </div>
+    {% else %}
+    <div class="sad">
+      <h2>Bear is not best. Bear is sad.</h2>
+      <img src="static/sad_bear.jpeg">
+    </div>
+    {% endif %}
+  </a>
+</div>
+
+</div>
+</body>
+</html>
