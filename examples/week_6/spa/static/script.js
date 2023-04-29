@@ -21,6 +21,11 @@ function makeBest(animal, pushHistory = true) {
   }
 
   if (pushHistory) {
+    window.history.pushState(
+      { animal: animal },
+      `${animal} is best!`,
+      `/${animal}`
+    );
     // TODO: push /animal to the URL bar and add this page to the history
     // DOES NOT WORK: location.replace('/'+animal)
   }
@@ -28,6 +33,8 @@ function makeBest(animal, pushHistory = true) {
 
 function loadAnimal(pushHistory = true) {
   // TODO: Check the URL bar on load so e.g. /cat makes cat best
+  path = window.location.pathname; // "/bear"
+  animal = path.substring(1); // "bear"
 
   console.log("Making best animal: " + animal);
   makeBest(animal, pushHistory);
