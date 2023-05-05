@@ -142,12 +142,11 @@ https://codepen.io/gaearon/pen/gWWZgR?editors=0010
 # Lab: React Tic Tac Toe
 
 We'll need a local server to host our React application. Navigate to the
-`examples` directory for Week 7 and run:
+`examples/week_7/tictactoe` directory and run:
 
 `python3 -m http.server`
 
-That will let you see your Tic Tac Toe application at
-`http://localhost:8000/tictactoe.html`
+That will let you see your Tic Tac Toe application at `http://localhost:8000`
 
 From here we'll be working through the instructions on the tutorial in the React
 documentation: https://reactjs.org/tutorial/tutorial.html
