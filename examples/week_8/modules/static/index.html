@@ -1,0 +1,17 @@
+<html lang="en" dir="ltr">
+<head>
+  <title>Single-Page Login and Post</title>
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/prop-types@15.6/prop-types.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="static/childDependency.js" data-plugins="transform-modules-umd" data-presets="react"></script>
+  <script type="text/babel" src="static/module.js" data-plugins="transform-modules-umd" data-presets="react"></script>
+  <script type="text/babel" src="static/script.js" data-plugins="transform-modules-umd" data-presets="react"></script>
+</body>
+</html>

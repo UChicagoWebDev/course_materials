@@ -1,0 +1,110 @@
+body {
+  margin: 0
+}
+
+.weblog {
+  width: 960px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.title_bar {
+  background-color: #CCFFEE
+}
+
+/* .posts {
+  display: none;
+}
+
+.compose {
+  display: none;
+} */
+
+h1 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.login_form, .post_form {
+  width: 400px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px 10px;
+  padding: 20px 40px 20px 40px;
+}
+
+.login_form label {
+  grid-column: 1 / 2;
+  text-align: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.login_form input {
+  grid-column: 2 / 4;
+  font-size: 24px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
+
+.login_form button {
+  grid-column: 2;
+}
+
+.post_form label {
+  grid-column: 1 / 2;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.post_form input {
+  grid-column: 1 / 4;
+  font-size: 24px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
+
+.post_form textarea {
+  height: 150px;
+  grid-column: 1 / 4;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
+
+.post_form button {
+  grid-column: 1;
+}
+
+button.form_button {
+  width: 100%;
+  font-size: 18px;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+}
+
+.posts button {
+  padding: 10px 14px 10px 14px;
+  margin: 6px 6px 6px 6px;
+  background-color: white;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+  color: #AADDCC;
+  font-size: 18;
+}
+
+.logout_button {
+  float: right;
+}
+
+.logout_button button {
+  padding: 10px 14px 10px 14px;
+  margin: 6px 6px 6px 6px;
+  background-color: white;
+  border: 2px solid #AADDCC;
+  border-radius: 4px;
+  color: #AADDCC;
+  font-size: 18;
+}
