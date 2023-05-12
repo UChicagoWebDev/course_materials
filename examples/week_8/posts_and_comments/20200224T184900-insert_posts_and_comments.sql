@@ -1,4 +1,4 @@
--- sqlite3 weblog.sqlite < 20200224T184900-insert_posts_and_comments.sql
+-- sqlite3 weblog.sqlite3 < 20200224T184900-insert_posts_and_comments.sql
 
 -- text from http://shakespeare.mit.edu/tempest/full.html
 
