@@ -4,7 +4,7 @@
 --   slug VARCHAR(30),
 --   body TEXT,
 --   author VARCHAR(30),
---   post_id INT
+--   post_id INTEGER
 -- );
 
 -- migrate the posts first
