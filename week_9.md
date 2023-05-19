@@ -114,6 +114,8 @@ alongside the database contents.
 
 ## https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 
+---
+
 # Lab: Passwords
 
 In the `/examples/passwords` directory we have a simple app that creates user
