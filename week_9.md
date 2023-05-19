@@ -54,6 +54,15 @@ unlikely event that someone is able to steal its contents.
 
 # Password Security
 
+Yours truly has been a victim as well. I still get identity monitoring from when
+my forms were stolen in the OPM hack:
+
+https://en.wikipedia.org/wiki/Office_of_Personnel_Management_data_breach
+
+---
+
+# Password Security
+
 Databases of usernames and passwords are valuable because users re-use passwords
 for multiple web services. They shouldn't, but they do. So even if your web
 project doesn't have anything of value, a large enough list of usernames and
