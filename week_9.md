@@ -118,9 +118,9 @@ alongside the database contents.
 
 # Lab: Passwords
 
-In the `/examples/passwords` directory we have a simple app that creates user
-accounts with passwords and checks whether a login was successful. Right now it
-is storing passwords in plaintext though. Modify it to:
+In the `/examples/week_9/passwords` directory we have a simple app that creates
+user accounts with passwords and checks whether a login was successful. Right
+now it is storing passwords in plaintext though. Modify it to:
 
 - Store hashes created with `bcrypt`
 - Store a unique salt for each row that's used to create the hash

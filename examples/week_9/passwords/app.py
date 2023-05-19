@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, g
 from functools import wraps
-import mysql.connector  # pip3 install mysql-connector
+# import mysql.connector  # pip3 install mysql-connector
+import sqlite3
 import bcrypt
 import configparser
 import io
@@ -14,6 +15,32 @@ config.read('secrets.cfg')
 DB_NAME = 'passwords'
 DB_USERNAME = config['secrets']['DB_USERNAME']
 DB_PASSWORD = config['secrets']['DB_PASSWORD']
+
+
+def get_db():
+    db = getattr(g, '_database', None)
+
+    if db is None:
+        db = g._database = sqlite3.connect('passwords.sqlite3')
+        db.row_factory = sqlite3.Row
+        setattr(g, '_database', db)
+    return db
+
+
+def query_db(query, args=(), one=False):
+    db = get_db()
+    cursor = db.execute(query, args)
+    print("query_db")
+    print(cursor)
+    rows = cursor.fetchall()
+    print(rows)
+    db.commit()
+    cursor.close()
+    if rows:
+        if one:
+            return rows[0]
+        return rows
+    return None
 
 
 @app.route('/')
@@ -32,25 +59,29 @@ def signup():
     username = body['username']
     password = body['password']
 
-    connection = mysql.connector.connect(
-        user=DB_USERNAME, database=DB_NAME, password=DB_PASSWORD)
-    cursor = connection.cursor()
+    # connection = mysql.connector.connect(
+    #     user=DB_USERNAME, database=DB_NAME, password=DB_PASSWORD)
+    # connection = sqlite3.connect('passwords.sqlite')
+    # cursor = connection.cursor()
 
     # TODO: Instead, store a password hashed with bcrypt with a salt and a pepper
     # hashed = bcrypt.hashpw(password, bcrypt.gensalt())
 
-    query = "INSERT into users (username, password) VALUES (%s, %s)"
+    query = "INSERT into users (username, password) VALUES (?, ?)"
 
     try:
-        cursor.execute(query, (username, password))
-        connection.commit()
-        return {}
+        # cursor.execute(query, (username, password))
+        # connection.commit()
+        query_db(query, (username, password))
+        return {}, 200
     except Exception as e:
         print(e)
         return {"username": username}, 302
     finally:
-        cursor.close()
-        connection.close()
+        print("Finally!")
+    #     # cursor.close()
+    #     # connection.close()
+    #     return {}, 404
 
 
 @app.route('/api/login', methods=['POST'])
@@ -62,27 +93,28 @@ def login():
     username = body['username']
     password = body['password']
 
-    connection = mysql.connector.connect(
-        user=DB_USERNAME, database=DB_NAME, password=DB_PASSWORD)
-    cursor = connection.cursor()
+    # connection = mysql.connector.connect(
+    #     user=DB_USERNAME, database=DB_NAME, password=DB_PASSWORD)
+    # cursor = connection.cursor()
 
-    query = "SELECT password FROM users WHERE username=%s"
+    query = "SELECT password FROM users WHERE username=?"
 
     try:
-        cursor.execute(query, (username,))
-        hashed = cursor.fetchone()[0]
+        hashed = query_db(query, (username,), True)
 
         print(password)
         print(hashed)
 
         # TODO: Instead, check that password matches its bcrypt hash
 
-        if bcrypt.checkpw(password, hashed):
+        if hashed and hashed[0] == password:
             return jsonify({})
         return {}, 404
     except Exception as e:
         print(e)
         return {}, 404
     finally:
-        cursor.close()
-        connection.close()
+        #     # cursor.close()
+        #     # connection.close()
+        print("Finally!")
+    #     return {}, 404
