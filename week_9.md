@@ -112,9 +112,7 @@ We'll also include a second kind of salting that's stored on the application
 server and not on the database at all, so it's less likely to be stolen
 alongside the database contents.
 
-## https://owasp.org/www-project-cheat-sheets/cheatsheets/Password_Storage_Cheat_Sheet
-
----
+## https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 
 # Lab: Passwords
 
