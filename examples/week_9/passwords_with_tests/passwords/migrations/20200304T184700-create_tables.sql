@@ -1,6 +1,6 @@
 drop table if exists users;
 
 create table users (
-  username TEXT NOT NULL,
+  username TEXT PRIMARY KEY,
   password TEXT NOT NULL
 );
