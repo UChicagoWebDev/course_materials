@@ -51,7 +51,7 @@ def create_app(test_config=None):
 
         username = body['username']
         password = body['password'] + \
-            app.config['PEPPER'] + "Deliberately Broken"
+            app.config['PEPPER']  # + "Deliberately Broken"
         salt = bcrypt.gensalt()
         hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
 

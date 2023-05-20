@@ -43,6 +43,9 @@ def test_static_html(client):
 
     rv = client.get('/')
     # TODO: Check status and content
+    assert rv.status == "200 OK"
+    assert "<title>Single-Page Login and Post</title>" in rv.data.decode(
+        'utf-8')
 
 
 def test_signup_and_login(client, new_user):
@@ -59,13 +62,34 @@ def test_signup_and_login(client, new_user):
         '/api/login', json={'username': new_username, 'password': new_password})
 
     # TODO: check for success
+    assert response.status == "200 OK"
 
 
 def test_wrong_password(client, new_user):
     """Tests that I can't log in with invalid credentials"""
     # TODO: Try to log in with deliberately wrong password
 
+    new_username, new_password = new_user
+    create_response = client.post(
+        '/api/signup', json={'username': new_username, 'password': new_password})
+    assert create_response.status == "200 OK"
+
+    bad_password = new_password + "Deliberately Broken"
+    response = client.post(
+        '/api/login', json={'username': new_username, 'password': bad_password})
+    assert response.status != "200 OK"
+
 
 def test_duplicate_signup(client, new_user):
     """Tests that I can't create a new user with an existing username"""
     # TODO: Try to register twice with the same username
+
+    new_username, new_password = new_user
+    create_response = client.post(
+        '/api/signup', json={'username': new_username, 'password': new_password})
+    assert create_response.status == "200 OK"
+
+    bad_password = new_password + "Deliberately Broken"
+    response = client.post(
+        '/api/signup', json={'username': new_username, 'password': bad_password})
+    assert response.status == "302 FOUND"
