@@ -1,7 +1,7 @@
 uchicagowebdevclass: center, middle
 
 # MPCS 52553: Web Development
-## Week 4: Javascript and REST APIs
+## Week 4: Javascript and REST APIs \[WIP\]
 ---
 
 class: agenda

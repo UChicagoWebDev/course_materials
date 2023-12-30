@@ -1,8 +1,7 @@
 class: center, middle
 
 # Web Development
-## Spring 2023
-Week 2: Advanced Layout
+## Week 2: Advanced Layout \[WIP\]
 ---
 
 class: agenda

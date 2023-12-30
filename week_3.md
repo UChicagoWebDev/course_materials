@@ -1,7 +1,7 @@
 class: center, middle
 
 # MPCS 52553: Web Development
-## Week 3: Server-Side Rendering with the LAMP Stack
+## Week 3: Server-Side Rendering with the LAMP Stack \[WIP\]
 ---
 
 class: agenda

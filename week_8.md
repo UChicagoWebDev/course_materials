@@ -1,8 +1,7 @@
 class: center, middle
 
 # MPCS 52553: Web Development
-
-## Week 8: React Classes and Database Migrations
+## Week 8: React Classes and Database Migrations \[WIP\]
 
 ---
 
