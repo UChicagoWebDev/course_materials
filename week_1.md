@@ -151,6 +151,18 @@ attribution for the people you worked with or the resources you consulted. Code
 comments or a README are good ways of doing this.
 ---
 
+# Utopian Beginnings
+The Web was initially proposed by Tim Berners-Lee in 1989, as a web for researchers at CERN to share ideas:
+
+> We should work toward a universal linked information system, in which generality and portability are more important than fancy graphics techniques and complex extra facilities.
+> 
+> The aim would be to allow a place to be found for any information or reference which one felt was important, and a way of finding it afterwards. The result should be sufficiently attractive to use that it the information contained would grow past a critical threshold, so that the usefulness the scheme would in turn encourage its increased use.
+
+
+
+https://www.w3.org/History/1989/proposal.html
+---
+
 # HTML5
 ---
 
