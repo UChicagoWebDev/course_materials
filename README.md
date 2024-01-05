@@ -4,7 +4,8 @@ Winter Quarter 2024
 
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)
-- TAs to come
+- [Hsiang-Chung Teng](hsiangct@uchicago.edu) (TA)
+- [Praneeth Chandu](praneeth@uchicago.edu) (TA)
 
 ### Useful Links
 - Course Syllabus on [Canvas](https://canvas.uchicago.edu/courses/54533)

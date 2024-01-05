@@ -59,16 +59,16 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 
 ## Trevor Austin (Lecturer)
 
-## Daniel Bivona (TA)
+## Hsiang-Teng Chung (TA)
 
-## Jonathan Jong (TA)
+## Praneeth Chandu (TA)
 
 ---
 
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
-- Slack: https://app.slack.com/client/T71CT0472/C02TBJ5BHU2
-- Syllabus: https://canvas.uchicago.edu/courses/49707
+- Slack: #web-development channel on https://cs-uchicago.slack.com/
+- Syllabus: https://canvas.uchicago.edu/courses/54533
 ---
 
 # Objectives
