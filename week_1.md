@@ -59,7 +59,7 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 
 ## Trevor Austin (Lecturer)
 
-## Hsiang-Teng Chung (TA)
+## Hsiang-Chung (Alex) Teng (TA)
 
 ## Praneeth Chandu (TA)
 
