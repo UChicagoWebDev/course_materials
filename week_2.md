@@ -25,6 +25,7 @@ class: agenda
 
 # Advanced Styling: Selectors
 [CSS Diner](https://flukeout.github.io/)
+
 ![CSS Diner](images/diner.png "CSS Diner Home Page")
 ---
 
