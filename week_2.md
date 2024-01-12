@@ -1,7 +1,7 @@
 class: center, middle
 
 # Web Development
-## Week 2: Advanced Layout \[WIP\]
+## Week 2: Advanced Layout
 ---
 
 class: agenda
