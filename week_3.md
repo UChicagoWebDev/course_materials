@@ -1,7 +1,7 @@
 class: center, middle
 
 # MPCS 52553: Web Development
-## Week 3: Server-Side Rendering with the LAMP Stack \[WIP\]
+## Week 3: Server-Side Rendering with ~~the~~ _a_ LAMP-_ish_ Stack
 ---
 
 class: agenda
@@ -28,13 +28,13 @@ class: agenda
 
 ![Google Interview Question](images/google_interview.png "Screenshot of Glassdoor.com")
 
-???
+--
 
 For a long time, a popular interview question at Google was "What happens when
 you type google.com into your browser and hit enter?" I got it myself during
 onsite interviews there in 2013.
 
-Much of the answer is about HTTP
+Much of the answer is about **HTTP**.
 ---
 
 # HTTP
@@ -126,32 +126,11 @@ the URL path and returns them to the web browser.
 ![httpd.pache.org](images/apache.png "Screenshot of httpd.apache.org")
 ---
 
-# Server-Side Rendering with PHP
+# Web Servers: Python Built-In
 
-```html
-<html>
-<head>
-  <title>PHP Math Examples</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-  <h1>Let's do some math on the server!</h1>
-  <p>2 + 2 = <?php echo 2+2 ?></p>
-  <p>8 - 3 = <?php echo 8-3 ?></p>
-  <p>6 * 7 = <?php echo 6*7 ?></p>
-  <p>pi = <?php echo pi()?></p>
-</body>
-```
+We can get a similar effect (though intended for production) with Python's built-in http module:
 
-Take a look at how math.php (above) renders on
-[https://uchicagowebdev.com/examples/week_3/math.php](https://uchicagowebdev.com/examples/week_3/math.php).
-
-???
-
-Before the server passes math.php to the browser, it evaluates the code in the
-`<?php ?>` tags. If you View Source, you'll see that they have been replaced
-with plain text. Importantly, that evaluation happens on the server, before any
-data is sent to the user.
+`python3 -m http.server`
 ---
 
 # Serving Static Files
@@ -160,21 +139,45 @@ data is sent to the user.
 
 ---
 
-# Server-Side Rendering with PHP
+# Serving Static Files
 
-[PHP](https://www.php.net/) is a whole, Turing-complete programming language.
-Famously, Facebook was written using it.
+```
+HTTP request comes in
 
-So a web server isn't just a program that shows existing html documents to
-users; it can be any arbitrarily complex program that returns HTTP responses.
+Parse out the PATH
 
-![php.net](images/php.png "Screenshot of php.net")
+Does that path match a file on the local filesystem?
+
+If yes, read that file and send its contents as the body of a new Response
+
+If no, send a 404 Response
+```
 ---
 
-# Rendering PHP Pages
+# Server-Side Rendering
 
-![Diagram: Rendering HTML with PHP](images/diagram_http_php.png "Rendering HTML with PHP")
+![Diagram: Serving Static HTML over HTTP](images/diagram_http_abstraction.png "Serving Static HTML over HTTP")
 
+Importantly, HTTP is the interface between the browser and the server. The 
+browser sends its HTTP Requests out, then it gets responses back. It has no
+insight into how those responses are generated.
+
+--
+
+So they don't have to be pre-existing HTML files, they can just be the output of an application.
+
+---
+# Server-Side Rendering
+
+```
+HTTP request comes in
+
+Parse out the path, headers, query variables, body, etc
+
+DO LITERALLY ANYTHING YOU CAN PROGRAM
+
+Send a new Response
+```
 ---
 
 # The LAMP Stack
@@ -195,8 +198,6 @@ https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 
 # Lab: Working with Form Submissions
 
-[Dealing with Forms (PHP Documentation)](https://www.php.net/manual/en/tutorial.forms.php)
-
 [http://uchicagowebdev.com/examples/week_3/post.php](http://uchicagowebdev.com/examples/week_3/post.php)
 
 [http://uchicagowebdev.com/examples/week_3/post_no_escape.php](http://uchicagowebdev.com/examples/week_3/post_no_escape.php)
@@ -205,9 +206,6 @@ Try POSTing:
 
 `<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
 
-Copy your own php file up to the server with:
-
-`scp trevor.php student@uchicagowebdev.com:/var/www/html/student/`
 ---
 
 # Databases
@@ -252,11 +250,11 @@ VALUES ("Lair of Bones", 2, 2);`
 
 ---
 
-# Accessing the Database with PHP
+# Accessing the Database with Python
 
-[Connecting to the Database](https://www.php.net/manual/en/intro.pdo.php)
+[Connecting to the Database](https://docs.python.org/3/library/sqlite3.html))
 
-[Prepared Statements to Send Queries](https://www.php.net/manual/en/pdo.prepared-statements.php)
+[Using Placeholders to construct queries](https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries)
 ---
 
 # Lab: HTTP Exercises
@@ -287,4 +285,4 @@ The password is in Slack
 
 [A Web Journal](http://uchicagowebdev.com/weblog.php)
 
-[Exercise 3 on GitHub Classroom](https://classroom.github.com/a/dygjId3q)
+[Exercise 3 on GitHub Classroom](https://classroom.github.com/a/8Z7B1yx-)

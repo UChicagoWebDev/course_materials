@@ -76,6 +76,16 @@ img {
   width: 80%;
 }
 
+p {
+  background: rgba(255,255,255,0.8);
+}
+
+p:has(> img):has(+ p){
+  height: 5em;
+  /* object-fit: cover;
+  object-position: 0% 0%; */
+}
+
 .floatRight img {
   width: 50%;
   float: right;
