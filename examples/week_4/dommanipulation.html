@@ -16,13 +16,15 @@
         greenbox.setAttribute("style","color: darkgreen");
     }
 
+
     document.addEventListener("DOMContentLoaded", make_box_green);
+
 </script>
 
 <h2>Calling a function with the onclick attribute</h2>
 <div id="testing_ground">Watch me change colors!</div>
 
-<input type="button" onClick="make_box_red()" value="Colorize!"></input>
+<input id="colorizeButton" type="button" onClick="make_box_red()" value="Colorize!"></input>
 
 <h2>Creating and inserting DOM elements</h2>
 <ol id="mylist">
@@ -39,12 +41,26 @@
 
 
 <script>
+
+    // make_box_red();
+
     bluebox = document.body.querySelector("#bluebox");
     bluebox.setAttribute("style","color: navy");
 
+    function recolorTestingGround(e) {
+        console.log("rct");
+        recolor("testing_ground");
+    }
+
+    cb = document.body.querySelector("#colorizeButton");
+    cb.addEventListener("click", recolorTestingGround);
+
     function recolor(id) {
       var e = document.body.querySelector("#"+id);
-      e.setAttribute("style","color: red");
+      red = 255 * Math.random();
+      green = 255 * Math.random();
+      blue = 255 * Math.random();
+      e.setAttribute("style","color: rgb("+red+","+green+","+blue+")");
     }
 
     function addListItem() {
