@@ -1,7 +1,7 @@
 class: center, middle
 
 # MPCS 52553: Web Development
-## Week 5: Async and APIs \[WIP\]
+## Week 5: Async and APIs
 
 ---
 
@@ -12,16 +12,12 @@ class: agenda
 - setTimeout
 - The Javascript Event Loop
 - Promises
-- fetch
+- `fetch`
+- `async` and `await`
 
 # Python and Flask
 
 - Choosing Frameworks
-
-# Web API Design Patterns
-
-- ~~Token-based authentication~~
-- ~~Magic links~~
 
 # Labs
 
@@ -305,9 +301,20 @@ request.then((result) => {
 
 ---
 
+# Async and Await
+
+Define a function with the `async` keyword:
+- Always goes directly into the side execution queue
+- It automatically wraps any return value in a Promise
+- Can use the `await` keyword inside it
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await
+
+---
+
 # Python and Flask
 
-**[Editorial]** We're now halfway through the course, and going to start to
+**[Editorial]** We're now more than halfway through the course, and going to start to
 depart from pure standards or tools chosen for their historical importance.
 There are any number of perfectly fine server-side languages you could use, each
 with fierce partisans. And because HTTP is a well-defined spec, all of them can
