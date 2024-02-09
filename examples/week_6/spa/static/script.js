@@ -21,7 +21,6 @@ function makeBest(animal) {
   }
     // TODO: push /animal to the URL bar and add this page to the history
     // DOES NOT WORK: location.replace('/'+animal)
-  }
 }
 
 function loadAnimal() {
