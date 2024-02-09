@@ -11,7 +11,7 @@ function showHappyAnimal(animal) {
   }
 }
 
-function makeBest(animal, pushHistory = true) {
+function makeBest(animal) {
   showHappyAnimal(animal);
 
   if (animal.length > 0) {
@@ -19,29 +19,16 @@ function makeBest(animal, pushHistory = true) {
   } else {
     document.title = "SPA: Single Page Application";
   }
-
-  if (pushHistory) {
-    window.history.pushState(
-      { animal: animal },
-      `${animal} is best!`,
-      `/${animal}`
-    );
     // TODO: push /animal to the URL bar and add this page to the history
     // DOES NOT WORK: location.replace('/'+animal)
   }
 }
 
-function loadAnimal(pushHistory = true) {
-  // TODO: Check the URL bar on load so e.g. /cat makes cat best
-  path = window.location.pathname; // "/bear"
-  animal = path.substring(1); // "bear"
+function loadAnimal() {
+  animal = "";
 
+  // TODO: Check the URL bar on load so e.g. /cat makes cat best
   console.log("Making best animal: " + animal);
-  makeBest(animal, pushHistory);
+  makeBest(animal);
 }
 
-window.addEventListener("load", loadAnimal);
-window.addEventListener("popstate", (newState) => {
-  console.log(newState);
-  loadAnimal(false);
-});

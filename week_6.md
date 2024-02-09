@@ -1,7 +1,7 @@
 class: center, middle
 
 # MPCS 52553: Web Development
-## Week 6: Storage, Arguments, and Single Page Applications \[WIP\]
+## Week 6: Storage, Arguments, and Single Page Applications
 
 ---
 
