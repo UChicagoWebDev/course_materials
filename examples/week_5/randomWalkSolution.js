@@ -47,4 +47,35 @@ function walkFive() {
   .then((suggestion)=> {
     return getRelatedSearches(suggestion);
   })
+  .then((relatedSearches)=> {
+    let selected = pickRandomSuggestion(relatedSearches);
+    console.log(selected);
+    return selected;
+  })
+  .then((suggestion)=> {
+    return getRelatedSearches(suggestion);
+  })
+  .then((relatedSearches)=> {
+    let selected = pickRandomSuggestion(relatedSearches);
+    console.log(selected);
+    return selected;
+  })
+  .then((suggestion)=> {
+    return getRelatedSearches(suggestion);
+  })
+  .then((relatedSearches)=> {
+    let selected = pickRandomSuggestion(relatedSearches);
+    console.log(selected);
+    return selected;
+  })
+  .then((suggestion)=> {
+    return getRelatedSearches(suggestion);
+  })
+  .then((relatedSearches)=> {
+    let selected = pickRandomSuggestion(relatedSearches);
+    console.log(selected);
+    return selected;
+  })
+
+  // TODO: Do it four more times
 }

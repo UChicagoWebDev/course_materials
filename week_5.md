@@ -312,6 +312,12 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#
 
 ---
 
+# Lab: Random Concept Walk with Async
+
+examples/week_5/randomwalk.html
+
+---
+
 # Python and Flask
 
 **[Editorial]** We're now more than halfway through the course, and going to start to

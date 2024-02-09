@@ -12,9 +12,9 @@
         <script>
             function waitForEggs() {
                 let wait = document.getElementById("input").value
-                let myGreeting = setTimeout(() => {
+                let myGreeting = setInterval(() => {
                     console.log("Ding! "+ wait);
-                },wait);
+                },wait * 1000);
             }
 
         </script>
