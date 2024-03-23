@@ -59,10 +59,6 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 
 ## Trevor Austin (Lecturer)
 
-## Hsiang-Chung (Alex) Teng (TA)
-
-## Praneeth Chandu (TA)
-
 ---
 
 # Important pages
@@ -93,7 +89,7 @@ on the software you write, instead of tests or quizzes.
 
 Exercises are due each week right before class (so that students aren't tempted
 to skip lecture in order to finish last week's homework). Push your submissions
-to your student repo on GitHub at https://classroom.github.com/classrooms/97002355-uchicagowebdev-spring-2023.
+to your student repo on GitHub at https://classroom.github.com/classrooms/97002355-uchicagowebdev-spring-2024/.
 For ease of grading, please then submit the URL of your submission on Canvas.
 
 Exercises are graded on a ten-point scale, according to the rubric at the
@@ -230,5 +226,5 @@ https://www.w3.org/History/1989/proposal.html
 ---
 
 # Exercise 1: Resume Styling
-- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/47824/assignments/525111)
-- Get the code to get started on [GitHub](https://classroom.github.com/a/JXV2A2Ft)
+- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/54533/assignments/622712)
+- Get the code to get started on [GitHub](https://classroom.github.com/a/A86P1w9t)
