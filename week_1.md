@@ -58,6 +58,16 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 ---
 
 ## Trevor Austin (Lecturer)
+trevoraustin@uchicago.edu
+
+## Carlos Patiño (TA)
+cpatinoc@uchicago.edu
+
+## Garen Hu (TA)
+zihanhu2@uchicago.edu
+
+## Praneeth Chandu (TA)
+praneeth@uchicago.edu
 
 ---
 
