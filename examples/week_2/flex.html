@@ -28,11 +28,11 @@
         padding: 10px;
         margin: 10px;
         background: aqua;
-        flex: 1 200px;
+        /* flex: 1 200px; */
       }
 
       article.wide {
-          flex: 3 400px;
+          /* flex: 3 400px; */
       }
 
       /* Add your flexbox CSS below here */
@@ -40,6 +40,12 @@
       section {
         display: flex;
         flex-wrap: wrap;
+      }
+
+      @media (max-width: 20em) {
+        section {
+          flex-direction: column;
+        }
       }
 
 

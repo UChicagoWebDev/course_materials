@@ -53,9 +53,13 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+strong {
   font-family: "Yanone Kaffeesatz";
   font-weight: normal;
+}
+strong {
+  font-size: 2em;
 }
 .remark-inline-code,
 .remark-code-line {
@@ -76,19 +80,20 @@ img {
   width: 80%;
 }
 
-p {
+.overlay p {
+  position: relative;
+  z-index: 1;
+  padding: 1em;
   background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 0.2em rgba(255,255,255,0.8);
 }
 
-p:has(> img):has(+ p){
-  height: 5em;
-  /* object-fit: cover;
-  object-position: 0% 0%; */
-}
-
-.floatRight img {
-  width: 50%;
+.overlay img {
+  z-index: 0;
+  width: 80%;
   float: right;
+  margin-top: -10%;
+  margin-bottom: -100%;
 }
 
 .animate img {

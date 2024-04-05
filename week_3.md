@@ -23,16 +23,17 @@ class: agenda
 - Exercise 3: A Weblog
 
 ---
+class: overlay
 
 # HTTP
 
 ![Google Interview Question](images/google_interview.png "Screenshot of Glassdoor.com")
 
---
-
 For a long time, a popular interview question at Google was "What happens when
 you type google.com into your browser and hit enter?" I got it myself during
 onsite interviews there in 2013.
+
+--
 
 Much of the answer is about **HTTP**.
 ---
@@ -69,8 +70,9 @@ for example by a mouse click or by tapping the screen in a web browser.
 ![HTTP response diagram showing protocol version, status code, status message, and headers](images/http_response.png "HTTP response diagram")
 
 ---
+# Lab: HTTP Exercises
 
-# HTTP: Responses
+`curl` - [cURL (Wikipedia)](https://en.wikipedia.org/wiki/CURL)
 
 `curl -i https://uchicagowebdev.com`
 
@@ -128,7 +130,7 @@ the URL path and returns them to the web browser.
 
 # Web Servers: Python Built-In
 
-We can get a similar effect (though intended for production) with Python's built-in http module:
+We can get a similar effect (though not intended for production) with Python's built-in http module:
 
 `python3 -m http.server`
 ---
@@ -174,10 +176,29 @@ HTTP request comes in
 
 Parse out the path, headers, query variables, body, etc
 
-DO LITERALLY ANYTHING YOU CAN PROGRAM
+**DO LITERALLY ANYTHING YOU CAN PROGRAM**
 
 Send a new Response
 ```
+---
+
+# Lab: Server-Side Rendering
+
+Copy the `<yourname>.html` file you uploaded to `http://uchicagowebdev.com/students/`
+in Week 1 and rename the copy `<yourname>.php`
+
+Add some expressions to be evaluated server-side inside `<?php ?>` tags.
+- Use `rand` ([https://www.php.net/rand](https://www.php.net/rand)) to generate
+a random number. Refresh the page to see the number change.
+- Use `getenv` ([https://www.php.net/getenv](https://www.php.net/getenv)) to get
+the value of `HTTP_USER_AGENT` and tell you what browser is visiting the page.
+
+Upload the result again with:
+```bash
+scp <yourname>.php student@uchicagowebdev.com:/var/www/html/students/
+```
+
+The password is pinned in Slack
 ---
 
 # The LAMP Stack
@@ -255,30 +276,6 @@ VALUES ("Lair of Bones", 2, 2);`
 [Connecting to the Database](https://docs.python.org/3/library/sqlite3.html))
 
 [Using Placeholders to construct queries](https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries)
----
-
-# Lab: HTTP Exercises
-
-`curl` - [cURL (Wikipedia)](https://en.wikipedia.org/wiki/CURL)
----
-
-# Lab: Server-Side Rendering
-
-Copy the `<yourname>.html` file you uploaded to `http://uchicagowebdev.com/students/`
-in Week 1 and rename the copy `<yourname>.php`
-
-Add some expressions to be evaluated server-side inside `<?php ?>` tags.
-- Use `rand` ([https://www.php.net/rand](https://www.php.net/rand)) to generate
-a random number. Refresh the page to see the number change.
-- Use `getenv` ([https://www.php.net/getenv](https://www.php.net/getenv)) to get
-the value of `HTTP_USER_AGENT` and tell you what browser is visiting the page.
-
-Upload the result again with:
-```bash
-scp <yourname>.php student@uchicagowebdev.com:/var/www/html/students/
-```
-
-The password is in Slack
 ---
 
 # Lab: Exercise 3
