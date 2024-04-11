@@ -275,11 +275,51 @@ VALUES ("Lair of Bones", 2, 2);`
 
 [Connecting to the Database](https://docs.python.org/3/library/sqlite3.html))
 
+---
+# Sanitizing Database Inputs
+
+![Bobby Tables Comic](https://imgs.xkcd.com/comics/exploits_of_a_mom.png "Comic strip of a mom who has named her son with a SQL injection")
+.credit[https://xkcd.com/327/]
+
+---
+# Sanitizing Database Inputs
+
 [Using Placeholders to construct queries](https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries)
+```python
+con = sqlite3.connect("db/my_db.sqlite3")
+cur = con.cursor()
+cur.execute("CREATE TABLE birthdays(name, year)")
+
+data = {"name": "Alice", "year": 1865}
+cur.execute("INSERT INTO birthdays_table VALUES(:name, :year)", data)
+```
+---
+# Lab: DIY SQL Injection
+```
+cd examples/week_3
+python3 -i
+```
+
+```python
+import sqlite3
+con = sqlite3.connect("my_db.sqlite3")
+cur = con.cursor()
+cur.execute("CREATE TABLE students(name, grade)")
+
+# THIS IS BAD
+def unsafe_insert(name, grade):
+    cur.execute("insert into students (name, grade) values" +
+        "('" + name + "', '" + grade + "')")
+    con.commit()
+
+```
+
 ---
 
 # Lab: Exercise 3
 
-[A Web Journal](http://uchicagowebdev.com/weblog.php)
+<!-- [A Web Journal](http://uchicagowebdev.com/weblog.php) -->
 
-[Exercise 3 on GitHub Classroom](https://classroom.github.com/a/8Z7B1yx-)
+https://github.com/UChicagoWebDev/exercise_3
+
+[Exercise 3 on GitHub Classroom](https://classroom.github.com/a/RZGJC6lm)
