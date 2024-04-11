@@ -54,13 +54,13 @@ body {
 h1,
 h2,
 h3,
-strong,
+.fancyStrong strong,
 .credit {
   font-family: "Yanone Kaffeesatz";
   font-weight: normal;
 }
-strong {
-  font-size: 2em;
+.fancyStrong strong, .big {
+  font-size: xx-large;
 }
 .credit {
   display: block;
@@ -85,6 +85,14 @@ strong {
 .agenda ul {
   margin-block-start: 0;
   color: #666;
+}
+blockquote p {
+  border-left: 0.5em solid lightgray;
+  padding-left: 0.5em;
+}
+blockquote footer {
+  font-size: small;
+  color: gray;
 }
 
 img {

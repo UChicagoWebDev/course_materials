@@ -23,7 +23,7 @@ class: agenda
 - Exercise 3: A Weblog
 
 ---
-class: overlay
+class: overlay, fancyStrong
 
 # HTTP
 
@@ -35,7 +35,7 @@ onsite interviews there in 2013.
 
 --
 
-Much of the answer is about **HTTP**.
+Much of the answer is about .big[**HTTP**].
 ---
 
 # HTTP
