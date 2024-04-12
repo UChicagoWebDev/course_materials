@@ -195,7 +195,7 @@ Good explanation why the above weird behaviors happen.
 
 # Lab: Exercise 4
 
-https://uchicagowebdev.com/examples/exercise_4/
+https://uchicagowebdev.com/examples/week_4/mood_board/
 
 [Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/57047/assignments/657292)
 
