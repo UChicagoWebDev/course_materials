@@ -190,3 +190,11 @@ Good explanation why the above weird behaviors happen.
 ### [Using XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 
 ### [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+---
+
+# Lab: Exercise 4
+
+[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/57047/assignments/657292)
+
+[Exercise 4 on GitHub Classroom](https://classroom.github.com/a/qmUxZhJ3)
