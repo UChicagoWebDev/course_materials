@@ -273,8 +273,24 @@ So errors propagate down the chain the way they would down the stack and you can
 handle them once at the end
 
 ## Here if any one of the functions fails you will hit the failureCallback
+---
+
+# When do we get our value back out of the promise?
+
+```
+x = new Promise(...)
+(???)
+return x+2;
+```
 
 ---
+
+# When do we get our value back out of the promise?
+
+![That's the neat part, you don't](https://i.imgflip.com/7lawfu.jpg)
+
+---
+
 
 # Lab: Random Concept Walk
 
