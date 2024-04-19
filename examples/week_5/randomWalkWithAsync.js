@@ -1,7 +1,9 @@
-const bing_api_endpoint = "https://api.bing.microsoft.com/v7.0/images/search";
-const bing_api_key = BING_API_KEY;
-
 async function getRelatedSearchesWithAsync(query) {
+  if(!query) return;
+
+  const bing_api_endpoint = "https://api.bing.microsoft.com/v7.0/images/search";
+  const bing_api_key = BING_API_KEY;
+
   let queryurl = bing_api_endpoint + "?q=" + encodeURIComponent(query);
 
   let walkHeaders = new Headers();
@@ -15,11 +17,7 @@ async function getRelatedSearchesWithAsync(query) {
   };
 
   let response = await fetch(queryurl, myInit);
-  let result = await response.json()
-  let relatedSearches = result.relatedSearches
-  
-  console.log(relatedSearches);
-  return relatedSearches;
+  // TODO: Implement the rest
 }
 
 function pickRandomSuggestionWithAsync(suggestions) {
@@ -29,18 +27,7 @@ function pickRandomSuggestionWithAsync(suggestions) {
   return selected;
 }
 
-async function walkFiveWithAsync() {
-  let query = document.querySelector("#input").value;
-  console.log(query);
-
-
-  let suggestions = await getRelatedSearchesWithAsync(query);
-  let suggested = pickRandomSuggestionWithAsync(suggestions);
-  console.log(suggested)
-
-  for(i=1; i<20; i++) {
-    suggestions = await getRelatedSearchesWithAsync(suggested);
-    suggested = pickRandomSuggestionWithAsync(suggestions);
-    console.log(suggested)
-  }
+async function walkFiveWithAsync(query) {
+  let suggestions = getRelatedSearchesWithAsync(query)
+  // TODO: Implement the rest
 }

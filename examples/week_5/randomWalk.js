@@ -1,7 +1,9 @@
-const bing_api_endpoint = "https://api.bing.microsoft.com/v7.0/images/search";
-const bing_api_key = BING_API_KEY;
-
 function getRelatedSearches(query) {
+  if(!query) return;
+
+  const bing_api_endpoint = "https://api.bing.microsoft.com/v7.0/images/search";
+  const bing_api_key = BING_API_KEY;
+
   let queryurl = bing_api_endpoint + "?q=" + encodeURIComponent(query);
 
   let walkHeaders = new Headers();
@@ -36,15 +38,8 @@ function pickRandomSuggestion(suggestions) {
 }
 
 
-function walkFive() {
-  let query = document.querySelector("#input").value;
+function walkFive(query) {
   let suggestionsPromise = getRelatedSearches(query);
-  suggestionsPromise.then((suggestions => {
-    let selected = pickRandomSuggestion(suggestions);
-    console.log(selected);
-    return selected;
-  }))
-  .then((suggestion)=> {
-    return getRelatedSearches(suggestion);
-  })
+  
+  // TODO: Implement the rest
 }

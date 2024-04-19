@@ -2,16 +2,48 @@
     <head>
         <title>Random Walk</title>
         <script src="apikey.js"></script>
-        <!-- <script src="randomWalk.js"></script> -->
+        <script src="randomWalk.js"></script>
         <script src="randomWalkWithAsync.js"></script>
     </head>
     <body>
 
         <h3>In which we learn about asynchronous function calls</h3>
         <p>
-            <input type="text" id="input">
+            <div>
+                <input type="text" id="input">
+            </div>
+            <div>
+                <input type="radio" name="paradigm" value="promises" id="promises" />
+                <label for="promises">Promises</label>
+                <input type="radio" name="paradigm" value="async" id="async" />
+                <label for="async"><code>async</code> Keyword</label>
+            </div>
             <!-- <input type="button" value="Walk Five" onclick="walkFive()"> -->
-            <input type="button" value="Walk Five with Async" onclick="walkFiveWithAsync()">
+            <input id="walkButton" type="button" value="Walk Five with Async" onclick="walkFiveWithAsync()">
         </p>
+        <ol id="results"></ol>
     </body>
+    <script>
+        const bing_api_endpoint = "https://api.bing.microsoft.com/v7.0/images/search";
+        const bing_api_key = BING_API_KEY;
+        const b = document.getElementById("walkButton");
+
+        b.addEventListener("click", ()=>{
+            const query = document.querySelector("#input").value;
+            if(!query) return;
+
+            const p = document.querySelector('input[name="paradigm"]:checked').value;
+            console.log(p);
+
+            if(p == "promises") {walkFive(query);}
+            if(p == "async") {walkFiveWithAsync(query);}
+        })
+
+        const addRelated = (related) => {
+            let li = document.createElement("li");
+            li.textContent = related;
+            let results = document.getElementById("results");
+            results.appendChild(li);
+        }
+    </script>
 </html>
