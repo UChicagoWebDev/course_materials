@@ -39,7 +39,27 @@ function pickRandomSuggestion(suggestions) {
 
 
 function walkFive(query) {
+  // suggestionsPromise points to our related searches result
   let suggestionsPromise = getRelatedSearches(query);
   
+  randomResultPromise = suggestionsPromise.then((related) => {
+    r = pickRandomSuggestion(related);
+    addRelated(r);
+    return r;
+  });
+
+  randomResultPromise.then((r)=>{
+    return getRelatedSearches(r);
+  })
+  .then((related) => {return pickRandomSuggestion(related)})
+  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
+  .then((related) => {return pickRandomSuggestion(related)})
+  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
+  .then((related) => {return pickRandomSuggestion(related)})
+  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
+  .then((related) => {return pickRandomSuggestion(related)})
+  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
+
+
   // TODO: Implement the rest
 }

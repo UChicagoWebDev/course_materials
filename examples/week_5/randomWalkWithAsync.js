@@ -18,6 +18,8 @@ async function getRelatedSearchesWithAsync(query) {
 
   let response = await fetch(queryurl, myInit);
   // TODO: Implement the rest
+  let j = await response.json();
+  return j.relatedSearches;
 }
 
 function pickRandomSuggestionWithAsync(suggestions) {
@@ -28,6 +30,12 @@ function pickRandomSuggestionWithAsync(suggestions) {
 }
 
 async function walkFiveWithAsync(query) {
-  let suggestions = getRelatedSearchesWithAsync(query)
-  // TODO: Implement the rest
+  console.log(query);
+  let q = query;
+  for(i=0; i<20; i++) {
+    console.log(i);
+    let suggestions = await getRelatedSearchesWithAsync(q);
+    q = pickRandomSuggestionWithAsync(suggestions);
+    addRelated(q);
+  }
 }
