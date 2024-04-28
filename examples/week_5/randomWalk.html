@@ -36,8 +36,11 @@
             console.log(p);
 
             if(p == "promises") {walkFive(query);}
-            if(p == "async") {walkFiveWithAsync(query);}
-        })
+            // debugger;
+            if(p == "async") {
+                walkFiveWithAsync(query);   
+            }
+        });
 
         const addRelated = (related) => {
             let li = document.createElement("li");
