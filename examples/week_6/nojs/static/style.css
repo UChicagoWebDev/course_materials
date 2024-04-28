@@ -46,10 +46,10 @@ h2 {
   display: none;
 }
 
-.animal:focus .happy {
+.animal:target .happy {
   display: block;
 }
 
-.animal:focus .sad {
+.animal:target .sad {
   display: none;
 }
