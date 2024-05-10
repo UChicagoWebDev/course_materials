@@ -30,7 +30,10 @@ quarter into a single web application.
 
 The final project is worth 4 times as much as a regular Exercise and 40% of your
 grade overall. You have the remainder of the quarter (i.e. through Friday
-May 26) to complete it.
+May 24) to complete it.
+
+https://canvas.uchicago.edu/courses/57047/assignments/657294
+
 
 ---
 
