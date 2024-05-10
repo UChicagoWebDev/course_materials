@@ -13,9 +13,9 @@ class: agenda
 - Migrating Safely
 - Lab: Posts and Comments
 
-# React Classes
+# Advanced React
 
-- Thinking in React
+- Node
 - Conditional Rendering
 - Lab: Login and Post
 - Type Checking
@@ -121,13 +121,15 @@ common, and should really be modeled as one table.
 
 ---
 
-# React Classes
+# Node.js
 
-https://beta.reactjs.org/learn/sharing-state-between-components
+https://nodejs.org/en/download
 
-https://beta.reactjs.org/learn/thinking-in-react
+---
 
-## https://beta.reactjs.org/learn/conditional-rendering
+# Conditional Rendering
+
+https://beta.reactjs.org/learn/conditional-rendering
 
 ---
 
@@ -143,11 +145,11 @@ us.
 
 # Type Checking
 
-https://reactjs.org/docs/typechecking-with-proptypes.html
+https://www.typescriptlang.org/
 
-https://www.npmjs.com/package/prop-types
+https://nextjs.org/docs
 
-## https://www.typescriptlang.org/
+---
 
 # Lab: Login and Post
 
