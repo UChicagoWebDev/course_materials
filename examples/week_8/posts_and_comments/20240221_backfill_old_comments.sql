@@ -1,12 +1,5 @@
-insert into posts_and_comments
-(post_id,
-is_post,
-body,
-author)
-VALUES
-
-    select post_id,
-    0,
+insert into posts_and_comments (
+    parent_post_id,
     body,
     author
-    from comments;
+) select post_id, body, author from comments;
