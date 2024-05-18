@@ -1,1 +1,1 @@
-drop table posts CASCADE;
+drop table posts cascade;

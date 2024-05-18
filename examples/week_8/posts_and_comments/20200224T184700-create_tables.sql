@@ -14,3 +14,4 @@ create table comments (
   author VARCHAR(30),
   FOREIGN KEY(post_id) REFERENCES posts(id)
 );
+

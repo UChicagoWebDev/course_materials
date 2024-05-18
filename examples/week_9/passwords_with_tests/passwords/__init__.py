@@ -63,7 +63,7 @@ def create_app(test_config=None):
         try:
             cursor.execute(query, (username, hashed))
             connection.commit()
-            return {}
+            return {}, 404
         except sqlite3.IntegrityError as e:
             template = "An exception of type {0} occurred. Arguments:\n{1!r}"
             message = template.format(type(e).__name__, e.args)
