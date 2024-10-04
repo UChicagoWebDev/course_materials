@@ -74,7 +74,7 @@ yanze41@uchicago.edu
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
 - Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Syllabus: https://canvas.uchicago.edu/courses/57047
+- Syllabus: https://canvas.uchicago.edu/courses/58705
 ---
 
 # Objectives
