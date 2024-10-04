@@ -63,18 +63,18 @@ trevoraustin@uchicago.edu
 ## Carlos Patiño (TA)
 cpatinoc@uchicago.edu
 
-## Garen Hu (TA)
-zihanhu2@uchicago.edu
+## Alexandra Qi (TA)
+siyuanq@uchicago.edu
 
-## Praneeth Chandu (TA)
-praneeth@uchicago.edu
+## Jason Wang (TA)
+yanze41@uchicago.edu
 
 ---
 
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
 - Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Syllabus: https://canvas.uchicago.edu/courses/54533
+- Syllabus: https://canvas.uchicago.edu/courses/57047
 ---
 
 # Objectives
@@ -236,5 +236,5 @@ https://www.w3.org/History/1989/proposal.html
 ---
 
 # Exercise 1: Resume Styling
-- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/54533/assignments/622712)
-- Get the code to get started on [GitHub](https://classroom.github.com/a/A86P1w9t)
+- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/57047/assignments)
+- Get the code to get started on [GitHub](https://classroom.github.com/a/-zZ8uRTP)
