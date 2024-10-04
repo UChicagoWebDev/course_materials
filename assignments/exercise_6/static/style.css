@@ -1,0 +1,423 @@
+/* Global styles */
+body {
+  background-color: #333366;
+  margin: 0;
+}
+
+.container {
+  width: 900px;
+  height: 100%;
+  margin: auto;
+  padding: 0 30px 0 30px;
+  background-color: white;
+  box-shadow: 0 0 20px black;
+  font-family: sans-serif;
+}
+
+button {
+  color: white;
+  text-shadow: -1px -1px 2px black;
+  font-family: sans-serif;
+  background-color: orange;
+  padding: 6px;
+  border-radius: 4px;
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.loginHeader {
+  display: flex;
+  margin-left: auto;
+  z-index: 5;
+  height: 44px;
+}
+
+.loginHeader > div {
+  font-size: 18px;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 20px 30px 10px 30px;
+  border-radius: 0 0 8px 8px;
+  margin: -10px 10px 0 0;
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+.loginHeader > div:hover {
+  transform: translateY(4px);
+  box-shadow: 0 4px 8px #ffffa2;
+}
+
+.loginHeader .loggedOut {
+  background-color: orange;
+  text-shadow: -1px -1px 2px black;
+}
+
+.loginHeader .loggedIn {
+  background-color: lightsalmon;
+  color: white;
+  text-shadow: 0 0 2px brown;
+  font-size: 18px;
+}
+
+.material-symbols-outlined {
+  display: inline-flex;
+  vertical-align: bottom;
+}
+
+.alignedForm {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 100%;
+}
+
+.alignedForm > * {
+  padding: 4px;
+  margin: 6px;
+}
+
+.alignedForm input {
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.alignedForm input:invalid {
+  outline: none;
+  box-shadow: 0 0 3px 3px lightcoral;
+}
+
+
+.alignedForm button {
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  background-color: white;
+  color: gray;
+  font-family: "Rowdies", cursive;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 8px darkslateblue;
+}
+
+.header h2 {
+  position: relative;
+  z-index: 3;
+  font-size: 32px;
+  color: white;
+  text-shadow: 1px 1px 5px black, 3px 3px 2px orange, -3px -1px 2px blue;
+  font-family: "Rowdies", cursive;
+  padding: 10px;
+  display: block;
+  justify-content: start;
+}
+
+.header h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.header h4 {
+  position: absolute;
+  left: 100px;
+  top: -1.4em;
+  z-index: 2;
+  font-size: 100px;
+  color: white;
+  text-shadow: 0 0 5px red;
+}
+
+.header .roomDetail {
+  flex-basis: auto;
+  align-self: flex-end;
+  margin-left: 20px;
+  padding: 30px;
+  display: inline;
+  font-weight: 100;
+}
+
+.header .roomDetail h3 {
+  font-weight: 100;
+  font-size: medium;
+  color: gray;
+}
+
+.header .roomDetail h3 strong {
+  margin-left: 0.5em;
+  font-weight: bold;
+  font-size: x-large;
+  color: #666;
+}
+
+.header .roomDetail h3 input {
+  font-size: x-large;
+  margin-left: 0.5em;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.header .roomDetail h3 button {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.header .roomDetail a {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: hotpink;
+}
+
+.clip {
+  overflow: hidden;
+}
+
+.clip .container {
+  padding-top: 20px;
+}
+
+/* Splash screen */
+.splash .splashHeader {
+  display: flex;
+}
+
+.splash .hero {
+  margin: auto;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.splash h1,
+h2,
+h3 {
+  font-family: "Rowdies", cursive;
+}
+
+.splash .hero h1 {
+  display: block;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  z-index: 4;
+  margin: auto;
+
+  font-size: 80px;
+  color: white;
+  text-shadow: 1px 1px 5px black, 3px 3px 2px orange, -3px -1px 2px blue;
+  font-family: "Rowdies", cursive;
+}
+
+.splash .hero h2 {
+  display: block;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  z-index: 3;
+  margin: auto;
+
+  font-size: 240px;
+  color: white;
+  text-shadow: 0px 0px 20px red, 0px 0px 40px darkred;
+}
+
+.splash .logo {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  height: 300px;
+  width: 600px;
+}
+
+.splash .logo img {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.splash .logo img#tv {
+  height: 300px;
+  padding-left: 60px;
+}
+
+.splash .logo img#popcorn {
+  height: 200px;
+  padding-top: 100px;
+}
+
+.splash .hero form {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.splash .hero button {
+  margin: 20px 40px 20px 40px;
+  padding: 10px 20px 10px 20px;
+  font-size: 24px;
+  background-color: orange;
+  border: 7px outset orange;
+  border-radius: 20px;
+  box-shadow: 0 0 4px magenta;
+  filter: drop-shadow(10px 4px 4px #4444dd);
+}
+
+.splash .hero button:hover {
+  box-shadow: 0 2px 5px magenta;
+}
+
+.splash .roomList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.splash .roomList > a {
+  display: block;
+  flex: 1 1 30%;
+  padding: 8px;
+  margin: 4px;
+  color: white;
+  text-shadow: 0 1px 1px darkslateblue;
+  border-radius: 4px;
+  background-color: gray;
+  box-shadow: 0 4px 8px lightcyan;
+}
+
+.splash .roomList > a:hover {
+  background-color: rgb(75, 101, 122);
+  border-radius: 3px;
+}
+
+.splash .roomList a {
+  text-decoration: none;
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+.splash .roomList a:hover {
+  transform: scale(1.025);
+}
+
+/* Profile screen */
+.profile {
+  display: block;
+}
+
+.profile .exit {
+  margin-top: 40px;
+}
+.profile .exit.goToSplash {
+  grid-column: 2/3;
+}
+
+.profile .exit.logout {
+  grid-column: 3/4;
+  background-color: lightcoral;
+}
+
+/* Login screen */
+.login {
+  display: block;
+}
+
+.login .failed {
+  margin-top: 4em;
+  display: flex;
+}
+
+.login .failed .message {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 8px;
+  color: white;
+  border-radius: 5px;
+  background-color: lightcoral;
+  box-shadow: 0 0 5px 3px lightcoral;
+}
+
+.login .failed button {
+  margin-left: 20px;
+  margin-right: auto;
+  padding: 12px;
+}
+
+/* Room screen */
+.room .chat {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr;
+  height: 100%;
+}
+
+.room .chat .comment_box {
+  margin-right: 20px;
+  padding-right: 20px;
+  height: 100%;
+  border-right: 8px solid lightgray;
+}
+
+.room .chat .comment_box textarea {
+  display: block;
+  width: 100%;
+}
+
+.room .chat .comment_box button {
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  margin-top: 15px;
+}
+
+.room .chat .comment_box label {
+  display: block;
+  font-family: "Rowdies", cursive;
+  margin-bottom: 10px;
+}
+
+.room .chat .messages {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+  height: auto;
+}
+
+.room .chat message {
+  display: grid;
+  grid-column: 1/3;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid lightgray;
+}
+
+.room .chat message author {
+  color: #c93;
+  font-weight: bold;
+  display: block;
+  padding: 5px;
+  grid-column: 1/2;
+}
+
+.room .chat message content {
+  display: block;
+  padding: 5px;
+  grid-column: 2/3;
+}
+
+/* 404 page */
+.notFound h1 {
+  margin: 20px 20px -300px 20px;
+  font-size: 500px;
+  color: #f0c0c0;
+}
+
+.notFound .message {
+  margin-left: 100px;
+  text-shadow: 0 0 6px white;
+}
+
+.hide {
+  display: none;
+}
