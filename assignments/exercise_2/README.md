@@ -1,6 +1,8 @@
 # Exercise #2: Landing Page
 10 points
-**DUE: Friday, April 5 by 5:00pm**
+
+**DUE: Friday, October 18 by 5:00pm**
+
 ### Instructions
 One of the most common web development tasks is to build a **Landing Page**, the
 first thing visitors will see when visiting a web address. Developers and
