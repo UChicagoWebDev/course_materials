@@ -17,7 +17,6 @@ def write_html(message=""):
   elif message == "success":
     html += """
     <h3 class="success">Post created! See it <a href="/">here</a>."""
-
   html += """
     <form method="post">
       <label for="title">Title</label>
@@ -32,5 +31,4 @@ def write_html(message=""):
   <a href="/">Home</a>
 </body>
 </html>"""
-
   return html

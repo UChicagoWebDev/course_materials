@@ -7,9 +7,7 @@
 <body>
   <h1>Post Code</h1>
   <hr/>
-
   Random! <?php echo rand(1,10) ?>
-
   <?php $x = 5 ?>
   <div class="post-place">
       <?php if (isset($_POST['submit'])) { ?>

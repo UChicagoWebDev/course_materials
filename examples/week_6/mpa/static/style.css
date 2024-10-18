@@ -2,34 +2,27 @@
   width: 800px;
   margin: auto
 }
-
 .hero {
   text-align: center;
 }
-
 .animals {
   display: flex;
 }
-
 .animals div {
   flex: 1;
 }
-
 a.animal { 
   display: block;
   text-decoration: none;
   color: black;
 }
-
 .animals img {
   display: block;
   width: 200px;
 }
-
 h2 {
   height: 50px;
 }
-
 .sad h2 {
   padding-top: 20px;
   color: #666666;
@@ -37,7 +30,6 @@ h2 {
   font-size: 14px;
   vertical-align: bottom;
 }
-
 .sad img {
   filter: grayscale(60%);
 }

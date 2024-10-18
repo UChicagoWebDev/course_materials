@@ -6,12 +6,10 @@
     function simple_alert() {
       alert("Click!");
     }
-
     function alert_event_handler(event) {
       console.log(event);
       // alert(event.key);
     }
-
     function alert_element_handler(element) {
       element.blur(); // Alerting will take focus, then put it back, which will
                       // re-trigger this function if element is in focus before

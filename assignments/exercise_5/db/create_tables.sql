@@ -5,12 +5,10 @@ create table users (
   cookie VARCHAR(40),
   api_key VARCHAR(40)
 );
-
 create table rooms (
     id INTEGER PRIMARY KEY,
     name VARCHAR(40) UNIQUE
 );
-
 create table messages (
   id INTEGER PRIMARY KEY,
   user_id INTEGER,

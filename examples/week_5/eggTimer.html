@@ -3,7 +3,6 @@
         <title>Egg Timer</title>
     </head>
     <body>
-
         <h3>In which we learn about asynchronous function calls</h3>
         <p>
             <input type="text" id="input">
@@ -12,12 +11,10 @@
         <script>
             function waitForEggs() {
                 let wait = document.getElementById("input").value
-
                 setTimeout(()=>{
                     console.log("DING! Eggs are ready!");
                 }, wait*1000);
             }
-
         </script>
     </body>
 </html>

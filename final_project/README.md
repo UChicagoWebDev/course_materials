@@ -1,20 +1,14 @@
 # Final Project: Belay (a Slack clone)
-
 40 points
-
 **DUE: Friday, May 24 by 5:00pm**
-
 ## Introduction
-
 As a capstone project for Web Development, we're going to combine the various
 front-end and back-end techniques we've learned over the course to produce a
 modern, database-backed single-page application. Specifically, we'll be building
 our own (significantly smaller in scope) version of the popular workplace
 messaging app Slack. We'll call our version
 [Belay](https://en.wikipedia.org/wiki/Belaying).
-
 ## Core Behavior
-
 - Belay lets users send and read real-time chat messages that are organized into
   rooms called Channels. Users see a list of all the channels on the server and
   can click one to enter that channel. Inside, they see all the messages posted
@@ -29,15 +23,12 @@ messaging app Slack. We'll call our version
   that number is greater than zero. We don't support nested threads; messages
   either belong directly to a channel or are replies in a thread to a message
   that does, but replies can't have nested replies of their own.
-
 ## Submissions and Grading
-
 Graders will have Python 3.11+ with Flask installed,  a local install of
 SQLite3 (which comes with Python), and Node v20 or later. Your submission may 
 include up to 1 Flask application and up to 1 Node application, in any 
 combination. In your submission, include a README with instructions for how to 
 configure and run your app's frontend and backend.
-
 - Graders will start a Flask app with a `flask run` command from the command line.
   Graders will have their FLASK_APP environment variable set to "app," so name
   your Flask file `app.py`.
@@ -52,7 +43,6 @@ configure and run your app's frontend and backend.
 - Make sure that your app starts successfully under these circumstances. We'll
   do our best to make your app run even if it doesn't, but with a points
   penalty.
-
 You can use any techniques or tools to complete your project, whether or not we
 studied them in class. In particular, note that there is no requirement that you
 use React (though it may make the project easier to complete). You could do the
@@ -60,18 +50,13 @@ whole project with vanilla Javascript, you could use React, or you could use
 some other framework we didn't study in class, like [Vue.js](https://vuejs.org/)
 or [Svelte](https://svelte.dev/). As always, remember to include in your
 submission any classmates you collaborated with and any materials you consulted.
-
 ## Requirements and Rubric (40 points total)
-
 ### Unauthenticated UI: (3 points)
-
 - Unanthenticated users can create a new account
 - Unauthenticated users can sign in with their username and password
 - Unauthenticed users who try to access a room cannot see any messages in that
   room, and are sent to the signup/login page instead
-
 ### Authenticated UI: (10 points)
-
 - Authenticated users can log out, change their username, and change their
   password
 - Authenticated users can see a list of all channels. For each channel, they 
@@ -91,9 +76,7 @@ submission any classmates you collaborated with and any materials you consulted.
 - Users can add an emoji reaction to any message or reply. You may choose a 
   limited set of emoji reactions you support.
 - Hovering over a reaction displays all the users who had that reaction
-
 ### Single-Page State (5 points)
-
 - ~~Only serve one HTML request. Handle all other requests through the API~~ 
   Free point!
 - Push the channel name (for messages) or parent message id (for replies) to the
@@ -108,11 +91,8 @@ submission any classmates you collaborated with and any materials you consulted.
   as part of your storage keys so your storage won't conflict with those of
   other students on the graders' machines. e.g.
   `window.localStorage.setItem('trevoraustin_belay_auth_key', 'abcdefg')`
-
 ### Responsive Styling: (8 points)
-
 Wide Screen:
-
 - Show the list of channels down the left-hand side of the screen, and the
   channel the user is looking at (or a placeholder for no channel) on the
   right-hand side
@@ -123,9 +103,7 @@ Wide Screen:
 - When viewing a reply thread, display the thread as a third column, narrowing
   the column with messages to fit it
 - Users can click an icon or button to dismiss the thread panel
-
 Narrow Screens:
-
 - On narrow screens, the page has a one-column layout with a menu bar. Users see
   the channel list, the messages in one channel, or the replies to one message
   at a time, and not the other two
@@ -134,9 +112,7 @@ Narrow Screens:
   parent message
 - When viewing messages in a channel on a narrow screen, users have a button or
   link they can click to navigate back to the channel list
-
 ### Database (8 points)
-
 - Store channels, messages, and user account information in a SQLite3 database
 - Create the database and its tables with migrations Start the name(s) of your
   migration file(s) with [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
@@ -161,9 +137,7 @@ Narrow Screens:
   user in each channel—you don't have to store every user-to-message pair)
 - Sanitize all database inputs by
   [passing them as arguments to a parameterized query](https://flask.palletsprojects.com/en/2.3.x/patterns/sqlite3/#:~:text=To%20pass%20variable%20parts%20to%20the%20SQL%20statement%2C%20use%20a%20question%20mark%20in%20the%20statement%20and%20pass%20in%20the%20arguments%20as%20a%20list.%20Never%20directly%20add%20them%20to%20the%20SQL%20statement%20with%20string%20formatting%20because%20this%20makes%20it%20possible%20to%20attack%20the%20application%20using%20SQL%20Injections)
-
 ### API (6 points)
-
 - Give API endpoints a unique path namespace to distinguish them from your HTML
   path(s) e.g. `/api/endpoint1`, `/api/encpoint2` etc
 - Create an authentication endpoint that accepts a username and password, and 

@@ -3,7 +3,6 @@ def write_html(posts_with_comments=[]):
     # TODO: get all the posts and their comments
     #       chop up the below html and loop through the posts and comments to create 
     #       the page using content from the database
-
     html = f"""<html>
 <head>
   <title>Exercise 3 - A Web Journal</title>
@@ -16,9 +15,7 @@ def write_html(posts_with_comments=[]):
       <i class="material-icons">create</i>
     </a>
   </div>
-
   <h1>&lt;yourname&gt;'s Web Journal</h1>
-
   <div id="posts">
     <post class="post" id="3">
       <h2 class=post-title>
@@ -27,7 +24,6 @@ def write_html(posts_with_comments=[]):
           <i class="material-icons">link</i>
         </a>
       </h2>
-
       <div class="post-body">
 Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having
 little or no money in my purse, and nothing particular to interest me on shore,
@@ -45,7 +41,6 @@ the ship. There is nothing surprising in this. If they but knew it, almost all
 men in their degree, some time or other, cherish very nearly the same feelings
 towards the ocean with me.
       </div>
-
       <h3>2 Comments</h3>
       <div class="comment-block">
         <comment>
@@ -64,14 +59,12 @@ towards the ocean with me.
             nick_carraway
           </div>
         </comment>
-
         <a href="comment?post_id=3">
           <i class="material-icons">create</i>
           Leave a comment
         </a>
       </div>
     </post>
-
     <post id="2">
       <h2 class=post-title>
         This Is Just To Say
@@ -84,18 +77,15 @@ I have eaten
 the plums
 that were in
 the icebox
-
 and which
 you were probably
 saving
 for breakfast
-
 Forgive me
 they were delicious
 so sweet
 and so cold
       </div>
-
       <h3>0 Comments</h3>
       <div class="comment-block">
         <a href="comment?post_id=2">
@@ -104,7 +94,6 @@ and so cold
         </a>
       </div>
     </post>
-
     <post id="1">
       <h2 class=post-title>
         Sonnet 2
@@ -128,7 +117,6 @@ Proving his beauty by succession thine.
     This were to be new made when thou art old,
     And see thy blood warm when thou feel’st it cold.
       </div>
-
       <h3>0 Comments</h3>
       <div class="comment-block">
         <a href="comment?post_id=1">
@@ -137,7 +125,6 @@ Proving his beauty by succession thine.
         </a>
       </div>
     </post>
-
     <post id="0">
       <h2 class=post-title>
         First Post
@@ -148,7 +135,6 @@ Proving his beauty by succession thine.
       <div class="post-body">
 Hello World!
       </div>
-
       <h3>0 Comments</h3>
       <div class="comment-block">
         <a href="comment?post_id=0">
@@ -157,7 +143,6 @@ Hello World!
         </a>
       </div>
     </post>
-
   </div> <!-- end of posts block -->
 </body>
 </html>

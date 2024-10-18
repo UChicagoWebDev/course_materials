@@ -3,7 +3,6 @@ create table posts (
   title VARCHAR(255) NOT NULL,
   body TEXT
 );
-
 create table comments (
   id INTEGER PRIMARY KEY,
   post_id INTEGER,

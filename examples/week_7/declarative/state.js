@@ -7,5 +7,4 @@ let state = {
     room_id: 27,
     messages: [...]
 }
-
 renderPage(state);

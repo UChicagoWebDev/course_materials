@@ -1,5 +1,4 @@
 // import {useState} from 'react'
-
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
@@ -19,34 +18,24 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
 function Square({value, handler}) {
   return <button className="square" onClick={handler}>{value}</button>
 }
-
 function Board() {
   const emptyBoard = Array(9).fill(null)
   const [history, setHistory] = React.useState([emptyBoard])
   const [currentTurn, setCurrentTurn] = React.useState(0);
-
   const board = history[currentTurn]
-
   // const [board, setBoard] = React.useState([null,null,null,
   //                                           null,null,null,
   //                                           null,null,null]);
-
   // const [xIsNext, setXIsNext] = React.useState(true)
-
   const xIsNext = currentTurn % 2 == 0
-
   const winner = calculateWinner(board);
-
   const nextMove = xIsNext ? "X" : "O"
   const status = winner ? winner + " won the game!" : nextMove + "'s turn!"
-
   let clickHandler = (i) => {
     if(board[i] || winner) return;
-
     let newBoard = board.slice()
     newBoard[i] = nextMove
     let newHistory = history.slice(0,currentTurn+1)
@@ -54,7 +43,6 @@ function Board() {
     newHistory.push(newBoard)
     setHistory(newHistory)
   }
-
   return (
     // let b = document.createElement("button");
     // b.classList.add("square")
@@ -89,9 +77,7 @@ function Board() {
     </>
   );
 }
-
 // ========================================
-
 const rootContainer = document.getElementById("root");
 const root = ReactDOM.createRoot(rootContainer);
 root.render(<Board />);

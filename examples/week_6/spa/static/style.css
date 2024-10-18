@@ -2,28 +2,22 @@
   width: 800px;
   margin: auto
 }
-
 .hero {
   text-align: center;
 }
-
 .animals {
   display: flex;
 }
-
 .animals div {
   flex: 1;
 }
-
 .animals img {
   display: block;
   width: 200px;
 }
-
 h2 {
   height: 50px;
 }
-
 .sad h2 {
   padding-top: 20px;
   color: #666666;
@@ -31,25 +25,19 @@ h2 {
   font-size: 14px;
   vertical-align: bottom;
 }
-
 .sad img {
   filter: grayscale(60%);
 }
-
 .sad {
   display: block;
 }
-
 .best .sad {
   display: none;
 }
-
 .happy{
   display: none;
 }
-
 .best .happy{
   display: block;
 }
-
 

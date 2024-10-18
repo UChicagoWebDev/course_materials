@@ -1,12 +1,10 @@
 # Lectures
 Notes, slides, and exercises for MPCS 52553 - Web Development, as taught Autumn Quarter 2024
-
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)
 - [Carlos Patino](cpatinoc@alumni.chicagobooth.edu) (TA)
 - [Siyuan Qi](siyuanq@uchicago.edu) (TA)
 - [Yanze Wang](yanze41@uchicago.edu) (TA)
-
 ### Useful Links
 - Course Syllabus on [GitHub](syllabus.md) and [Canvas](https://canvas.uchicago.edu/courses/58705)
 - Submit Exercises [also on Canvas](https://canvas.uchicago.edu/courses/58705/assignments)

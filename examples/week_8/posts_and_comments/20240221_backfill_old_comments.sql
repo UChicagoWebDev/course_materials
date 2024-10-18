@@ -4,7 +4,6 @@ is_post,
 body,
 author)
 VALUES
-
     select post_id,
     0,
     body,

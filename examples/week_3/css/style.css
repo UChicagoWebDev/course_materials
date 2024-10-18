@@ -1,7 +1,6 @@
 html {
   background-color: #CEF;
 }
-
 body {
   width: 960px;
   margin: auto;
@@ -9,15 +8,12 @@ body {
   background-color: white;
   color: #333;
 }
-
 a {
   color: #0000B0;
 }
-
 .post-body {
   white-space: pre-wrap;
 }
-
 .compose-button {
   float: right;
   margin: 10 10 10 10;
@@ -25,36 +21,29 @@ a {
   border: 1px solid #CCC;
   border-radius: 50px;
 }
-
 .compose-button:hover {
   margin: 4 4 10 10;
   padding: 25 25 25 25;
   border: 2px solid #0000B0;
 }
-
 .comment-block {
   width: 40%;
 }
-
 .comment {
   border-bottom: 1px solid #CCC;
   margin-bottom: 15px;
 }
-
 .comment-body {
   margin-bottom: 10px;
 }
-
 .comment-author {
   margin-left: 15px;
   margin-bottom: 5px;
   font-size: 0.8em;
 }
-
 form {
   width: 600px;
 }
-
 label {
   display: block;
   float: left;
@@ -62,29 +51,24 @@ label {
   text-align: right;
   margin-right: 10px;
 }
-
 input,textarea {
   display: block;
   width: 300px;
   margin: 10px 10px 10px 10px;
 }
-
 textarea {
   height: 150px;
 }
-
 input[type=submit] {
   margin-left: 160px;
   padding: 20px 0 20px 0;
 }
-
 .leave-comment .post-body {
   font-size: 0.8em;
   padding-bottom: 20px;
   border-bottom: 1px solid #CCC;
   margin-bottom: 20px;
 }
-
 .error {
   color: darkred;
 }

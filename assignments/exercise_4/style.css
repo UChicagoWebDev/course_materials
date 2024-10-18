@@ -4,20 +4,17 @@ body {
   margin: 20px auto 0 auto;
   font-family: 'Open Sans', sans-serif;
 }
-
 .top_bar {
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
   flex-wrap: nowrap;
 }
-
 @media (max-width: 1024px) {
   .top_bar {
     flex-wrap: wrap;;
   }
 }
-
 h1 {
   flex-basis: 600px;
   flex-shrink: 0;
@@ -30,39 +27,32 @@ h1 {
   text-shadow: 0 0 4px black, 6px 0 3px #73141B, 9px 3px 6px #BFA006;
 }
 
-
-
 .top_bar .search {
   flex-basis: 360px;
   flex-shrink: 0;
   flex-grow: 1;
 }
-
 .search input, .search button{
   font-size: 20px;
   border-radius: 4px;
   padding: 8px 16px;
   box-shadow: none;
 }
-
 .search button {
   color: white;
   background-color: #BFA006;
   border: 0px;
 }
-
 .suggestions h3 {
   font-size: small;
   text-transform: uppercase;
 }
-
 .suggestions ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 4px 0;
   padding: 0;
 }
-
 .suggestions li {
   display: block;
   border: 1px solid gray;
@@ -70,13 +60,11 @@ h1 {
   margin: 4px;
   padding: 4px;
 }
-
 #results {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
-
 #resultsExpander {
   margin: 0 auto;
   border: 3px solid gray;
@@ -90,19 +78,16 @@ h1 {
   transition: min-height ease 0.4s;
   transition: max-height ease 0.4s;
 }
-
 #resultsExpander.open {
   min-height: 160px;
   max-height: 600px;
   transition: min-height ease 0.4s;
   transition: max-height ease 0.4s;
 }
-
 #closeResultsButton {
   display: block;
   text-align: right;
 }
-
 #results #resultsImageContainer {
   width: 100%;
   height: 100%;
@@ -110,44 +95,37 @@ h1 {
   display: flex;
   flex-wrap: wrap;
 }
-
 #results img {
   margin: 10px;
   height: 150px;
   width: 150px;
   object-fit: cover;
 }
-
 .loading {
   width: 100%;
   text-align: center;
   margin-top: 50px;
 }
-
 .loading .spinner {
   animation: rotate 1s linear infinite;
 }
 @keyframes rotate{
   to{ transform: rotate(360deg); }
 }
-
 /* Only display the spinner if the results list is empty */
 .loading:has(+ #resultsImageContainer *) {
   display: none;
 }
-
 #board {
   margin-top: 20px;
   column-width: 250px;
   column-count: auto;
   column-gap: 20px;
 }
-
 #board img {
   width: 250px;
   margin-bottom: 20px;
 }
-
 #fakeResults {
   display: none;
 }

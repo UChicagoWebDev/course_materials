@@ -2,19 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
 body, .remark-container {
   font-family: "Droid Serif";
   background-color: white;
   margin: 0;
   min-width: 15em;
 }
-
 .remark-slides-area {
   margin-top: -1.3em;
   z-index: 1;
 }
-
 #header {
   background-color: #333;
   color: white;
@@ -22,12 +19,10 @@ body, .remark-container {
   padding: 0;
   position: relative;
   z-index: 2;
-
   a, a:visited { 
     color: white; 
     text-decoration: none;
   }
-
   ul { 
     display: flex;
     margin: 0;
@@ -55,7 +50,6 @@ body, .remark-container {
   li:last-child {
     margin-left: auto;
   }
-
   li a {
     display: block;
     width: 100%;
@@ -64,24 +58,20 @@ body, .remark-container {
     line-height: 1.2em;
   }
 }
-
 @media (max-width: 45em) {
   #header {
     e { display: none; }
     li { width: 1em; }
   }
 }
-
 #header ul {
   display: flex;
 }
-
 #indexContainer {
   max-width: 640px;
   margin: 0 auto;
   padding: 20px;
 }
-
 #home {
   width: 100px;
   position: absolute;
@@ -131,7 +121,6 @@ header span {
   border: 0.05em solid #ddd;
 }
 
-
 h1,
 h2,
 h3,
@@ -175,12 +164,10 @@ blockquote footer {
   font-size: small;
   color: gray;
 }
-
 img {
   display: block;
   width: 100%;
 }
-
 .overlay p {
   position: relative;
   z-index: 1;
@@ -189,20 +176,17 @@ img {
   box-shadow: 0 0 0.2em rgba(255,255,255,0.8);
 }
 
-
 .overlay p:has( img) {
   z-index: 0;
   width: 100%;
   float: right;
   margin-bottom: -100%;
 }
-
 .animate img {
   width: 210px;
   animation-duration: 3s;
   animation-name: rise;
 }
-
 @keyframes rise {
   from {
     margin-top: 60%;

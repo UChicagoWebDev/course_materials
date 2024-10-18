@@ -14,7 +14,6 @@ def write_html(post={}):
       Leave a Comment on
       <a href="weblog.php#a_post_title">A Post Title</a>
     </h2>
-
     <div class="post-body">
 Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having
 little or no money in my purse, and nothing particular to interest me on shore,
@@ -32,7 +31,6 @@ the ship. There is nothing surprising in this. If they but knew it, almost all
 men in their degree, some time or other, cherish very nearly the same feelings
 towards the ocean with me.
     </div>
-
     <h3>2 Comments</h3>
     <div class="comment-block">
       <div class="comment">
@@ -52,7 +50,6 @@ towards the ocean with me.
         </div>
       </div>
     </div>
-
     <form method="post">
       <label for="body">Comment</label>
       <textarea name="body"></textarea>

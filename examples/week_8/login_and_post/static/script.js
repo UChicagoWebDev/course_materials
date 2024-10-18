@@ -5,13 +5,10 @@ class Login extends React.Component {
   //     display: true,
   //   }
   // }
-
   login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-
     //this.setState({display: false});
-
     fetch("http://127.0.0.1:5000/api/login", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -24,7 +21,6 @@ class Login extends React.Component {
           // document.getElementById("posts").setAttribute('style', 'display: block;');
           this.props.loginHandler();
         });
-
       } else {
         console.log(response.status);
         this.logout();
@@ -34,7 +30,6 @@ class Login extends React.Component {
       this.logout();
     })
   }
-
   logout() {
     window.localStorage.removeItem("journal_session_token");
     // this.setState({display: true});
@@ -42,7 +37,6 @@ class Login extends React.Component {
     // document.getElementById("compose").setAttribute('style', 'display: none;');
     // document.getElementById("posts").setAttribute('style', 'display: none;');
   }
-
   render() {
     if(!this.props.loggedIn) {
       return (
@@ -71,13 +65,11 @@ class Login extends React.Component {
     }
   }
 }
-
 class Compose extends React.Component {
   post() {
     const title = document.getElementById("compose_title").value;
     const body = document.getElementById("compose_body").value;
     const session_token = window.localStorage.getItem("journal_session_token");
-
     fetch("http://127.0.0.1:5000/api/post", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -91,7 +83,6 @@ class Compose extends React.Component {
       document.getElementById("compose_body").value = "";
     });
   }
-
   render() {
     return (
       <div className="compose" id="compose">
@@ -109,7 +100,6 @@ class Compose extends React.Component {
     );
   }
 }
-
 class Posts extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -117,7 +107,6 @@ class Posts extends React.Component {
   //     posts: [],
   //   }
   // }
-
   refresh(){
     const session_token = window.localStorage.getItem("journal_session_token");
     fetch("http://127.0.0.1:5000/api/post", {
@@ -130,7 +119,6 @@ class Posts extends React.Component {
       // this.setState({posts: data});
     });
   }
-
   render() {
     const posts = this.props.posts.map((post) =>
       <div key={post.id} id={"post_" + post.id}>
@@ -138,7 +126,6 @@ class Posts extends React.Component {
         <div>{post.body}</div>
       </div>
     );
-
     return (
       <div className="posts" id="posts">
         <h2>Posts</h2>
@@ -148,11 +135,9 @@ class Posts extends React.Component {
     );
   }
 }
-
 Posts.propTypes = {
   posts: window.PropTypes.array
 }
-
 class Journal extends React.Component {
   constructor(props) {
     super(props);
@@ -164,20 +149,15 @@ class Journal extends React.Component {
       ]
     }
   }
-
   loginHandler() {
     // TODO: update this call by managing State
     this.setState({isLoggedIn: true});
   }
-
   logoutHandler() {
     // TODO: replace this call by managing State
     this.setState({isLoggedIn: false})
-
   }
-
   
-
   render() {
     return (
       <div className="weblog">
@@ -193,7 +173,6 @@ class Journal extends React.Component {
     );
   }
 }
-
 function TitleBar() {
   return (
     <div className="title_bar">
@@ -201,9 +180,7 @@ function TitleBar() {
     </div>
   );
 }
-
 // ========================================
-
 
 ReactDOM.render(
   React.createElement(Journal),

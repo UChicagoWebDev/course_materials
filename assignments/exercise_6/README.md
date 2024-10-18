@@ -1,18 +1,12 @@
 # Exercise #6: Watch Party 2: The Single Page Experience
-
 10 points
-
 **DUE: Friday, May 3 by 5:00pm**
-
 ### Instructions
-
 For this exercise, we will build a _single-page_ group chat web application with
 asynchronous Javascript and a REST API written in Python with Flask.
-
 Like the original, Watch Party 2 lets users start group chats and invite their
 friends. This time, however, we serve a single static HTML page and never
 redirect or reload. Instead, the page interacts purely with the JSON API.
-
 Starting with the files included in this directory, implement the UI for Watch
 Party in HTML, CSS, and Javascript, and serve it using server-side code written
 in the
@@ -22,15 +16,11 @@ in the
 serve the static content are provided, so you will only need to implement the
 API endpoints in `app.py` and the javascript in `script.js`. You are however
 free to modify any other file if it makes development more convenient.
-
 You may re-use any code from your Exercise 5. Remember to include in the README
 of your submission any classmates you collaborated with and any materials you 
 consulted.
-
 ### Rubric
-
 One point each for:
-
 - One-click signup creates a new user in the database and returns an API key for
   that user. Store the API key in the user's browser, so that it is available
   across tabs and if the browser window is closed and reopened. A javascript

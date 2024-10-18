@@ -1,29 +1,19 @@
 # Exercise 3: A Weblog
-
 10 points
-
-**DUE: Friday, April 12 by 5:00pm**
-
+**DUE: Friday, October 25 by 5:00pm**
 ### Instructions
-
 One very common kind database-driven web application is a Content Management
 System, or CMS. A CMS provides an interface for users to write content—posts,
 articles, whole web pages—that is stored in a database, and then creates web
 pages from those entries, without the author needing to know any HTML.
-
 We're going to make our own very simple CMS for a web journal, with posts and
 comments. The assignment this week is to modify the `.py` files in `exercise_3`
 to make the pages display posts and comments that are stored in a database, and
 to enable users to create new posts and leave new comments.
-
 The LAMP stack is still free and still powerful, but it can be harder to get running on your laptops than some alternatives. Instead we're going to use Python as our server-side language. It's widely used both in application development and in scientific computing, and it has some things we'll need already built-in. So first, install the latest stable version of Python from https://www.python.org/.
-
 From the root our your exercise directory (ie this one), start your server with:
-
 `python3 weblog.py`
-
 You should be able to see your pages at e.g. http://localhost:8000/
-
 From there:
 1. You can connect to the SQLite3 database in `db/weblog.sqlite3`. It has
   already been set up to have tables for posts and comments by running the
@@ -67,15 +57,11 @@ From there:
       that's a bad idea on the real internet, but it's fine for this exercise.
     - When a user posts a new comment, add a new row to the `comments` table,
       sanitizing as before.
-
 Don't worry about mobile layouts for this exercise, about or about features like
 previewing or editing.
-
 Remember to include in your submission any classmates you collaborated with and
 any materials you consulted.
-
 ### Rubric
-
 One point each for:
 - Replace `<yourname>` with your name in the index, post, and comment pages
 - Uses one SELECT query with a JOIN to fetch a post and any of its

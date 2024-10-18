@@ -1,22 +1,16 @@
 # Exercise #2: Landing Page
-
 10 points
-
 **DUE: Friday, April 5 by 5:00pm**
-
 ### Instructions
-
 One of the most common web development tasks is to build a **Landing Page**, the
 first thing visitors will see when visiting a web address. Developers and
 designers have built up a fairly common set of elements that you'll see used
 again and again and that give us a good opportunity to put our new CSS skills
 to work.
-
 First, let's look at some well-designed landing pages: [airbnb.com](airbnb.com);
 [shopify.com](shopify.com); [notion.so](notion.so). And of course
 [uchicago.edu](uchicago.edu). Look at them on your laptop browser and with your
 phone.
-
 Now, make your own landing page for an imaginary product, company, or
 institution. Your page should, at a minimum, contain the following elements:
 1. A navigation bar across the top
@@ -31,23 +25,18 @@ institution. Your page should, at a minimum, contain the following elements:
   These sections should vary the number and spacing of columns. Use one
   column-count, one flexbox, and one css grid.
 1. A footer element with links
-
 Make your page display reasonably on mobile devices. Note that you are allowed
 to collapse or drop some elements in the mobile view.
-
 Use at least two fonts other than the system default. You do not need to include
 any animation or other interactive elements, but are welcome to.
-
 Clone this repositoriy, and edit `index.html` and `styles/landing.css`.
 Put all your styling into `landing.css` instead of putting your CSS directly
 in a `<style>` element or as a `style` attribute. You only need to make the
 landing page. There's no need to make a second `html` file, and all your links
 can have `href="#"`.
-
 Remember to include in your submission any classmates you collaborated with and
 any materials you consulted. Because these pages are for imaginary organizations
 you have each made up, *we expect them to be fairly different from one another.*
-
 ### Grading Rubric:
   * 1 point: All styling is in `landing.css` and applied with CSS selectors, 
     instead of inline
@@ -63,7 +52,6 @@ you have each made up, *we expect them to be fairly different from one another.*
   * 1 point: Grid changes to fewer columns on a narrow screen width
   * 1 point: Header and footer change to a vertical layout or are hidden on a 
     narrow screen width
-
 ### Resources:
 - [Designing Hero Images - Smashing Magazine](https://www.smashingmagazine.com/2017/06/designing-hero-images/)
 - High-resolution background images from

@@ -3,11 +3,9 @@ class SignupAndLogin extends React.Component {
     super(props);
     this.state = {};
   }
-
   signup = () => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-
     fetch("http://127.0.0.1:5000/api/signup", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -20,11 +18,9 @@ class SignupAndLogin extends React.Component {
       }
     });
   }
-
   login = () => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-
     fetch("http://127.0.0.1:5000/api/login", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -37,7 +33,6 @@ class SignupAndLogin extends React.Component {
       }
     });
   }
-
   render() {
     return (
       <div className="signup">
@@ -59,9 +54,7 @@ class SignupAndLogin extends React.Component {
   }
 }
 
-
 // ========================================
-
 
 ReactDOM.render(
   React.createElement(SignupAndLogin),

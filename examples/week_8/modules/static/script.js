@@ -1,5 +1,4 @@
 import MyModule from "/static/module.js"
-
 class ModuleDemo extends React.Component {
   render() {
     return (
@@ -10,9 +9,7 @@ class ModuleDemo extends React.Component {
     );
   }
 }
-
 // ========================================
-
 ReactDOM.render(
   React.createElement(ModuleDemo),
   document.getElementById('root')
