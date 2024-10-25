@@ -1,6 +1,6 @@
 # Exercise #4: Mood Board
 10 points
-**DUE: Friday, April 19 by 5:00pm**
+**DUE: Friday, Nov 1 by 5:00pm**
 ### Instructions
 ![A Screenshot of Pinterest.com from 2010](pinterest_2010.jpg)
 For this exercise, we'll put together all the techniques we covered this week to
