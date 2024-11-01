@@ -1,6 +1,9 @@
 # Exercise #5: Watch Party
+
 10 points
-**DUE: Friday, April 26 by 5:00pm**
+
+**DUE: Friday, Novemver 8 by 5:00pm**
+
 ### Instructions
 For this exercise, we will build a group chat web application with asynchronous
 Javascript and a REST API written in Python with Flask. Watch Party is a public
@@ -20,6 +23,7 @@ adjustments to any other files you feel would be helpful.
 Remember to include in your submission any classmates you collaborated with and
 any materials you consulted. Watch Party (though it has somewhat different
 requirements) is inspired by [yap.chat](https://yap.chat/).
+
 ### Rubric
 - `room.html` currently has a number of dummy messages to demonstrate styling.
   Implement an API endpoint that accepts and returns JSON and that returns all the
