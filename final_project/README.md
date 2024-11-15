@@ -1,6 +1,6 @@
 # Final Project: Belay (a Slack clone)
 40 points
-**DUE: Friday, May 24 by 5:00pm**
+**DUE: Friday, December 13by 5:00pm**
 ## Introduction
 As a capstone project for Web Development, we're going to combine the various
 front-end and back-end techniques we've learned over the course to produce a
