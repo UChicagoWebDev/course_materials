@@ -17,9 +17,10 @@ quarter into a single web application.
 - Storing and retrieving records from a database
 - APIs and asynchronous requests
 - Single-page applications
+
 The final project is worth 4 times as much as a regular Exercise and 40% of your
 grade overall. You have the remainder of the quarter (i.e. through Friday
-May 24) to complete it.
+December 13) to complete it.
 https://canvas.uchicago.edu/courses/57047/assignments/657294
 
 ---
@@ -61,6 +62,7 @@ have become the standard adopted by other frameworks: **one-way binding** and
 ---
 # One-Way Binding & Declarative UI
 Under the hood, React is doing something like:
+```javascript
     const renderPage = (props) => {
       document.queryElement("title").innerText = props.title;
       let container = document.createElement("div");
@@ -75,6 +77,7 @@ Under the hood, React is doing something like:
         ...
       }
     }
+  ```
 ---
 # One-Way Binding & Declarative UI
 https://beta.reactjs.org/learn/reacting-to-input-with-state
