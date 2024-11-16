@@ -1,10 +1,10 @@
 // import {useState} from 'react'
+ calculateWinner(squares) {
 
-
+function Square() {
+  return <button className="square"></button>
+}
 function Board() {
-  const emptyBoard = Array(9).fill(null)
-
-
   return (
     // let b = document.createElement("button");
     // b.classList.add("square")
@@ -12,19 +12,19 @@ function Board() {
     // parent.append(b)
     <>
     <div className="board-row">
-      <Square value={board[0]} handler={()=>clickHandler(0)}/>
-      <Square value={board[1]} handler={()=>clickHandler(1)}/>
-      <Square value={board[2]} handler={()=>clickHandler(2)}/>
+      <Square />
+      <Square />
+      <Square />
     </div>
     <div className="board-row">
-      <Square value={board[3]} handler={()=>clickHandler(3)}/>
-      <Square value={board[4]} handler={()=>clickHandler(4)}/>
-      <Square value={board[5]} handler={()=>clickHandler(5)}/>
+      <Square />
+      <Square />
+      <Square />
     </div>
     <div className="board-row">
-      <Square value={board[6]} handler={()=>clickHandler(6)}/>
-      <Square value={board[7]} handler={()=>clickHandler(7)}/>
-      <Square value={board[8]} handler={()=>clickHandler(8)}/>
+      <Square />
+      <Square />
+      <Square />
     </div>
     </>
   );
