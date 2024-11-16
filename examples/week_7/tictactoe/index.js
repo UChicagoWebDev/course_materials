@@ -1,5 +1,4 @@
 // import {useState} from 'react'
- calculateWinner(squares) {
 
 function Square() {
   return <button className="square"></button>
