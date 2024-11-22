@@ -24,9 +24,9 @@ const checkPasswordValidity = () => {
     repeatPasswordField.reportValidity();
     passwordField.reportValidity();
     return;
-  }
-
-  if(!passwordField.reportValidity()) return;
+  } 
+  
+  passwordField.reportValidity();
 
   if(p == r) {
     repeatPasswordField.setCustomValidity("");
