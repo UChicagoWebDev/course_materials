@@ -1,14 +1,6 @@
-class Login extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     display: true,
-  //   }
-  // }
   login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    //this.setState({display: false});
     fetch("http://127.0.0.1:5000/api/login", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -17,9 +9,8 @@ class Login extends React.Component {
       if(response.status == 200) {
         response.json().then((data) => {
           window.localStorage.setItem("journal_session_token", data.session_token);
-          // document.getElementById("compose").setAttribute('style', 'display: block;');
-          // document.getElementById("posts").setAttribute('style', 'display: block;');
-          this.props.loginHandler();
+          document.getElementById("compose").setAttribute('style', 'display: block;');
+          document.getElementById("posts").setAttribute('style', 'display: block;');
         });
       } else {
         console.log(response.status);
@@ -100,7 +91,7 @@ class Compose extends React.Component {
     );
   }
 }
-class Posts extends React.Component {
+const Posts = () => {
   // constructor(props) {
   //   super(props);
   //   this.state = {

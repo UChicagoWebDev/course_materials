@@ -1,7 +1,8 @@
 class: center, middle
 # MPCS 52553: Web Development
-## Week 8: React Classes and Database Migrations \[WIP\]
+## Week 8: Database Migrations, Conditional Rendering, Typescript \[WIP\]
 ---
+
 class: agenda
 # Database Migrations
 - Configuration as Code
@@ -11,9 +12,10 @@ class: agenda
 - Node
 - Conditional Rendering
 - Lab: Login and Post
-- Type Checking
+# Type Checking
 - Lab: Login and Post
 ---
+
 # Database Migrations
 A database is a critical part of most modern web applications, and the way that
 database is structured is a critical part of their design. And as database
@@ -25,6 +27,7 @@ under the control of web application engineers.
 but they tend to work on bigger databases, which are of course now bigger then
 ever)
 ---
+
 # Database Migrations
 Rather than defining tables or modifying their structure by hand, the best
 practice is to write code that performs the transformations and check it into
@@ -40,6 +43,7 @@ number of advantages:
   regular code review process
 https://martinfowler.com/articles/evodb.html
 ---
+
 # Migrating Safely
 Application code that tries to reference tables that aren't there will throw an
 error.
@@ -52,6 +56,7 @@ We preface our migrations with an
 [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date and time so that their
 lexical order is the same as the order they are meant to be run in.
 ---
+
 # Migrating Safely
 Sometimes you'll be able to make these changes all at once. You'll schedule a
 downtime window, make the changes to the database and the application code
@@ -69,7 +74,8 @@ is structured you might need to:
 1. Drop the old table
 ## https://firstround.com/review/shims-jigs-and-other-woodworking-concepts-to-conquer-technical-debt/
 ---
-# Lab: Posts and Comments
+
+# Lab: Migrate Posts and Comments
 In the `/examples` directory we have SQL migrations to create the posts and
 comments tables from Exercise 3, and to insert some sample data. Let's say we
 want to add a new feature where users (with some `user_id`) can `like` posts and
@@ -82,24 +88,28 @@ common, and should really be modeled as one table.
 --
 ## How would we do that migration?
 ---
+
 # Node.js
 https://nodejs.org/en/download
 ---
+
 # Conditional Rendering
 https://beta.reactjs.org/learn/conditional-rendering
 ---
-# Lab: Login and Post
+
+# Lab: Conditional Format Login and Post
 In the `/examples` directory we have a simple single-page application that is
 doing a lot of showing and hiding of page elements manually, and has the
 application state spread over several components. Let's lift the state up to the
 top component and use conditional formatting to let React manage the display for
 us.
 ---
+
 # Type Checking
 https://www.typescriptlang.org/
-https://nextjs.org/docs
 ---
-# Lab: Login and Post
+
+# Lab: Typed Journal
 The Journal app already has some rudimentary type checking for the Posts
 component, let's expand it to check that every Post has an id, a title, and a
 post body.
