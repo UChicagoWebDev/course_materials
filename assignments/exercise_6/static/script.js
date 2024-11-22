@@ -9,34 +9,36 @@ const repeatPasswordField = document.querySelector("#repeat_password");
 
 const checkPasswordValidity = () => {
   const p = passwordField.value;
+  const r = repeatPasswordField.value;
+
   if(p.length < 5) {
     passwordField.setCustomValidity("Password must be at least 5 characters long");
-    repeatPasswordField.setCustomValidity("");
   } else if (p == "12345") {
     passwordField.setCustomValidity("That's the kind of password an idiot would have on his luggage!");
-    repeatPasswordField.setCustomValidity("");
   } else {
     passwordField.setCustomValidity("");
   }
-  passwordField.reportValidity();
-  checkPasswordRepeat();
-}
-const checkPasswordRepeat = () => {
-  if(!passwordField.reportValidity()) {
+  
+  if(!passwordField.checkValidity()) {
     repeatPasswordField.setCustomValidity("");
+    repeatPasswordField.reportValidity();
+    passwordField.reportValidity();
     return;
   }
 
-  if(passwordField.value == repeatPasswordField.value) {
+  if(!passwordField.reportValidity()) return;
+
+  if(p == r) {
     repeatPasswordField.setCustomValidity("");
   } else {
     repeatPasswordField.setCustomValidity("Password doesn't match");
   }
   repeatPasswordField.reportValidity();
 }
+
 let CURRENT_ROOM = 0;
 passwordField.addEventListener("input", checkPasswordValidity);
-repeatPasswordField.addEventListener("input", checkPasswordRepeat);
+repeatPasswordField.addEventListener("input", checkPasswordValidity);
 
 // TODO:  On page load, read the path and whether the user has valid credentials:
 //        - If they ask for the splash page ("/"), display it
