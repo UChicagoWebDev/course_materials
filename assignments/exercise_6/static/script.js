@@ -6,30 +6,36 @@ const ROOM = document.querySelector(".room");
 // Custom validation on the password reset fields
 const passwordField = document.querySelector("#update_password");
 const repeatPasswordField = document.querySelector("#repeat_password");
-const repeatPasswordMatches = () => {
-  const p = passwordField.value;
-  const r = repeatPasswordField.value;
-  return p == r;
-};
-const checkPasswordRepeat = () => {
+
+const checkPasswordValidity = () => {
   const p = passwordField.value;
   if(p.length < 5) {
     passwordField.setCustomValidity("Password must be at least 5 characters long");
+    repeatPasswordField.setCustomValidity("");
   } else if (p == "12345") {
     passwordField.setCustomValidity("That's the kind of password an idiot would have on his luggage!");
+    repeatPasswordField.setCustomValidity("");
   } else {
     passwordField.setCustomValidity("");
-    if(passwordField.value != repeatPasswordField.value) {
-      repeatPasswordField.setCustomValidity("Password doesn't match");
-    } else {
-      repeatPasswordField.setCustomValidity("");
-    }
   }
   passwordField.reportValidity();
+  checkPasswordRepeat();
+}
+const checkPasswordRepeat = () => {
+  if(!passwordField.reportValidity()) {
+    repeatPasswordField.setCustomValidity("");
+    return;
+  }
+
+  if(passwordField.value == repeatPasswordField.value) {
+    repeatPasswordField.setCustomValidity("");
+  } else {
+    repeatPasswordField.setCustomValidity("Password doesn't match");
+  }
   repeatPasswordField.reportValidity();
 }
 let CURRENT_ROOM = 0;
-passwordField.addEventListener("input", checkPasswordRepeat);
+passwordField.addEventListener("input", checkPasswordValidity);
 repeatPasswordField.addEventListener("input", checkPasswordRepeat);
 
 // TODO:  On page load, read the path and whether the user has valid credentials:
