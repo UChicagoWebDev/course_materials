@@ -38,12 +38,12 @@ TAs
 Video links for hours are in the Zoom Tab on Canvas
 
 ## Textbooks
-- MDN Web Docs: https://developer.mozilla.org/en-US/Links to an external site.
-- SQLite Documentation: https://www.sqlite.org/docs.htmlLinks to an external site.
-- Node Documentation: https://nodejs.org/en/docs/guides/Links to an external site.
-- Python Documentation: https://www.python.org/doc/Links to an external site.
-- Flask Documentation: https://flask.palletsprojects.com/en/2.0.x/Links to an external site.
-- React Documentation: https://reactjs.org/docs/getting-started.htmlLinks to an external site.
+- MDN Web Docs: https://developer.mozilla.org/en-US/
+- SQLite Documentation: https://www.sqlite.org/docs.html
+- Node Documentation: https://nodejs.org/en/docs/guides/
+- Python Documentation: https://www.python.org/doc/
+- Flask Documentation: https://flask.palletsprojects.com/en/2.0.x/
+- React Documentation: https://reactjs.org/docs/getting-started.html
 
 ## Assignments and Grading
 Students will be expected to complete small assignments in class, more substantial take home exercises due the next week before class, and a final project due by the end of finals week, March 14, 2025.
