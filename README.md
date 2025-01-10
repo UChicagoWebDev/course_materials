@@ -3,8 +3,9 @@ Notes, slides, and in-class exercises for MPCS 52553 - Web Development, as taugh
 
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)
-- [Abhyas Mall](abhyas@uchicago.edu) (TA)
-- [Geno Lewis](grlewis@uchicago.edu) (TA)
+- [Abhyas Mall](mailto:abhyas@uchicago.edu) (TA)
+- [Alexandra Qi](mailto:siyuanq@uchicago.edu) (TA)
+- [Geno Lewis](mailto:grlewis@uchicago.edu) (TA)
 
 ### Useful Links
 - Course Syllabus on [GitHub](syllabus.md) and [Canvas](https://canvas.uchicago.edu/courses/61092)
