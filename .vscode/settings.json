@@ -3,7 +3,4 @@
     "editor.defaultFormatter": "ms-python.autopep8"
   },
   "python.formatting.provider": "none",
-  "files.exclude": {
-    "**/.git": false
-  }
 }
