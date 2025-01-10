@@ -27,6 +27,7 @@ Lecturer
 - Trevor Austin (trevoraustin@cs.uchicago.edu)
 TAs
 - Abhyas Mall (abhyas@uchicago.edu)
+- Alexandra Qi (siyuanq@uchicago.edu)
 - Geno Lewis (grlewis@uchicago.edu)
 
 ## Office Hours
