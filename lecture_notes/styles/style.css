@@ -166,7 +166,8 @@ blockquote footer {
 }
 img {
   display: block;
-  width: 100%;
+  width: max-content;
+  height: max-content;
 }
 .overlay p {
   position: relative;

@@ -77,12 +77,12 @@ Let's get started on Canvas: https://canvas.uchicago.edu/courses/61092/assignmen
 ---
 
 # Policies and Grading
-- Exercises
-  - Each week for the first six weeks (starting today!)
-  - Due each week before class
-  - Get harder over time and build on each other, so be sure to stay current
+### Exercises
+- Each week for the first six weeks (starting today!)
+- Due each week before class
+- Get harder over time and build on each other, so be sure to stay current
 
-???
+--
 
 This class is all about writing software, and your grade will be based almost 
 entirely on the software you write, instead of tests or quizzes. There is a mix 
@@ -112,11 +112,11 @@ discretion.
 ---
 
 # Policies and Grading
-- Final Project
-  - Like an Exercise, but bigger
-  - With a little extra work, makes a good portfolio piece
+### Final Project
+- Like an Exercise, but bigger
+- With a little extra work, makes a good portfolio piece
 
-???
+--
 
 Instead of a final exam. we'll cap the quarter off with a final project, which
 will incorporate everything we've learned into a single web application.
@@ -127,11 +127,11 @@ can add to your public git profile and use while interviewing.
 ---
 
 # Policies and Grading
-- Collaboration
-  - Type your own code
-  - Include attribution for resources you use and people you collaborate with
+### Collaboration
+- Type your own code
+- Include attribution for resources you use and people you collaborate with
 
-???
+--
 
 In the real world, software development is a very collaborative process. And
 because web development is especially fast-moving, a key objective of this
@@ -139,10 +139,13 @@ course if for students to learn how to learn new techniques by studying other
 sites and consulting online resources. Accordingly, students are encouraged to
 collaborate on assignments, and to use any resources they find helpful.
 To do that in a way consistent with the University's academic honesty policy, we
-have two simple rules. First, everyone turns in their own work on their own
-GitLab. That doesn't just mean no group submissions; literally type it out
-yourself. Don't copy and paste, you'll learn much less. Second, include
-attribution for the people you worked with or the resources you consulted in your README for the assignment.
+have two simple rules:
+
+1. Everyone turns in their own work on their own GitHub repo. Talk as much as 
+you like, but literally type it out yourself. Don't copy and paste, you'll learn 
+much less.
+2. Include attribution for the people you worked with or the resources you 
+consulted in your README for the assignment.
 ---
 
 # Utopian Beginnings
