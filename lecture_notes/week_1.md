@@ -148,6 +148,9 @@ much less.
 consulted in your README for the assignment.
 ---
 
+# Act Break
+---
+
 # Utopian Beginnings
 The Web was initially proposed by Tim Berners-Lee in 1989, as a web for researchers at CERN to share ideas:
 > We should work toward a universal linked information system, in which generality and portability are more important than fancy graphics techniques and complex extra facilities.
@@ -189,6 +192,9 @@ https://www.w3.org/History/1989/proposal.html
 - Held locally in memory by the browser
 - Editable by the user!
 - https://twitter.com/POTUS/status/1407463658242908162
+---
+
+# Act Break
 ---
 
 # CSS3
