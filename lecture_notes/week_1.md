@@ -32,6 +32,7 @@ Double-click to open it with your browser.
 ### Let's look at a web server
 [uchicagowebdev.com](http://uchicagowebdev.com)
 --
+
 ### Copy your file there:
 ```bash
 scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
@@ -40,7 +41,7 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 
 # Build a Web Page
 ### Let's look now!
-[uchicagowebdev.com](http://uchicagowebdev.com/students)
+[uchicagowebdev.com/students](http://uchicagowebdev.com/students)
 ---
 
 # Introductions    
