@@ -201,7 +201,7 @@ https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 
 # Lab: Working with Form Submissions
 When the PHP script is run, it has access to information about the HTTP request that triggered it. See this page for an example:
- 
+
 [http://uchicagowebdev.com/examples/week_3/post_unsafe.php](http://uchicagowebdev.com/examples/week_3/post_unsafe.php)
 
 [code on GitHub](https://github.com/UChicagoWebDev/course_materials/blob/main/examples/week_3/post_unsafe.php)
@@ -223,6 +223,12 @@ Let's try again:
 
 `<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
 
+--
+
+Line 12 here does the work: 
+
+https://github.com/UChicagoWebDev/course_materials/blob/main/examples/week_3/post_safely.php#L12
+
 ---
 
 # Databases
@@ -238,18 +244,27 @@ Let's try again:
 
 # Databases: SQLite
 [SQLite (Wikipedia)](https://en.wikipedia.org/wiki/SQLite)
+
 `sqlite3`
+
 `.databases`
+
 `.open example_db`
+
 `.tables`
+
 `.schema example_table;`
 ---
 
 # Databases: Select and Insert
 `select * from posts;`
+
 `select * from comments;`
-`insert into books (Title, SeriesID, AuthorID)
-VALUES ("Lair of Bones", 2, 2);`
+
+```
+insert into books (Title, SeriesID, AuthorID)
+VALUES ("Lair of Bones", 2, 2);
+```
 ---
 
 # Databases: JOIN
@@ -257,7 +272,7 @@ VALUES ("Lair of Bones", 2, 2);`
 ---
 
 # Accessing the Database with Python
-[Connecting to the Database](https://docs.python.org/3/library/sqlite3.html))
+[Connecting to the Database](https://docs.python.org/3/library/sqlite3.html)
 ---
 
 # Sanitizing Database Inputs
@@ -294,7 +309,8 @@ def unsafe_insert(name, grade):
 ```
 ---
 
-# Lab: Exercise 3
-<!-- [A Web Journal](http://uchicagowebdev.com/weblog.php) -->
-https://github.com/UChicagoWebDev/exercise_3
-[Exercise 3 on GitHub Classroom](https://classroom.github.com/a/RZGJC6lm)
+# Exercise 3
+
+[A Web Journal](https://github.com/UChicagoWebDev/web-development-winter-2025-assignments-2-0-assignments/tree/main/3_take-home-weblogp)
+
+
