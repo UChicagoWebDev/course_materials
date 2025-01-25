@@ -199,6 +199,9 @@ https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 ![LAMP Stack diagram](images/lamp_architecture.png "LAMP Architecture Diagram")
 ---
 
+# Act Break
+---
+
 # Lab: Working with Form Submissions
 When the PHP script is run, it has access to information about the HTTP request that triggered it. See this page for an example:
 
@@ -309,8 +312,11 @@ def unsafe_insert(name, grade):
 ```
 ---
 
+# Act Break
+---
+
 # Exercise 3
 
-[A Web Journal](https://github.com/UChicagoWebDev/web-development-winter-2025-assignments-2-0-assignments/tree/main/3_take-home-weblogp)
+[A Web Journal](https://github.com/UChicagoWebDev/web-development-winter-2025-assignments-2-0-assignments/tree/main/3_take-home-weblog)
 
 
