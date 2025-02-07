@@ -38,17 +38,5 @@ function walkFive(query) {
     addRelated(r);
     return r;
   });
-  randomResultPromise.then((r)=>{
-    return getRelatedSearches(r);
-  })
-  .then((related) => {return pickRandomSuggestion(related)})
-  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
-  .then((related) => {return pickRandomSuggestion(related)})
-  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
-  .then((related) => {return pickRandomSuggestion(related)})
-  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
-  .then((related) => {return pickRandomSuggestion(related)})
-  .then((r)=>{addRelated(r); return getRelatedSearches(r)})
-
   // TODO: Implement the rest
 }
