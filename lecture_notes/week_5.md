@@ -2,6 +2,7 @@ class: center, middle
 # MPCS 52553: Web Development
 ## Week 5: Async and APIs
 ---
+
 class: agenda
 # Asynchronous Javascript
 - setTimeout
@@ -9,24 +10,31 @@ class: agenda
 - Promises
 - `fetch`
 - `async` and `await`
+
 # Python and Flask
 - Choosing Frameworks
+
 # Labs
 - SetTimeout: Egg Timer
 - Fetch and Promises: Random Concept Walk
 - APIs and Flask: Row Row Row Your Boat API
 ---
+
 # Asynchronous Javascript
 ![Time Turner from Harry Potter](images/time_turner.jpeg)
+
 ???
+
 Show of hands, who here has written asynchronous or concurrent code before? You
 might have used threads in C, or a library with “Worker” or “Executor” in the
 name.
+
 OK, some of you. Was that easy? Nod your head for yes, concurrency is easy,
 shake your head for no, concurrency is hard. Right, it’s hard. There’s a reason
 concurrency is always taught in the last lecture or two of your programming
 classes.
 ---
+
 # Synchronous Javascript
 Remember, the first version of Javascript was written by one person in 10 days
 in 1994.
@@ -34,6 +42,7 @@ in 1994.
 ### Straightforward, simple.
 ### Doesn’t demand browsers or client machines support multi-threading.
 ---
+
 # When is Synchronous Too Slow?
 ![Dark Helmet from Spaceballs (1987)](images/ludicrous_speed.jpg)
 ???
@@ -41,9 +50,11 @@ in 1994.
 - Manipulating a large or deeply-nested DOM tree
 - Any HTTP request
 ---
+
 # When is Synchronous Too Slow: HTTP
 ## ![Network tab showing Google.com taking > 300ms to load](images/google_load.png)
 ---
+
 # setTimeout
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 ```javascript
@@ -55,6 +66,7 @@ console.log("Howdy!");
 Howdy!
 Hello!
 ---
+
 # Lab: Egg Timer
 Make a page with a text entry field and a button called 'Set Timer'. When a user
 puts a number in the field and clicks the button, wait that many seconds then
@@ -67,14 +79,17 @@ let myGreeting = setTimeout(function () {
 console.log("Howdy!");
 ```
 ---
+
 # The Javascript Event Loop
 ![Javascript Event Loop](images/event_loop.gif)
 ## https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 ---
+
 # Lab: Sequential Asynchronous Functions
 The time passed to setTimeout is a minimum, not a guarantee. What are some ways
 we could can we make asynchronous calls happen in succession?
 ---
+
 # Callback Heck
 ```javascript
 let threeThings = setTimeout(function oneThing() {
@@ -88,10 +103,12 @@ let threeThings = setTimeout(function oneThing() {
 }, 0)
 ```
 ---
+
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 ## ![Pinky Swear](images/promise.jpg)
 ---
+
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 ```javascript
@@ -113,6 +130,7 @@ executed by the interpreter. That makes it a lot more readable and maintainable.
 Remember that your primary audience when you write software is for other humans
 to read, more than for a machine to execute.
 ---
+
 # Promises
 When a handler function returns a value, it is passed as an argument to the next
 handler(s) in a chain:
@@ -130,6 +148,7 @@ Promise.resolve(0)
 // 3
 ```
 ---
+
 # An Example Promise
 ```javascript
 function myAsyncFunction(url) {
@@ -146,6 +165,7 @@ You pass executor two functions, **resolve** and **reject**.
 Resolve is your success handler, and its return value is passed to any following `then` block.
 Reject is your failure handler, and its return value is passed to any following `catch` block.
 ---
+
 # Promise Guarantees
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#Guarantees
 ![Promise Guarantees](images/promise_guarantees.png)
@@ -155,12 +175,14 @@ Unlike "old-style" _passed-in_ callbacks, a promise comes with some guarantees:
   Callbacks added with `then()` even after the success or failure of the asynchronous operation, will be called, as above.
 - Multiple callbacks may be added by calling `then()` several times. Each callback is executed one after the another, in the order in which they were inserted.
 ---
+
 .floatRight[![Burger and order tickets on a diner counter](images/gettyimages-78324574-612x612.jpeg)]
 # Promise Guarantees
 You can think of Promises as separate orders getting filled on the side.
 You can always add a slice of pie to your order, whether or not they have
 cooked your entree yet.
 ---
+
 # Promise Failure
 ```javascript
 doSomething()
@@ -175,12 +197,13 @@ doSomething()
   })
   .catch(failureCallback);
 ```
-???
+--
 Another nice thing they do is return errors if they’re passed one
 So errors propagate down the chain the way they would down the stack and you can
 handle them once at the end
 ## Here if any one of the functions fails you will hit the failureCallback
 ---
+
 # When do we get our value back out of the promise?
 ```
 x = new Promise(...)
@@ -188,6 +211,7 @@ x = new Promise(...)
 return x+2;
 ```
 ---
+
 # When do we get our value back out of the promise?
 ![That's the neat part, you don't](https://i.imgflip.com/7lawfu.jpg)
 ---
@@ -212,6 +236,7 @@ request.then((result) => {
 }).then ...
 ```
 ---
+
 # Async and Await
 Define a function with the `async` keyword:
 - Always goes directly into the side execution queue
@@ -219,9 +244,11 @@ Define a function with the `async` keyword:
 - Can use the `await` keyword inside it
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await
 ---
+
 # Lab: Random Concept Walk with Async
 examples/week_5/randomwalk.html
 ---
+
 # Python and Flask
 **[Editorial]** We're now more than halfway through the course, and going to start to
 depart from pure standards or tools chosen for their historical importance.
@@ -233,6 +260,7 @@ popular web frameworks written in Ruby (Rails, Sinatra), Python (Django, Flask),
 and even Javascript itself (Node). There are web frameworks for newer languages
 like Go (Gorilla, Gin) or Rust (Actix, Iron), and a friend even made a popular
 [web framework for Fortran](https://fortran.io/).
+
 Arguments about what's the "best" language and framework are contentious because
 of the same kinds of positive feedback loops we've discussed around browsers
 and the HTML spec. How _valuable_ my skills and experience with a given language
@@ -241,6 +269,7 @@ other developers. That makes discussions frequently generate more light than
 heat. The truth is there are lots of perfectly good ways to write a web
 application, and we should hold our choices somewhat lightly.
 ---
+
 # Python and Flask
 That said, sometimes you do have to just pick something.
 https://www.python.org/
@@ -253,6 +282,7 @@ Similarly, we're going to use Flask because it's widely used, and also
 lightweight and relatively un-opinionated about how to structure web
 applications.
 ---
+
 # Lab: Row Row Row Your Boat API
 If you already have an earlier version of Python you use for other projects, you
 may want to install [pyenv](https://github.com/pyenv/pyenv) first.
@@ -266,8 +296,10 @@ def hello_world():
     return 'Hello, World!'
 ```
 ---
+
 # This is as far as we got on Week 5 – pushing the content below to Week6
 ---
+
 # Cookies
 One disadvantage of web browsers as an execution environment is security: users
 are constantly downloading and executing arbitrary, untrusted Javascript code
@@ -285,6 +317,7 @@ to make them inaccessible with Javascript.
 Here's a good example of reading and writing cookies with Flask:
 https://stackoverflow.com/a/46664792
 ---
+
 # Token-Based Authentication
 Another thing that API designers will do, especially for APIs that won't just be
 used in the browser, is to have the user enter their secure credentials once,
@@ -297,6 +330,8 @@ The API will then store those access tokens on the server and check whether
 incoming requests (1) have a token (2) that the server knows about and (3) has
 not yet expired.
 ## ![Token-Based Authentication](images/token_auth.jpg)
+---
+
 # Magic Links
 Long, strong passwords can be clumsy to enter, especially on mobile devices
 (which may be powered by the same API as the web app!).
