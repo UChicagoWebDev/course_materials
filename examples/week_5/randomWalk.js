@@ -4,7 +4,7 @@ function getRelatedSearches(query) {
   const bing_api_key = BING_API_KEY;
   let queryurl = bing_api_endpoint + "?q=" + encodeURIComponent(query);
   let walkHeaders = new Headers();
-  walkHeaders.append("Ocp-Apim-Subscription-Key", BING_API_KEY);
+  walkHeaders.append("Ocp-Apim-Subscription-Key", bing_api_key);
   walkHeaders.append("Accept", "application/json");
   walkHeaders.append("Content-Type", "application/json");
   const myInit = {
@@ -34,7 +34,7 @@ function walkFive(query) {
   let suggestionsPromise = getRelatedSearches(query);
   
   randomResultPromise = suggestionsPromise.then((related) => {
-    r = pickRandomSuggestion(related);
+    let r = pickRandomSuggestion(related);
     addRelated(r);
     return r;
   });

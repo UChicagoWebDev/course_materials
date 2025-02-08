@@ -14,6 +14,8 @@ async function getRelatedSearchesWithAsync(query) {
   let response = await fetch(queryurl, myInit);
   // TODO: Implement the rest
 
+  let obj = await response.json()
+  return obj.relatedSearches;
 }
 function pickRandomSuggestionWithAsync(suggestions) {
   let random = Math.floor(Math.random() * suggestions.length);
@@ -22,6 +24,10 @@ function pickRandomSuggestionWithAsync(suggestions) {
   return selected;
 }
 async function walkFiveWithAsync(query) {
-  let suggestions = await getRelatedSearchesWithAsync(query)
-  // TODO: Implement the rest
+  let newQuery = query
+  for(i=0; i<5; i++) {
+    let suggestions = await getRelatedSearchesWithAsync(newQuery)
+    newQuery = pickRandomSuggestionWithAsync(suggestions)
+    addRelated(newQuery)
+  }
 }
