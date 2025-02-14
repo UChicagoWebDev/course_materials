@@ -46,9 +46,9 @@ https://en.wikipedia.org/wiki/Single-page_application
 
 # Path, Routing, and History
 Look at our example application in `mpa`: 
-https://github.com/UChicagoWebDev/course_lectures/tree/main/examples/week_6/mpa
+https://github.com/UChicagoWebDev/course_materials/tree/main/examples/week_6/mpa
 ## We have modified it to simulate it being very slow to load:
-https://github.com/UChicagoWebDev/course_lectures/blob/main/examples/week_6/mpa/app.py#L10
+https://github.com/UChicagoWebDev/course_materials/blob/main/examples/week_6/mpa/app.py#L10
 ![](images/mpa_sleep.png)
 ---
 
