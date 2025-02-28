@@ -1,4 +1,5 @@
--- sqlite3 weblog.sqlite3 < 20200224T184700-create_tables.sql
+-- sqlite3 weblog.sqlite3 < 2025-02-24-T0900-create_tables.sql
+
 create table posts (
   id INTEGER PRIMARY KEY,
   slug VARCHAR(30) NOT NULL,

@@ -22,6 +22,7 @@ database is structured is a critical part of their design. And as database
 software has gotten more mature, larger and larger teams have moved away from
 having dedicated database administrators (DBAs) and towards putting the database
 under the control of web application engineers.
+
 (There are more DBAs then ever
 [BLS Statistics](https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm#tab-1),
 but they tend to work on bigger databases, which are of course now bigger then
@@ -72,6 +73,7 @@ is structured you might need to:
 1. Change the application code to read from the new table and stop writing to
    the old one
 1. Drop the old table
+
 ## https://firstround.com/review/shims-jigs-and-other-woodworking-concepts-to-conquer-technical-debt/
 ---
 
@@ -81,6 +83,7 @@ comments tables from Exercise 3, and to insert some sample data. Let's say we
 want to add a new feature where users (with some `user_id`) can `like` posts and
 comments.
 --
+
 So we know we'll need a `likes` table. We could let it link to posts and
 comments separately with `post_id` and `comment_id` columns. But maybe thinking
 about likes makes us realize the posts and comments have lots of behaviors in
