@@ -1,15 +1,15 @@
 // import {useState} from 'react'
 
-function Splash() {
+function Splash({navHandler}) {
   return (
 <div className="splash container"> {/*  TODO: Show me only on "/"  */}
   <div className="splashHeader">
     <div className="loginHeader">
       <div className="loggedOut"> {/*  TODO: Show me only to logged-out users  */}
-        <a>Login</a>
+        <a onClick={()=>{navHandler("profile")}}>Login</a>
       </div>
       <div className="loggedIn"> {/*  TODO: Show me only to logged-in users  */}
-        <a className="welcomeBack">
+        <a className="welcomeBack" onClick={()=>{navHandler("profile")}}>
           <span className="username">Welcome back,  Username !</span>
           <span className="material-symbols-outlined md-18">person</span>
         </a>
@@ -62,7 +62,7 @@ function Profile() {
         <button>update</button>
         <label for="repeat_password">Repeat: </label>
         <input type="password" id="repeat_password" />
-        <button className="exit goToSplash">Cool, let's go!</button>
+        <button className="exit goToSplash" onClick={()=>{navHandler("splash")}}>Cool, let's go!</button>
         <button className="exit logout">Log out</button>
       </div>
     </div>
@@ -174,12 +174,14 @@ function Room() {
 )}
 
 function App() {
+  const [page, setPage] = React.useState("splash")
+
   return (
     <>
-    <Splash />
-    <Profile />
-    <Login />
-    <Room />
+    {page == "splash" && <Splash navHandler={setPage} />}
+    {page == "profile" && <Profile />}
+    {page == "login" && <Login />}
+    {page == "room" && <Room />}
     </>
   );
 }
