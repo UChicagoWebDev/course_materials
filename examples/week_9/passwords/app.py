@@ -52,7 +52,7 @@ def signup():
     # TODO: Instead, store a password hashed with a strong algorithm and with a salt and a pepper
     query = "INSERT into users (username, password) VALUES (?, ?)"
     try:
-        query_db(query, (username, hashed))
+        query_db(query, (username, password))
         return {}, 200
     except Exception as e:
         print(e)

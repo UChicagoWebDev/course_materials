@@ -6,7 +6,7 @@ class SignupAndLogin extends React.Component {
   signup = () => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    fetch("http://127.0.0.1:5000/api/signup", {
+    fetch("/api/signup", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({username: username, password: password})
@@ -21,7 +21,7 @@ class SignupAndLogin extends React.Component {
   login = () => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    fetch("http://127.0.0.1:5000/api/login", {
+    fetch("/api/login", {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({username: username, password: password})
