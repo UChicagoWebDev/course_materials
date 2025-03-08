@@ -7,7 +7,7 @@ class: agenda
 # Secure Logins
 - Assume attackers will get your DB
 - Storing secure hashes
-- Lab: Securely storing passwords with bcrypt, salt, and pepper
+- Lab: Securely storing passwords with strong hashing, salt, and pepper
 
 # Automated Testing
 - Time-consistency vs correctness
@@ -73,7 +73,7 @@ a dictionary. You might
 space-efficient format for re-use.
 ---
 
-# Password Security: Bcrypt, Salt and Pepper
+# Password Security: Strong Hashing, Salt and Pepper
 To protect against those attacks, we're going to do two things: we're going to
 use a hashing function that's **expensive to compute**, so that
 guessing passwords by brute force becomes prohibitively expensive, and we're
@@ -91,10 +91,9 @@ alongside the database contents.
 In the `/examples/week_9/passwords` directory we have a simple app that creates
 user accounts with passwords and checks whether a login was successful. Right
 now it is storing passwords in plaintext though. Modify it to:
-- Store hashes created with `bcrypt`
+- Store hashes created with a strong algorithm
 - Store a unique salt for each row that's used to create the hash
 - Incorporate a pepper stored in a config file
-https://github.com/pyca/bcrypt/
 ---
 
 class: bigquote
