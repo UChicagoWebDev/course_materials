@@ -26,6 +26,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_com
 ![CSS Diner](images/diner.png "CSS Diner Home Page")
 ---
 
+# Act Break
+---
+
 # Modern Layouts
 [The New York Times](https://nytimes.com)
 ![New York Times Home Page](images/nytimes.png "New York Times Home Page")
@@ -62,6 +65,9 @@ column elements, and allow elements like headers to span multiple columns.
 ![Example Flexbox Layout](images/flexbox.png "Example Flexbox Layout")
 ---
 
+# Act Break
+---
+
 # CSS Grid
 [Basic Concepts of Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 [CSS Grid - Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
@@ -82,7 +88,7 @@ In addition to the one-dimensional versus two-dimensional distinction, there is 
 Grid works from the layout in. When you use CSS Grid Layout you create a layout and then you place items into it, or you allow the auto-placement rules to place the items into the grid cells according to that strict grid. It is possible to create tracks that respond to the size of the content, however, they will also change the entire track.
 ---
 
-# Lab: uchicago.edu Layout
+# Let's Examine: uchicago.edu Layout
 [uchicago.edu](uchicago.edu)
 ![UChicago.edu Home Page](images/uchicago.png "uchicago.edu home page")
 
