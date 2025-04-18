@@ -66,47 +66,57 @@ for example by a mouse click or by tapping the screen in a web browser.
 ![HTTP response diagram showing protocol version, status code, status message, and headers](images/http_response.png "HTTP response diagram")
 ---
 
-# Lab: HTTP Exercises
+# Let's Examine: HTTP Messsages
 
-`curl` - [cURL (Wikipedia)](https://en.wikipedia.org/wiki/CURL)
+We can send and receive HTTP messages directly using the command line tool [cURL (Wikipedia)](https://en.wikipedia.org/wiki/CURL).
+
+`curl -i http://uchicagowebdev.com`
 
 `curl -i https://uchicagowebdev.com`
+---
 
---
+# Let's Examine: HTTP Messsages
 
 ```
 HTTP/1.1 200 OK
-Date: Fri, 07 Apr 2023 20:23:49 GMT
-Server: Apache/2.4.56 () OpenSSL/1.0.2k-fips PHP/8.0.27
+Date: Fri, 11 Apr 2025 18:12:52 GMT
+Server: Apache/2.4.58 () OpenSSL/1.0.2k-fips PHP/8.0.30
 Upgrade: h2,h2c
 Connection: Upgrade
-Last-Modified: Sun, 19 Mar 2023 21:27:37 GMT
-ETag: "252-5f7477aba1131"
+Last-Modified: Fri, 04 Apr 2025 20:47:18 GMT
+ETag: "332-631f9fdfb81ed"
 Accept-Ranges: bytes
-Content-Length: 594
+Content-Length: 818
 Content-Type: text/html; charset=UTF-8
+
 <html>
     <head>
         <title>Web Development</title>
         <style>
-            body: {width: 960px; margin: auto; padding-top: 2em;}
+            body {width: 960px; margin: auto; padding-top: 2em;}
         </style>
-    </head>
+    </head> 
     <body>
         <titlebar>
             <h1>Web Development</h1>
-            <h3>MPCS 52553 - Winter Quarter 2023</h3>
+            <h3>MPCS 52553 - Winter Quarter 2025</h3>
         </titlebar>
         <main>
             <ul>
-                <li><a href="course_lectures/remark.html">Lecture Notes</a></li>
+                <li><a href="syllabus.md">Syllabus</a></li>
+                <li><a href="lecture_notes/">Lecture Notes</a></li>
                 <li><a href="examples">Labs &amp; In-Class Examples</a></li>
-		<li><a href="students">Student Pages</a></li>
-	    </ul>
+                <li><a href="assignments">Weekly Programming Assignments</a></li>
+                <li><a href="final_project">Final Project</a></li>
+		        <li><a href="students">Student Pages</a></li>                
+	        </ul>
         </main>
     </body>
 </html>
 ```
+---
+
+# Lab 3-1: Writing HTTP Responses with Python
 ---
 
 # Web Servers: Apache
@@ -146,6 +156,42 @@ If no, send a 404 Response
 
 ---
 
+# Lab 3-2: Serving Static Files
+---
+
+# Forms and Submissions
+
+> Web forms are one of the main points of interaction between a user and a website or application. Forms allow users to enter data, which is generally sent to a web server for processing and storage or used on the client-side to immediately update the interface in some way (for example, add another item to a list, or show or hide a UI feature).
+> 
+> A web form's HTML is made up of one or more form controls (sometimes called widgets), plus some additional elements to help structure the overall form — they are often referred to as HTML forms. The controls can be single or multi-line text fields, dropdown boxes, buttons, checkboxes, or radio buttons, and are mostly created using the &lt;input&gt; element, although there are some other elements to learn about too.
+> 
+> Form controls can also be programmed to enforce specific formats or values to be entered (form validation), and paired with text labels that describe their purpose to both sighted and visually impaired users.
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form
+---
+
+# Lab 3-3: Receiving Form Data
+---
+
+# Sanitizing User Input
+
+We have to be careful with user input though! Try POSTing:
+
+`<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
+
+---
+
+# Sanitizing User Input
+If we are going to include user input in our response, we have to make sure any 
+HTML is escaped and can't be interpreted by the browser as HTML. 
+
+# Cookies
+
+> A cookie (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is stateless.
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
+--- 
+
 # Server-Side Rendering
 ![Diagram: Serving Static HTML over HTTP](images/diagram_http_abstraction.png "Serving Static HTML over HTTP")
 
@@ -165,23 +211,6 @@ Parse out the path, headers, query variables, body, etc
 Send a new Response
 ```
 ---
-# Lab: Server-Side Rendering
-Copy the `<yourname>.html` file you uploaded to `http://uchicagowebdev.com/students/`
-in Week 1 and rename the copy `<yourname>.php`
-
-Add some expressions to be evaluated server-side inside `<?php ?>` tags.
-- Use `rand` ([https://www.php.net/rand](https://www.php.net/rand)) to generate
-a random number. Refresh the page to see the number change.
-- Use `getenv` ([https://www.php.net/getenv](https://www.php.net/getenv)) to get
-the value of `HTTP_USER_AGENT` and tell you what browser is visiting the page.
-
-Upload the result again with:
-```bash
-scp <yourname>.php student@uchicagowebdev.com:/var/www/html/students/
-```
-
-The password is pinned in Slack
----
 
 # The LAMP Stack
 One very popular thing you might want to do with your program that responds to
@@ -197,41 +226,6 @@ popular such configuration of these pieces was the
 https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 
 ![LAMP Stack diagram](images/lamp_architecture.png "LAMP Architecture Diagram")
----
-
-# Act Break
----
-
-# Lab: Working with Form Submissions
-When the PHP script is run, it has access to information about the HTTP request that triggered it. See this page for an example:
-
-[http://uchicagowebdev.com/examples/week_3/post_unsafe.php](http://uchicagowebdev.com/examples/week_3/post_unsafe.php)
-
-[code on GitHub](https://github.com/UChicagoWebDev/course_materials/blob/main/examples/week_3/post_unsafe.php)
-
---
-
-We have to be careful with user input though! Try POSTing:
-
-`<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
----
-
-# Lab: Working with Form Submissions
-If we are going to include user input in our response, we have to make sure any 
-HTML is escaped and can't be interpreted by the browser as HTML. 
-
-Let's try again:
-
-[http://uchicagowebdev.com/examples/week_3/post_safely.php](http://uchicagowebdev.com/examples/week_3/post_safely.php)
-
-`<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
-
---
-
-Line 12 here does the work: 
-
-https://github.com/UChicagoWebDev/course_materials/blob/main/examples/week_3/post_safely.php#L12
-
 ---
 
 # Databases
@@ -294,7 +288,7 @@ cur.execute("INSERT INTO birthdays_table VALUES(:name, :year)", data)
 ```
 ---
 
-# Lab: DIY SQL Injection
+# Let's Examine: DIY SQL Injection
 ```
 cd examples/week_3
 python3 -i
@@ -312,7 +306,7 @@ def unsafe_insert(name, grade):
 ```
 ---
 
-# Act Break
+# Lab 3-5: POSTing to the Wall
 ---
 
 # Exercise 3
