@@ -2,24 +2,30 @@ uchicagowebdevclass: center, middle
 # MPCS 52553: Web Development
 ## Week 4: Javascript and REST APIs
 ---
+
 class: agenda
 # Why We Javascript
+
 # Classical Javascript
 - `<script>` tags
 - `console.log`, `alert`, event handlers
+
 # DOM Manipulation
 - selectors, modifying attributes
 - adding and removing nodes
+
 # ES6
 - "wats"
 - `const` and `let`
+
 # AJAX and REST APIs
 ---
+
 # Why We Javascript
 ## "Competition is a click away."
 [Google Response to Antitrust Concerns, 2009 (NYT)](https://www.nytimes.com/2009/06/29/technology/companies/29google.html)
-
 ---
+
 # Why We Javascript
 > The basic advice regarding response times has been about the same for [fifty]
 years
@@ -42,6 +48,7 @@ important if the response time is likely to be highly variable, since users will
 then not know what to expect.
 [Response Times: The 3 Important Limits (Nielsen Norman Group)](https://www.nngroup.com/articles/response-times-3-important-limits/)
 ---
+
 # Why We Javascript
 ###It is very hard to get HTTP responses back in less than 100 ms.
 So if you're doing everything right, you get 1 request that you can send out and
@@ -49,12 +56,14 @@ back without interrupting the user's flow. And if you have to reload the whole
 page, with all its HTML, CSS, and images, forget about it. You'll easily be
 spending hundreds or thousands of milliseconds.
 ---
+
 # Why We Javascript
 > Netscape quickly realized that the Web needed to become more dynamic. Even if
 you simply wanted to check that users entered correct values in a form, you
 needed to send the data to the server in order to give feedback.
 <footer>Speaking JS <cite>O'Reilly Media, http://speakingjs.com/es5/ch04.html</cite></footer>
 ---
+
 # Classical Javascript
 ## [Script Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#Examples)
 - External file or inline
@@ -62,16 +71,23 @@ needed to send the data to the server in order to give feedback.
 - Evaluated immediately
 - Global scope
 ---
+
 # Classical Javascript
+
 ## [HTML Event Handlers](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers#HTML_onevent_attributes)
 - onclick
 - onkeypress
 - onfocus
+
 ## Examples
 - [Alert Example](http://uchicagowebdev.com/examples/week_4/alert.html)
 - [Console Log Example](http://uchicagowebdev.com/examples/week_4/console.html)
 ---
-# Lab: Logging events to the Console
+
+# Lab 4-1: Logging events to the Console
+
+https://github.com/UChicagoWebDev/lab-4
+
 ```
 <script>
 var i =0;
@@ -82,14 +98,18 @@ function increment() {
 </script>
 ```
 ---
+
 # DOM Manipulation
 ### [DOM Element API](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 - [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 - [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 - [setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 ---
-# Lab: Buttons to change the styling of a `<div>`
-[dommanipulation.html](https://uchicagowebdev.com/examples/week_4/dommanipulation.html)
+
+# Lab 4-2: Buttons to change the styling of a `<div>`
+
+https://github.com/UChicagoWebDev/lab-4
+
 ```
 <div id="testing_ground">Watch me change colors!</div>
 <input type="button" onclick="recolor('testing_ground')" value="Colorize!"></input>
@@ -101,6 +121,7 @@ function recolor(id) {
 </script>
 ```
 ---
+
 # DOM Manipulation
 ### [DOM Element API](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 - [children](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/children)
@@ -110,9 +131,13 @@ function recolor(id) {
 - [cloneNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
 - [document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 ---
-# Lab: Buttons to add new `<li>`s to a List
-[dommanipulation.html](https://uchicagowebdev.com/examples/week_4/dommanipulation.html)
+
+# Lab 4-3: Buttons to add new `<li>`s to a List
+
+https://github.com/UChicagoWebDev/lab-4
+
 ---
+
 # ES6
 ### [Wat - A lightning talk by Gary Bernhardt from CodeMash 2012](https://www.destroyallsoftware.com/talks/wat)
 (start at 1:20)
@@ -120,6 +145,7 @@ function recolor(id) {
 Good explanation why the above weird behaviors happen.
 ### [Javascript Quirks and Elegant Features](http://speakingjs.com/es5/ch03.html)
 ---
+
 # ES6
 ### ECMAScript Versions
 1. June 1997
@@ -130,6 +156,7 @@ Good explanation why the above weird behaviors happen.
 6. June **2015**
 [ECMAScript Versions (Wikipedia)](https://en.wikipedia.org/wiki/ECMAScript#Versions)
 ---
+
 # ES6 New Features
 - [`let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
@@ -138,11 +165,15 @@ Good explanation why the above weird behaviors happen.
   and [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - Promises (for next week)
 ---
+
 # AJAX and REST APIs
 ### [Using XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 ### [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 ---
-# Lab: Exercise 4
+
+# Exercise 4
 https://uchicagowebdev.com/examples/week_4/mood_board/
-[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/57047/assignments/657292)
-[Exercise 4 on GitHub Classroom](https://classroom.github.com/a/qmUxZhJ3)
+
+[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/62339/assignments/738571)
+
+[Exercise 4 on GitHub](https://github.com/UChicagoWebDev/exercise-4)
