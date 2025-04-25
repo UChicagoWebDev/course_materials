@@ -37,34 +37,49 @@ classes.
 
 # Synchronous Javascript
 Remember, the first version of Javascript was written by one person in 10 days
-in 1994.
-### Javascript is Single-Threaded.
-### Straightforward, simple.
-### Doesn’t demand browsers or client machines support multi-threading.
+in 1995.
+
+In that conext, it makes sense that Javascript is **single-threaded**:
+- Straightforward, simple.
+- Doesn’t demand browsers or client machines support multi-threading.
 ---
 
 # When is Synchronous Too Slow?
 ![Dark Helmet from Spaceballs (1987)](images/ludicrous_speed.jpg)
-???
+
 - Very large computation
 - Manipulating a large or deeply-nested DOM tree
 - Any HTTP request
 ---
 
 # When is Synchronous Too Slow: HTTP
-## ![Network tab showing Google.com taking > 300ms to load](images/google_load.png)
+![Network tab showing Google.com taking > 300ms to load](images/google_load.png)
+
+As we saw last week, sending an HTTP request and getting a response is almost 
+always too slow.
+
+Being single-threaded means that a function like `sleep()` would pause all 
+execution, and any javascript in the UI would not respond to user input until 
+the sleep was over.
 ---
 
 # setTimeout
-https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+The simplest way to make javascript asynchronous is with [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+).
+Its semantics are "wait this long *in the background*, then run this function."
+
 ```javascript
 let myGreeting = setTimeout(function () {
   console.log("Hello!");
 }, 2000);
 console.log("Howdy!");
 ```
+
+Output:
+```console
 Howdy!
 Hello!
+```
 ---
 
 # Lab: Egg Timer
@@ -80,9 +95,18 @@ console.log("Howdy!");
 ```
 ---
 
+# Wait But How
+We just heard that javascript is single-threaded.
+---
+
 # The Javascript Event Loop
 ![Javascript Event Loop](images/event_loop.gif)
-## https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
+We don't have `sleep()`, but we can push the snooze button a **lot**. In a 
+modern browser under no load, 200+ times a second. Recall that your eyes only 
+work at 30-60 FPS.
 ---
 
 # Lab: Sequential Asynchronous Functions
@@ -106,11 +130,28 @@ let threeThings = setTimeout(function oneThing() {
 
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-## ![Pinky Swear](images/promise.jpg)
+
+![Pinky Swear](images/promise.jpg)
+---
+
+class: gallery
+# Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+
+I wish they weren't called "Promises," which has misleading connotations. 
+
+A better metaphor would be "Plans."
+
+![Coach's Soccer Plan](images/plan.avif)
+![Coach's Soccer Plan](images/flowchart.webp)
+![Coach's Soccer Plan](images/thymbra.png)
 ---
 
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
 ```javascript
 new Promise((resolve, reject) => {
   console.log("one thing");
@@ -123,8 +164,10 @@ new Promise((resolve, reject) => {
     console.log("a third thing");
   });
 ```
+
 The nice thing `then()` does is it also returns a Promise. That lets you chain
 successive calls together.
+
 Now there's a correspondence between how the code reads on the page and how it's
 executed by the interpreter. That makes it a lot more readable and maintainable.
 Remember that your primary audience when you write software is for other humans
@@ -161,7 +204,9 @@ function myAsyncFunction(url) {
   });
 }
 ```
+
 You pass executor two functions, **resolve** and **reject**.
+
 Resolve is your success handler, and its return value is passed to any following `then` block.
 Reject is your failure handler, and its return value is passed to any following `catch` block.
 ---
@@ -169,14 +214,17 @@ Reject is your failure handler, and its return value is passed to any following 
 # Promise Guarantees
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#Guarantees
 ![Promise Guarantees](images/promise_guarantees.png)
+
 ???
+
 Unlike "old-style" _passed-in_ callbacks, a promise comes with some guarantees:
 - Callbacks will never be called before the completion of the current run of the Javascript event loop.
   Callbacks added with `then()` even after the success or failure of the asynchronous operation, will be called, as above.
 - Multiple callbacks may be added by calling `then()` several times. Each callback is executed one after the another, in the order in which they were inserted.
 ---
 
-.floatRight[![Burger and order tickets on a diner counter](images/gettyimages-78324574-612x612.jpeg)]
+![Burger and order tickets on a diner counter](images/gettyimages-78324574-612x612.jpeg)
+
 # Promise Guarantees
 You can think of Promises as separate orders getting filled on the side.
 You can always add a slice of pie to your order, whether or not they have
@@ -197,11 +245,14 @@ doSomething()
   })
   .catch(failureCallback);
 ```
+
 --
-Another nice thing they do is return errors if they’re passed one
+
+Another nice thing they do is return errors if they’re passed one.
 So errors propagate down the chain the way they would down the stack and you can
-handle them once at the end
-## Here if any one of the functions fails you will hit the failureCallback
+handle them once at the end.
+
+Here if any one of the functions fails you will hit the failureCallback.
 ---
 
 # When do we get our value back out of the promise?
@@ -210,10 +261,18 @@ x = new Promise(...)
 (???)
 return x+2;
 ```
+--
+
+![That's the neat part, you don't](https://i.imgflip.com/7lawfu.jpg)
 ---
 
-# When do we get our value back out of the promise?
-![That's the neat part, you don't](https://i.imgflip.com/7lawfu.jpg)
+class: gallery
+# Promises are a one-way ticket
+
+Like going to the underworld or the Phantom Zone
+
+![Persephone in the Underworld](images/persephone.jpg)
+![Superman Comic Book Cover Depicting the Phantom Zone](images/phantom_zone.jpg)
 ---
 
 # Lab: Random Concept Walk

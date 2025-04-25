@@ -179,12 +179,24 @@ img {
   box-shadow: 0 0 0.2em rgba(255,255,255,0.8);
 }
 
-.overlay p:has( img) {
+.overlay p:has(img) {
   z-index: 0;
   width: 100%;
   float: right;
   margin-bottom: -100%;
 }
+
+.gallery p:has(img) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & img {
+    height: 8em;
+    margin: 1em;
+  }
+}
+
 .animate img {
   width: 210px;
   animation-duration: 3s;
