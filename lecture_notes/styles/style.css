@@ -197,6 +197,17 @@ img {
   }
 }
 
+.gallery-big p:has(img) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & img {
+    height: 16em;
+    margin: 1em;
+  }
+}
+
 .animate img {
   width: 210px;
   animation-duration: 3s;

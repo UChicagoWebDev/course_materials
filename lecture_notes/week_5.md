@@ -266,7 +266,7 @@ return x+2;
 ![That's the neat part, you don't](https://i.imgflip.com/7lawfu.jpg)
 ---
 
-class: gallery
+class: gallery-big
 # Promises are a one-way ticket
 
 Like going to the underworld or the Phantom Zone
