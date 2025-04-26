@@ -128,6 +128,9 @@ let threeThings = setTimeout(function oneThing() {
 ```
 ---
 
+# Act Break
+---
+
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
@@ -308,6 +311,9 @@ https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises#
 examples/week_5/randomwalk.html
 ---
 
+# Act Break
+---
+
 # Python and Flask
 **[Editorial]** We're now more than halfway through the course, and going to start to
 depart from pure standards or tools chosen for their historical importance.
@@ -366,6 +372,7 @@ from third parties. You don't really want to be storing passwords or API keys in
 places where Javascript can get to them. But you often want _some_ kind of
 persistence so the user doesn't get logged out if they refresh the page or close
 the tab.
+
 One way to do that is with
 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies),
 small files the browser stores and can then include in subsequent HTTP requests.
@@ -373,6 +380,7 @@ By default, Cookies can be restricted to only get sent to the domain that
 created them, and can be created with the
 [HttpOnly flag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies)
 to make them inaccessible with Javascript.
+
 Here's a good example of reading and writing cookies with Flask:
 https://stackoverflow.com/a/46664792
 ---
