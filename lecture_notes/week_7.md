@@ -4,13 +4,22 @@ class: center, middle
 ---
 
 class: agenda
+# Syllabus Update
+- Final Projects
+
 # Intro to React
 - Components
 - JSX
 - Props
 - State
-
 ---
+
+# Syllabus Update
+I have been experimenting this quarter with making the course more interactive by awarding more credit for in-class work (the labs) and shortening the take-home exercises. I have been happy with the results, and I'm going to extend that approach over the last few weeks of the quarter.
+
+We will keep having labs for weeks 7-9,and we will continue to have weekly exercises that extend and refactor Watch Party, instead of a separate final project you have to build from scratch. This will make sure students get credit for incorporating the techniques we learn in these last few weeks, and should substantially reduce the class workload for finals week.
+---
+
 # Introduction to React
 You will have noticed in working on Exercise 6 that it can be tedious and
 difficult when writing a single-page application to manage what **state** the
