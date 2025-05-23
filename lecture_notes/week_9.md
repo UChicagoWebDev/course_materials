@@ -1,6 +1,6 @@
 class: center, middle
 # Web Development Winter 2022
-## Week 9: Security, Testing, Production \[WIP\]
+## Week 9: Security, WebSockets, and Deployment
 ---
 
 class: agenda
@@ -8,6 +8,11 @@ class: agenda
 - Assume attackers will get your DB
 - Storing secure hashes
 - Lab: Securely storing passwords with strong hashing, salt, and pepper
+
+# WebSockets
+- How they work
+- On your server
+- On your client
 
 # Automated Testing
 - Time-consistency vs correctness
@@ -20,8 +25,6 @@ class: agenda
 # Deployment to Cloud Hosting
 - AWS Free Usage Tier
 - Heroku Free Resources
-
-# Stretch: Feature Flags
 ---
 # Password Security
 You should do your best to keep your database and its contents safe. But
@@ -94,6 +97,14 @@ now it is storing passwords in plaintext though. Modify it to:
 - Store hashes created with a strong algorithm
 - Store a unique salt for each row that's used to create the hash
 - Incorporate a pepper stored in a config file
+---
+
+# WebSockets
+- [WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (MDN)
+- [WebSocket Servers](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) MDN
+- [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) for Flask
+- [Writing WebSocket Client Applications](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications) (MDN)
+- [React useEffect Hook](https://react.dev/reference/react/useEffect) (React Docs)
 ---
 
 class: bigquote
