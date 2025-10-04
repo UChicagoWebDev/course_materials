@@ -1,6 +1,6 @@
 class: center, middle
 # Web Development
-## Winter 2025
+## Autumn 2025
 MPCS 52553
 ---
 
@@ -60,11 +60,11 @@ grlewis@uchicago.edu
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
 - Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Syllabus: https://canvas.uchicago.edu/courses/61092
+- Syllabus: https://canvas.uchicago.edu/courses/67344
 ---
 
 # In-Class Exercise 1
-Let's get started on Canvas: https://canvas.uchicago.edu/courses/61092/assignments/733746
+Let's get started on Canvas: https://canvas.uchicago.edu/courses/67344/assignments/733746
 ---
 
 # Objectives
@@ -78,17 +78,17 @@ Let's get started on Canvas: https://canvas.uchicago.edu/courses/61092/assignmen
 
 # Policies and Grading
 ### Exercises
-- Each week for the first six weeks (starting today!)
+- Each week for the class (starting today!)
 - Due each week before class
 - Get harder over time and build on each other, so be sure to stay current
 
 --
 
-This class is all about writing software, and your grade will be based almost 
+~~This class is all about writing software, and your grade will be based almost 
 entirely on the software you write, instead of tests or quizzes. There is a mix 
 of in-class exercises due at the end of the lecture (including one today!) and 
 take-home exercises due each week right before class. You will create a fork of 
-the course assignements repo on GitHub at https://classroom.github.com/classrooms/97002355-web-development-winter-2025 and push your submission there.
+the course assignements repo on GitHub at https://classroom.github.com/classrooms/97002355-web-development-winter-2025 and push your submission there.~~
 
 For ease of grading, please then submit the URL of your submission on Canvas.
 Exercises are graded on a ten-point scale, according to the rubric at the
@@ -109,21 +109,6 @@ to catch up if you fall too far behind. If you're struggling with the
 assignments please reach out right away on Slack or in office hours.
 Extra credit way be awarded for in-class contributions, at the instructor's
 discretion.
----
-
-# Policies and Grading
-### Final Project
-- Like an Exercise, but bigger
-- With a little extra work, makes a good portfolio piece
-
---
-
-Instead of a final exam. we'll cap the quarter off with a final project, which
-will incorporate everything we've learned into a single web application.
-Submission and grading works just like a regular exercise, except that you have
-longer to work on it and it's worth 40 points instead of 10. For those of you
-that are interested, it is also designed to be a suitable portfolio piece you
-can add to your public git profile and use while interviewing.
 ---
 
 # Policies and Grading
