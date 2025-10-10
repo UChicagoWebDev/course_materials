@@ -3,6 +3,10 @@ class: center, middle
 ## Week 2: Advanced Layout
 ---
 
+# Teaching Team
+- Trevor Austin, Lecturer
+- Geno Lewis, TA
+
 class: agenda
 # Advanced Styling
 - selectors, icons, web fonts, CSS animation

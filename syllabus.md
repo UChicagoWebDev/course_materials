@@ -6,7 +6,7 @@ This course is intended to prepare students with a general programming backgroun
 Specifically, the course will cover content layout and styling with HTML and CSS, dynamically generating page content on the web server, interacting with databases, interacting with remote resources using HTTP and REST, client-side interactivity with modern Javascript, and the creation of single-page applications.
 This course uses agile software techniques to build real, working software each week. We will work as closely as possible to how software is developed in industry, and all work is asynchronous, open-note and open-internet. Students make indivual submissions to assignments, but encouraged to discuss them amongst themselves.
 
-We have a GitHub Organization for the course at https://github.com/UChicagoWebDev. I will be posting lecture notes and slaides there, at https://github.com/UChicagoWebDev/course_materials. Course assignments are a private repo on GitHub, and you will create your own private fork for your submissions via our GitHub Classroom at https://classroom.github.com/classrooms/97002355-web-development-winter-2025.
+We have a GitHub Organization for the course at https://github.com/UChicagoWebDev. I will be posting lecture notes and slaides there, at https://github.com/UChicagoWebDev/course_materials.
 
 We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-uchicago.slack.com) for the course that everyone should join and use. That's the best place to ask questions about course content, so that the whole class can benefit from the answers.
 
@@ -26,15 +26,12 @@ We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-u
 Lecturer
 - Trevor Austin (trevoraustin@cs.uchicago.edu)
 TAs
-- Abhyas Mall (abhyas@uchicago.edu)
-- Alexandra Qi (siyuanq@uchicago.edu)
 - Geno Lewis (grlewis@uchicago.edu)
 
 ## Office Hours
-- Monday 4:30-6:30 pm (Geno)
-- Tuesday 4-6 pm (Trevor) 
-- Wednesday 4-6 pm (Abhyas)
-- Friday 10-11 am (Trevor)
+- Tuesday 11-noon (Trevor)
+- Wednesday 4-6 pm (Geno)
+- Thursday 11-noon (Trevor)
 
 Video links for hours are in the Zoom Tab on Canvas
 
