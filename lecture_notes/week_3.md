@@ -117,6 +117,8 @@ Content-Type: text/html; charset=UTF-8
 ---
 
 # Lab 3-1: Writing HTTP Responses with Python
+
+https://github.com/UChicagoWebDev/lab-3
 ---
 
 # Web Servers: Apache
@@ -153,10 +155,11 @@ If no, send a 404 Response
 ```
 
 ![Diagram: Serving Static HTML over HTTP](images/diagram_http_static.png "Serving Static HTML over HTTP")
-
 ---
 
 # Lab 3-2: Serving Static Files
+
+https://github.com/UChicagoWebDev/lab-3
 ---
 
 # Forms and Submissions
@@ -171,6 +174,8 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/
 ---
 
 # Lab 3-3: Receiving Form Data
+
+https://github.com/UChicagoWebDev/lab-3
 ---
 
 # Sanitizing User Input
@@ -178,12 +183,14 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/
 We have to be careful with user input though! Try POSTing:
 
 `<div style="position: absolute;top: 0;left: 0;width: 500;background-color: red;height: 1000;">Hahahaha!</div>`
-
 ---
 
 # Sanitizing User Input
 If we are going to include user input in our response, we have to make sure any 
 HTML is escaped and can't be interpreted by the browser as HTML. 
+
+https://github.com/UChicagoWebDev/lab-3
+---
 
 # Cookies
 
@@ -191,6 +198,11 @@ HTML is escaped and can't be interpreted by the browser as HTML.
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
 --- 
+
+# Lab 3-4: Cookies
+
+https://github.com/UChicagoWebDev/lab-3
+---
 
 # Server-Side Rendering
 ![Diagram: Serving Static HTML over HTTP](images/diagram_http_abstraction.png "Serving Static HTML over HTTP")
@@ -291,26 +303,18 @@ cur.execute("INSERT INTO birthdays_table VALUES(:name, :year)", data)
 # Let's Examine: DIY SQL Injection
 ```
 cd examples/week_3
-python3 -i
+python3 insert.py list
 ```
-```python
-import sqlite3
-con = sqlite3.connect("my_db.sqlite3")
-cur = con.cursor()
-cur.execute("CREATE TABLE students(name, grade)")
-# THIS IS BAD
-def unsafe_insert(name, grade):
-    cur.execute("insert into students (name, grade) values" +
-        "('" + name + "', '" + grade + "')")
-    con.commit()
-```
+--
+Imagine that we have a student, SBF, who got an F. What happens if he enters his name as:
+`SBF','A');--`
 ---
 
 # Lab 3-5: POSTing to the Wall
+
+https://github.com/UChicagoWebDev/lab-3
 ---
 
-# Exercise 3
+# Exercise 3: A Web Journal
 
-[A Web Journal](https://github.com/UChicagoWebDev/web-development-winter-2025-assignments-2-0-assignments/tree/main/3_take-home-weblog)
-
-
+https://github.com/UChicagoWebDev/exercise-3
