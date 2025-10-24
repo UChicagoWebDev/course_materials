@@ -132,7 +132,7 @@ function recolor(id) {
 - [document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 ---
 
-# Lab 4-3: Buttons to add new `<li>`s to a List
+# Lab 4-3: Buttons to Add New Page Elements 
 
 https://github.com/UChicagoWebDev/lab-4
 
@@ -172,8 +172,7 @@ Good explanation why the above weird behaviors happen.
 ---
 
 # Exercise 4
-https://uchicagowebdev.com/examples/week_4/mood_board/
 
-[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/62339/assignments/738571)
+[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/67344/assignments/811127)
 
 [Exercise 4 on GitHub](https://github.com/UChicagoWebDev/exercise-4)
