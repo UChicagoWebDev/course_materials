@@ -172,4 +172,6 @@ https://react.dev/learn/passing-data-deeply-with-context
 
 # Exercise 7: Watch Party 3
 
+Watch Party again, this time with React!
+
 https://github.com/UChicagoWebDev/exercise-7
