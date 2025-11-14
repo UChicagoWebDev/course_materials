@@ -4,8 +4,9 @@ class: center, middle
 ---
 
 class: agenda
-# Syllabus Update
-- Final Projects
+# Looking Ahead to Finals and End of Quarter
+- Exercises 7, 8, and 9
+- No final project
 
 # Intro to React
 - Components
@@ -14,22 +15,27 @@ class: agenda
 - State
 ---
 
-# Syllabus Update
-I have been experimenting this quarter with making the course more interactive by awarding more credit for in-class work (the labs) and shortening the take-home exercises. I have been happy with the results, and I'm going to extend that approach over the last few weeks of the quarter.
-
-We will keep having labs for weeks 7-9,and we will continue to have weekly exercises that extend and refactor Watch Party, instead of a separate final project you have to build from scratch. This will make sure students get credit for incorporating the techniques we learn in these last few weeks, and should substantially reduce the class workload for finals week.
+# Looking Ahead to Finals and End of Quarter
+As discussed, while earlier versions of this course featured a final project, 
+I have recently switched to simply having regular-sized weekly assignments 
+through the end:
+- Exercise 7, out today, is due next week on Friday Nov 21.
+- Execise 8 goes out on the 21st, but because of the Thanksgiving break is not 
+  due until two weeks later, on Friday December 5
+- Exercise 9 goes out on Dec 5, which is our last day of class. It is due at 
+  the usual time on Friday December 12, which is the last day of finals week.
 ---
 
 # Introduction to React
 You will have noticed in working on Exercise 6 that it can be tedious and
 difficult when writing a single-page application to manage what **state** the
-app is supposed to be in what elements should be displayed to the user. You have
+app is supposed to be in and what elements should be displayed to the user. You have
 to change the navigation bar, update variables, and show/hide page elements all
 manually, and trigger updates after each API callback.
 
 [React](https://reactjs.org/) is a framework for developing interactive web
 pages, and especially single-page applications, developed and released as open
-source by Facebook. The powerful thing about it (and competing frameworks like
+source by Meta (neé Facebook). The powerful thing about it (and competing frameworks like
 [Vue](https://vuejs.org/) and [Svelte](https://svelte.dev/)) is it lets you
 define how the page should look in various states, and when you update the
 state, the framework updates the page automatically for you.
@@ -39,8 +45,6 @@ mistakes.
 
 # Why React?
 
---
-
 As with our discussion of Python in week 5, there are lots of alternatives, and
 you can do great work in all of them. Try not to get emotionally invested in a
 particular stack.
@@ -49,8 +53,8 @@ particular stack.
 # Why React?
 It's the most widely-used front-end framework, and well-liked by those who have
 used it. Stats from
-[State of JS](https://2022.stateofjs.com/en-US/libraries/front-end-frameworks/):
-## ![Front-End Frameworks Usage Chart](images/frontend-frameworks.png)
+[State of JS](https://share.devographics.com/share/prerendered?localeId=en-US&surveyId=state_of_js&editionId=js2024&blockId=front_end_frameworks_ratios&params=&sectionId=libraries&subSectionId=front_end_frameworks):
+## ![Front-End Frameworks Usage Chart](images/front_end_frameworks_ratios.png)
 ---
 
 # Why React?
@@ -84,7 +88,11 @@ Just heavily optimized to only re-render the parts of the page that need to be u
 ---
 
 # One-Way Binding & Declarative UI
-https://beta.reactjs.org/learn/reacting-to-input-with-state
+It was hidden in beta for a long time, but these days the React docs have a 
+pretty good introduction to "declarative" UI, and the "imperative" style 
+they are distinguishing it from:
+
+https://react.dev/learn/reacting-to-input-with-state
 
 ---
 # Lab 7: React Tic Tac Toe
@@ -92,7 +100,7 @@ While React is useful and popular, for a long time the docs were OK at best. The
 best introduction is the [tutorial](https://reactjs.org/tutorial/tutorial.html),
 but even then it has a lot of moving parts. For reasons we'll get into, React
 relies on pre-processing the code you write, which requires running
-[Node](https://nodejs.org/en/), a separate framework that's for running for
+[Node](https://nodejs.org/en/), a separate framework that's for running
 server-side Javascript code.
 
 Instead of all that, I've followed the instructions in their low-overhead guide
@@ -100,8 +108,9 @@ to
 [add React to a website](https://reactjs.org/docs/add-react-to-a-website.html)
 to make a starter project in `examples/week_7`. We'll start there and work
 through the tutorial with it.
+
 We'll be building a simple Tic Tac Toe game like this one:
-https://codepen.io/gaearon/pen/gWWZgR?editors=0010
+https://codesandbox.io/p/sandbox/4yq6fm?file=%2Fsrc%2FApp.js
 ---
 
 # Lab 7: React Tic Tac Toe
@@ -117,10 +126,12 @@ documentation: https://reactjs.org/tutorial/tutorial.html
 ---
 
 # Lab 7: React Tic Tac Toe
+
 ### Components
-- OOP classes that can be re-used
+- object-oriented classes that can be re-used
 - Takes in parameters called `props`
 - Describes what to display in its `render` method
+
 ### JSX
 - DSL
 - Shorthand for `React.createElement(...`
@@ -129,10 +140,12 @@ documentation: https://reactjs.org/tutorial/tutorial.html
 ---
 
 # Lab 7: React Tic Tac Toe
+
 ### Props
 - Calls a component's `render` method any time they change
 - Read-only to support one-directional data flow:
   https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e
+
 ### State
 - `useState` makes a bargain with React: I promise to only update the state with the assigned setter method, and React promises to efficiently re-render my component and its children. 
 - Update with `this.setState()`
@@ -140,3 +153,23 @@ documentation: https://reactjs.org/tutorial/tutorial.html
   components inside of it too.
 - To let child components modify state, pass a handler function down to them as
   one of their `props`.
+---
+
+# Why Does React Call Them Hooks?
+React calls arrangement like `useState` "Hooks," because it's how you "hook into" React's rendering cycle. 
+
+No, it is not a good metaphor. "Plugs" or "Deals" would have worked better.
+
+![Fish Hooks](images/Fish_hooks.jpg)
+source: https://commons.wikimedia.org/wiki/File:Fish_hooks.jpg
+---
+
+# Going Deep with useContext
+https://react.dev/learn/passing-data-deeply-with-context
+
+![React documentation tree diagram of pushing context from an ancestor element to distant descendants](images/passing_data_context_far.webp)
+---
+
+# Exercise 7: Watch Party 3
+
+https://github.com/UChicagoWebDev/exercise-7

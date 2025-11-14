@@ -19,6 +19,7 @@ function makeBest(animal) {
     // TODO: push /animal to the URL bar and add this page to the history
     // "127.0.0.1/dog"
     // DOES NOT WORK: location.replace('/'+animal)
+    history.pushState(null, null, "/"+animal)
 }
 function loadAnimal() {
   // TODO: Check the URL bar on load so e.g. /cat makes cat best
