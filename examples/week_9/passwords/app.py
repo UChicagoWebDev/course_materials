@@ -48,15 +48,13 @@ def signup():
     body = request.get_json()
     print(body)
     username = body['username']
-    password = body['password'] + PEPPER
-    ph = PasswordHasher()
+    password = body['password'] 
 
-    hashed = ph.hash(password)
 
     # TODO: Instead, store a password hashed with a strong algorithm and with a salt and a pepper
     query = "INSERT into users (username, password) VALUES (?, ?)"
     try:
-        query_db(query, (username, hashed))
+        query_db(query, (username, password))
         return {}, 200
     except Exception as e:
         print(e)
@@ -71,8 +69,7 @@ def login():
     print(body)
 
     username = body['username']
-    password = body['password'] + PEPPER
-    ph = PasswordHasher()
+    password = body['password']
 
     query = "SELECT password FROM users WHERE username=?"
 
@@ -83,7 +80,7 @@ def login():
         print(result)
         print(result[0])
 
-        if result and ph.verify(result[0], password):
+        if (result and result[0] == password):
             return {}, 200
         return {}, 404
     except Exception as e:
