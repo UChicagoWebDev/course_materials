@@ -62,7 +62,7 @@ In-class exercises and quizzes are due at 8:30 pm. Take-home exercises are due a
 ## Collaboration and AI Policy
 I **strongly** encourage students to collaborate on exercises together. Additionally, students may access any resources they find helpful, including online documentation, discussion boards, and generative AI models like ChatGPT or [PhoenixAI](https://phoenixai.uchicago.edu/). For maximum learning (and for consistency with the University's academic honesty policy), we have only two requirements:
 1. You must type in your own code yourself and submit it separately. All grades are individual. You simply won't learn anywhere near as much by copy and pasting as you will by typing it out yourself.
-1. Your submissions must list anyone you worked with and any sources you consulted (e.g. Stack OverflowLinks to an external site., ChatGPT) in their README.md files.
+1. Your submissions must list anyone you worked with and any sources you consulted (e.g. Stack Overflow, links to an external site, ChatGPT) in their README.md files.
 
 ## Tentative Weekly Schedule
 
