@@ -1,4 +1,4 @@
-# Syllabus for Web Development - Winter 2025
+# Syllabus for Web Development - Winter 2026
 
 ## Course Description
 This course is intended to prepare students with a general programming background to work on teams producing modern web applications. Students will learn a strong foundation of core web technologies and protocols, an overview of the major design patterns in the history of web development, and a detailed introduction to the current industry standard. We will have an emphasis on learning from publicly-available documentation, so that students are equipped to learn new techniques and frameworks in this rapidly-evolving field.
@@ -26,12 +26,12 @@ We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-u
 Lecturer
 - Trevor Austin (trevoraustin@cs.uchicago.edu)
 TAs
-- Geno Lewis (grlewis@uchicago.edu)
+- Abhyas Mall (mailto:abhyas@uchicago.edu)
 
 ## Office Hours
 - Tuesday 11-noon (Trevor)
-- Wednesday 4-6 pm (Geno)
 - Thursday 11-noon (Trevor)
+- Abhyas TBA
 
 Video links for hours are in the Zoom Tab on Canvas
 
@@ -44,7 +44,7 @@ Video links for hours are in the Zoom Tab on Canvas
 - React Documentation: https://reactjs.org/docs/getting-started.html
 
 ## Assignments and Grading
-Students will be expected to complete small assignments in class, more substantial take home exercises due the next week before class, and a final project due by the end of finals week, March 14, 2025.
+Students will be expected to complete small assignments in class ("Labs") and more substantial take home exercises ("Exercises") due the next week before class. There are 9 weekly take-home exercsies, with the last one due on the last day of finals week: https://canvas.uchicago.edu/courses/67482/assignments. There is no final project or final exam.
 
 ## Grading Policy
 Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentge of all possible points students have earned on their quizzes, exercises, and final projects:
