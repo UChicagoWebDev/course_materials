@@ -25,6 +25,7 @@ We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-u
 ## Contact Info and Office Hours
 Lecturer
 - Trevor Austin (trevoraustin@cs.uchicago.edu)
+
 TAs
 - Abhyas Mall (mailto:abhyas@uchicago.edu)
 
@@ -104,12 +105,16 @@ Week 6 (2/15/25):
 
 Week 7 (2/22/25):
 - Intro to React: Components, Props, State, JSX
-- Final Project
+
 Week 8 (3/1/25):
-- React Classes, Composability, Database migrations
+- Node
+- Javscriupt Modules
+- Typescript
+- CORS
 
 Week 9 (3/8/25):
-- Keypress handling, Continuous Integration, Cloud Hosting
+- Websockets
+- Security and Cloud Hosting
 
 ## Course Prerequisites
 Students must be fluent in at least one programming language, preferably an object-oriented language. This course requires competency in Unix and Linux. Please plan to attend the MPCS Unix Bootcamp (https://masters.cs.uchicago.edu/page/mpcs-unix-bootcamp) or take the online MPCS Unix Bootcamp Course on Canvas if you do not have familiarity working on the command line in *nix environments.
