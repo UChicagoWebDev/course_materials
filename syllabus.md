@@ -105,16 +105,19 @@ Week 6 (2/15/25):
 
 Week 7 (2/22/25):
 - Intro to React: Components, Props, State, JSX
+- Exercise #7: Watch Party 3: Chain Reaction
 
 Week 8 (3/1/25):
 - Node
 - Javscriupt Modules
 - Typescript
 - CORS
+- Exercise #8: Watch Party 4: Just My Type
 
 Week 9 (3/8/25):
 - Websockets
 - Security and Cloud Hosting
+- Exercise #9: Watch Party 5: For Real Time
 
 ## Course Prerequisites
 Students must be fluent in at least one programming language, preferably an object-oriented language. This course requires competency in Unix and Linux. Please plan to attend the MPCS Unix Bootcamp (https://masters.cs.uchicago.edu/page/mpcs-unix-bootcamp) or take the online MPCS Unix Bootcamp Course on Canvas if you do not have familiarity working on the command line in *nix environments.
