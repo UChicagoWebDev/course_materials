@@ -71,6 +71,7 @@ Week 1 (1/10/25)
 - HTML5: Semantic Markup, Elements, Attributes, and the DOM
 - CSS3: Fonts, Colors, Borders, Ids, Classes, the Box Model, the Inspect panel
 - Exercise #1: Static Pages: A Resume
+
 Week 2 (1/17/25)
 - HTML5 Accessibility, Screen Readers, Visual Alerting, Captioning
 - CSS3: Media Queries, Mobile-First Design, Icons, Web Fonts, Modern Layouts with Border-Box, Flexbox, and Grid
@@ -83,6 +84,7 @@ Week 3 (1/24/25):
 - Intro to the LAMP Stack and Flask
 - Intro to Databases
 - Exercise #3: Web Journal
+
 Week 4 (1/31/25):
 - Javascript: ES6, Functions, Callbacks, DOM manipulation, Page State
 - Connecting to REST APIs
@@ -94,18 +96,20 @@ Week 5 (2/7/25):
 - Timers, Asynchronous Functions, Promises
 - Intro to Node
 - Exercise #5: Watch Party
+
 Week 6 (2/15/25):
 - Secure Logins
 - Single-Page Applications
 - Exercise #6: Watch Party 2: The Single-Page Experience
+
 Week 7 (2/22/25):
 - Intro to React: Components, Props, State, JSX
 - Final Project
 Week 8 (3/1/25):
 - React Classes, Composability, Database migrations
+
 Week 9 (3/8/25):
 - Keypress handling, Continuous Integration, Cloud Hosting
-Final Projects Due: Friday December 13, 2024
 
 ## Course Prerequisites
 Students must be fluent in at least one programming language, preferably an object-oriented language. This course requires competency in Unix and Linux. Please plan to attend the MPCS Unix Bootcamp (https://masters.cs.uchicago.edu/page/mpcs-unix-bootcamp) or take the online MPCS Unix Bootcamp Course on Canvas if you do not have familiarity working on the command line in *nix environments.
