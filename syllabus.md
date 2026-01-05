@@ -48,7 +48,7 @@ Video links for hours are in the Zoom Tab on Canvas
 Students will be expected to complete small assignments in class ("Labs") and more substantial take home exercises ("Exercises") due the next week before class. There are 9 weekly take-home exercsies, with the last one due on the last day of finals week: https://canvas.uchicago.edu/courses/67482/assignments. There is no final project or final exam.
 
 ## Grading Policy
-Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentge of all possible points students have earned on their quizzes, exercises, and final projects:
+Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentge of all possible points students have earned on their labs and exercises:
 - 90.0/93.0%: A-/A
 - 80.0/83.0/87.0: B-/B/B+
 - 70.0/73.0/77.0: C-/C/C+
