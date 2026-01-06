@@ -30,9 +30,9 @@ TAs
 - Abhyas Mall (mailto:abhyas@uchicago.edu)
 
 ## Office Hours
+- Monday 4-6 (Abhyas)
 - Tuesday 11-noon (Trevor)
 - Thursday 11-noon (Trevor)
-- Abhyas TBA
 
 Video links for hours are in the Zoom Tab on Canvas
 
