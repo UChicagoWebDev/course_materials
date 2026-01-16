@@ -3,31 +3,82 @@ class: center, middle
 ## Week 2: Advanced Layout
 ---
 
-# Teaching Team
-- Trevor Austin, Lecturer
-- Geno Lewis, TA
-
 class: agenda
-# Advanced Styling
+## Advanced Styling
 - selectors, icons, web fonts, CSS animation
-# Modern Layouts
+- Lab 2: CSS Diner
+## Modern Layouts
 - css-column, flexbox, grid
 - Lab: uchicago.edu layout
-# Responsive Design
+## Responsive Design
 - media queries, mobile-first design
-# Accessibility (a11y)
+## Accessibility (a11y)
 - screen readers, visual alerting, and captioning
-# CSS Resets and Frameworks
+## CSS Resets and Frameworks
 - box-sizing, CSS resets, Bootstrap
 ---
 
-# Advanced Styling: Selectors
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators
+# Advanced Styling: Selectors Review
+
+`my_element_name` matches `<my_element_name>`
+- It can be a nonsense element type that you made up!
+
+`.my_class` matches `<div class="my_class">`
+- Elements can have multiple classes (`class="class_1 class_2"`)
+- Multiple different elements can have the same class
+
+`#my_id` matches `<div id="my_id">`
+- An element can only have one id
+- Only one element can have a given id
 ---
 
-# Advanced Styling: Selectors
+# Advanced Styling: Selectors and Combinators
+
+Selectors can be combined to make them more specific or to create interactions like 
+"Buttons are blue, but big buttons are green."
+
+`AB` matches elements that match A **and** B.
+- E.g. `button.big`. 
+- Note they are smushed together with no space
+
+`A,B` matches elements that match A **or** B
+- I say "A comma B"
+- Note this is **not** consistent with how you list multiple attirbutes or classes on an element,
+  where we have space separated lists.
+- I'm sorry.
+
+`A > B` finds things that match A, and matches their immediate children that match B
+- "A's children B"
+
+`A B` finds things that match A, and matches all their descendants that match B.
+- "A's descendants B"
+- Note this will include everything matched by `A > B`, plus the things it finds by walking 
+  recursively down the tree.
+
+Those are sadly not the most intuitive symbols. There are also to less-used exotic ones you may see
+in the wild. Normalize looking these up on 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators.
+---
+
+# Lab 2: CSS Diner
 [CSS Diner](https://flukeout.github.io/)
 ![CSS Diner](images/diner.png "CSS Diner Home Page")
+---
+
+# Advanced Selectors: Pseudo-Classes
+You can also have styling that is conditional on the state of the page with Pseudo-Classes.
+
+`:hover` matches when the user's cursor is hovering over the element. Lets you add interactivity 
+without any javascruipt code.
+
+`:target` matches if the element's `id` is in the URL after the # symbol
+
+`:checked`, `:optional`, `:valid`, etc. for form elements
+
+`:first-child`, `:last-child`, `:nth-child` for fence post problems or alternating colors on rows of a table
+
+And many more! Normalize looking them up if you are trying to do something specific:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 ---
 
 # Act Break
@@ -89,6 +140,7 @@ A simple question to ask yourself when deciding between grid or flexbox is:
 ???
 
 In addition to the one-dimensional versus two-dimensional distinction, there is another way to decide if you should use flexbox or grid for a layout. Flexbox works from the content out. An ideal use case for flexbox is when you have a set of items and want to space them out evenly in a container. You let the size of the content decide how much individual space each item takes up. If the items wrap onto a new line, they will work out their spacing based on their size and the available space on that line.
+
 Grid works from the layout in. When you use CSS Grid Layout you create a layout and then you place items into it, or you allow the auto-placement rules to place the items into the grid cells according to that strict grid. It is possible to create tracks that respond to the size of the content, however, they will also change the entire track.
 ---
 
@@ -147,8 +199,6 @@ achieve that layout.
 - [Eric Meyer's CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 - [Normalize](https://github.com/necolas/normalize.css/)
 - [Bootstrap](https://getbootstrap.com/)
-
-???
 
 The HTML and CSS specs have arisen out of competition between different browser
 makers, who tried to drive both install base with users and adoption by
