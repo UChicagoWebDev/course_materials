@@ -169,7 +169,7 @@ A simple question to ask yourself when deciding between grid or flexbox is:
 - Do I need to control the layout by row **and** column?
     ➡️ Use a grid
 
-???
+--
 
 In addition to the one-dimensional versus two-dimensional distinction, there is another way to decide if you should use flexbox or grid for a layout. Flexbox works from the content out. An ideal use case for flexbox is when you have a set of items and want to space them out evenly in a container. You let the size of the content decide how much individual space each item takes up. If the items wrap onto a new line, they will work out their spacing based on their size and the available space on that line.
 
