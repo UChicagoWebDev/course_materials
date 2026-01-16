@@ -1,6 +1,6 @@
 class: center, middle
 # Web Development
-## Autumn 2025
+## Winter 2026
 MPCS 52553
 ---
 
@@ -29,19 +29,13 @@ Double-click to open it with your browser.
 ---
 
 # Build a Web Page
-### Let's look at a web server
-[uchicagowebdev.com](http://uchicagowebdev.com)
---
+### Let's start a tiny web server
 
-### Copy your file there:
-```bash
-scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
-```
----
+From the command line, in the directory where you saved your .html file, run:
 
-# Build a Web Page
-### Let's look now!
-[uchicagowebdev.com/students](http://uchicagowebdev.com/students)
+`python3 -m http.server`
+
+In your browser, navigate to localhost:8000/yourname.html
 ---
 
 # Introductions    
@@ -49,18 +43,16 @@ scp <yourname>.html student@uchicagowebdev.com:/var/www/html/students
 
 ## Trevor Austin (Lecturer)
 trevoraustin@uchicago.edu
+
 ## Abhyas Mall (TA)
 abhyas@uchicago.edu
-## Alexandra Qi (TA)
-siyuanq@uchicago.edu
-## Geno Lewis (TA)
-grlewis@uchicago.edu
+
 ---
 
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
 - Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Syllabus: https://canvas.uchicago.edu/courses/67344
+- Canvas: https://canvas.uchicago.edu/courses/67482
 ---
 
 # In-Class Exercise 1
