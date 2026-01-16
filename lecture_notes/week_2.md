@@ -2,19 +2,25 @@ class: center, middle
 # Web Development
 ## Week 2: Advanced Layout
 ---
-
 class: agenda
-## Advanced Styling
+
+# Agenda
+
+#### Advanced Styling
 - selectors, icons, web fonts, CSS animation
 - Lab 2: CSS Diner
-## Modern Layouts
+
+#### Modern Layouts
 - css-column, flexbox, grid
 - Lab: uchicago.edu layout
-## Responsive Design
+
+#### Responsive Design
 - media queries, mobile-first design
-## Accessibility (a11y)
+
+#### Accessibility (a11y)
 - screen readers, visual alerting, and captioning
-## CSS Resets and Frameworks
+
+#### CSS Resets and Frameworks
 - box-sizing, CSS resets, Bootstrap
 ---
 
@@ -22,17 +28,19 @@ class: agenda
 
 `my_element_name` matches `<my_element_name>`
 - It can be a nonsense element type that you made up!
+***
 
 `.my_class` matches `<div class="my_class">`
 - Elements can have multiple classes (`class="class_1 class_2"`)
 - Multiple different elements can have the same class
+***
 
 `#my_id` matches `<div id="my_id">`
 - An element can only have one id
 - Only one element can have a given id
 ---
 
-# Advanced Styling: Selectors and Combinators
+# Advanced Styling: Combinators
 
 Selectors can be combined to make them more specific or to create interactions like 
 "Buttons are blue, but big buttons are green."
@@ -40,20 +48,27 @@ Selectors can be combined to make them more specific or to create interactions l
 `AB` matches elements that match A **and** B.
 - E.g. `button.big`. 
 - Note they are smushed together with no space
+***
 
 `A,B` matches elements that match A **or** B
 - I say "A comma B"
-- Note this is **not** consistent with how you list multiple attirbutes or classes on an element,
+- Note this is **not** consistent with how you list multiple attributes or classes on an element,
   where we have space separated lists.
 - I'm sorry.
+---
+
+# Advanced Styling: Combinators
+
 
 `A > B` finds things that match A, and matches their immediate children that match B
 - "A's children B"
+***
 
 `A B` finds things that match A, and matches all their descendants that match B.
 - "A's descendants B"
 - Note this will include everything matched by `A > B`, plus the things it finds by walking 
   recursively down the tree.
+***
 
 Those are sadly not the most intuitive symbols. There are also to less-used exotic ones you may see
 in the wild. Normalize looking these up on 
@@ -70,12 +85,16 @@ You can also have styling that is conditional on the state of the page with Pseu
 
 `:hover` matches when the user's cursor is hovering over the element. Lets you add interactivity 
 without any javascruipt code.
+***
 
 `:target` matches if the element's `id` is in the URL after the # symbol
+***
 
 `:checked`, `:optional`, `:valid`, etc. for form elements
+***
 
 `:first-child`, `:last-child`, `:nth-child` for fence post problems or alternating colors on rows of a table
+***
 
 And many more! Normalize looking them up if you are trying to do something specific:
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
@@ -98,25 +117,35 @@ handle multi-column layout in order of increasing power and complexity.
 
 # CSS Columns
 ![Example Multi-Column Layout](images/multi-column.png "Example Multi-Column Layout")
-[CSS Columns - Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns)
-[Multi-Column Layout - W3Schools Guide](https://www.w3schools.com/css/css3_multiple_columns.asp)
+- [CSS Columns - Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns)
+- [Multi-Column Layout - W3Schools Guide](https://www.w3schools.com/css/css3_multiple_columns.asp)
 ---
 
 # CSS Columns
 The simplest layout method uses the `column-count` CSS attribute to spread
 content over multiple columns. You can specify the spacing and borders between
 column elements, and allow elements like headers to span multiple columns.
+
 [/examples/week_2/columns.html](/examples/week_2/columns.html)
+
+--
+
+Very useful because you can edit the text and the browser picks the column breaks automatically.
+
+For the same reason, not great if you're trying to get things to line up horizontally.
 ---
 
 # CSS Columns - Masonry Layout
 [When And How To Use CSS Multi-Column Layout - Smashing Magazine](https://www.smashingmagazine.com/2019/01/css-multiple-column-layout-multicol/#masonry-like-display-of-content)
+
 ![CSS columns support a "masonry layout" with items of different heights](images/masonry.jpeg "Example of Masonry Layout")
 ---
 
 # Flexbox
 [CSS Flexbox - Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+
 [/examples/week_2/flex.html](/examples/week_2/flex.html)
+
 ![Example Flexbox Layout](images/flexbox.png "Example Flexbox Layout")
 ---
 
@@ -125,8 +154,11 @@ column elements, and allow elements like headers to span multiple columns.
 
 # CSS Grid
 [Basic Concepts of Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+
 [CSS Grid - Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+
 [/examples/week_2/grid.html](/examples/week_2/grid.html)
+
 ![Example CSS Grid Layout](images/grid.png "Example CSS Grid Layout")
 ---
 
