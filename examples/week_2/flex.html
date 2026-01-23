@@ -41,9 +41,16 @@
         }
       }
 
+      .menu{ display: none}
+      .menu:target{ display: block; position: absolute; background: white; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+      
+
     </style>
   </head>
   <body>
+    <a href="#menu"><span class="icon-stuff">menu</span></a>
+
+    <a href="#"><span class="icon-stuff">X</span></a>
     <header>
       <h1>Sample flexbox example</h1>
     </header>
