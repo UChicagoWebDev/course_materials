@@ -149,6 +149,23 @@ h3,
   background-color: lightblue;
   padding: 5px;
 }
+.highlight-third-code-line .remark-code-line:nth-child(3) {
+  font-weight: bold;
+  &:hover {
+    background-color: #ff0;
+  }
+}
+.split ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  & li { 
+    width: auto;
+    max-width: 70%;
+    & img {max-width: 100%;}
+    & :first-child {margin-top: 0;}
+  }
+}
 .agenda h1 {
   margin-bottom: 0px;
 }

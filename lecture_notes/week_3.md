@@ -129,13 +129,11 @@ birthday as a project in February 2015. ([httpd.apache.org](https://httpd.apache
 ![httpd.pache.org](images/apache.png "Screenshot of httpd.apache.org")
 ---
 
-# Web Servers: Apache
-The web server running at https://uchicagowebdev.com/ is Apache. By default, when it
-receives an HTTP request, it looks for files on the local filesystem that match
-the URL path and returns them to the web browser.
----
-
 # Web Servers: Python Built-In
+
+By default, when Apache receives an HTTP request, it looks for files on the local filesystem that match
+the URL path and returns them to the web browser.
+
 We can get a similar effect (though not intended for production) with Python's built-in http module:
 
 `python3 -m http.server`
@@ -194,10 +192,19 @@ https://github.com/UChicagoWebDev/lab-3
 
 # Cookies
 
-> A cookie (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is stateless.
+HTTP is **stateless**. The server does not keep track of a running conversation with the browser. Each request is treated as totally new, with no memory of any ones that came before it.
+
+![Dory from Finding Nemo](images/dory.png)
+---
+
+# Cookies
+
+If we want to remember a user across multiple requests, we have to give them some small token that they can show to to the server on subsequent requests. Image a wristband or hand stamp at a concert or amusement park.
+
+> A **cookie** (also known as a web cookie or browser cookie) is a small piece of data a server sends to a user's web browser. The browser may store cookies, create new cookies, modify existing ones, and send them back to the same server with later requests. Cookies enable web applications to store limited amounts of data and remember state information; by default the HTTP protocol is stateless.
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
---- 
+---
 
 # Lab 3-4: Cookies
 
@@ -212,7 +219,10 @@ browser sends its HTTP Requests out, then it gets HTTP Responses back. It has no
 insight into how those responses are generated.
 
 ---
+class: highlight-third-code-line
+
 # Server-Side Rendering
+
 That means that HTTP Responses don't have to just be the contents of pre-existing HTML files.
 They can just be the output of an application.
 
@@ -222,7 +232,30 @@ Parse out the path, headers, query variables, body, etc
 **DO LITERALLY ANYTHING YOU CAN PROGRAM**
 Send a new Response
 ```
+
+Let's pause for a minute and think about the implications.
 ---
+
+# Web Applications
+
+What is the name of this big black building downtown?
+
+![Stock photo of the Sears/Willis Tower](images/sears_tower.jpg)
+---
+class: split
+
+# Web Applications
+
+- ![Cover of a Sears & Roebuck Catalog from 1907](images/sears-catalog.jpg)
+- >By 1894, the Sears catalog had grown to 322 pages, including many new items, such as sewing machines, bicycles,      sporting goods and automobiles (later produced, from 1905 to 1915, by Lincoln Motor Car Works of Chicago [no relation to the current Ford line]).[20] By 1895, the company was producing a 532-page catalog. Sales were over $400,000 ($12 million in 2024 dollars) in 1893 and over $750,000 ($25 million in 2024 dollars) two years later.[21] By 1896, dolls, stoves, and groceries were added to the catalog.
+  
+Sears did not open a brick and mortar retail location until 1925.
+
+https://en.wikipedia.org/wiki/Sears
+
+---
+
+
 
 # The LAMP Stack
 One very popular thing you might want to do with your program that responds to
