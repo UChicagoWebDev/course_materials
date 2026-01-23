@@ -46,7 +46,7 @@ Selectors can be combined to make them more specific or to create interactions l
 "Buttons are blue, but big buttons are green."
 
 `AB` matches elements that match A **and** B.
-- E.g. `button.big`. 
+- E.g. `button.big`. matches `<button class="big">`
 - Note they are smushed together with no space
 ***
 
