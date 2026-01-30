@@ -70,9 +70,9 @@ for example by a mouse click or by tapping the screen in a web browser.
 
 We can send and receive HTTP messages directly using the command line tool [cURL (Wikipedia)](https://en.wikipedia.org/wiki/CURL).
 
-`curl -i http://uchicagowebdev.com`
+`curl -i http://uchicago.edu`
 
-`curl -i https://uchicagowebdev.com`
+`curl -i https://uchicago.edu`
 ---
 
 # Let's Examine: HTTP Messsages
