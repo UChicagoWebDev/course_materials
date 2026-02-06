@@ -83,10 +83,15 @@ Hello!
 ---
 
 # Lab: Egg Timer
+
+https://github.com/UChicagoWebDev/lab-5
+
 Make a page with a text entry field and a button called 'Set Timer'. When a user
 puts a number in the field and clicks the button, wait that many seconds then
 log "Ding!" to the console. Make sure you let users set multiple timers at once!
+
 https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+
 ```javascript
 let myGreeting = setTimeout(function () {
   console.log("Hello!");
@@ -105,8 +110,8 @@ We just heard that javascript is single-threaded.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 
 We don't have `sleep()`, but we can push the snooze button a **lot**. In a 
-modern browser under no load, 200+ times a second. Recall that your eyes only 
-work at 30-60 FPS.
+modern browser under no load, the event loop completes 200+ times a second. 
+Recall that your eyes only work at 30-60 FPS.
 ---
 
 # Lab: Sequential Asynchronous Functions
@@ -155,18 +160,68 @@ A better metaphor would be "Plans."
 # Promises
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
+Imagine you had an object for abstract plans. You would need:
+- The plan contents (ie a function body)
+- A "mark as successful" method
+- A "mark as failed" method
+
+To combine individual plans into multi-step processes, you would also want to be able to assign:
+- "Next step" (ie what to do on success)
+- "Backup plan" (ie what to do on failure)
+
+---
+
+# Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+In Javscrtipt Promises, "mark as successful" is called `resolve()`, 
+and "mark as failed" is called `reject()`. If you needed to create one manually, 
+it would look like:
+
 ```javascript
-new Promise((resolve, reject) => {
-  console.log("one thing");
-  resolve();
+let myPromise = new Promise((resolve, reject) => {
+  try {
+    result = somethingLongSlowAndFlaky()
+    if is_valid(result) { resolve() }
+    else { reject() }
+  }
+  catch(error) {
+    console.log(error)
+    reject()
+  }    
 })
-  .then(() => {
-    console.log("another thing");
-  })
-  .then(() => {
-    console.log("a third thing");
-  });
 ```
+---
+
+# Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+Functions that are unavoidably long, slow or flaky can do that work already for the user, 
+and just return a Promise. For example, the built-in replacement for XMLHttpRequest that
+returns promises is called [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+```javascript
+let myResponsePromise = fetch("https://example.com")
+```
+---
+
+# Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+On a given Promise (ie plan) We can set "next step" and "backup plan" with `.then()`:
+
+```javascript
+  let nextStep = () => {...}
+
+  let myResponsePromise = fetch("https://example.com")
+
+  myResponsePromise.then(nextStep, );
+```
+
+---
+
+# Promises
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 The nice thing `then()` does is it also returns a Promise. That lets you chain
 successive calls together.
