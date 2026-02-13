@@ -92,7 +92,7 @@ correct animal is identified as best.
 # Lab: Who is Best?
 ![](/examples/week_6/spa/static/happy_cat.jpeg)
 
-Modify the example app in `spa/` so that the animal we pick as best goes into
+Modify the example app in https://github.com/UChicagoWebDev/lab-6 so that the animal we pick as best goes into
 our browser history. Make sure that if we load the page with that URL, the
 correct animal is identified as best.
 
