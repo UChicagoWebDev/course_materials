@@ -31,6 +31,7 @@ Just as a preview, we're going to be using these techniques to make a new versio
 > JavaScript, and CSS code is either retrieved by the browser with a single page
 > load,[1] or the appropriate resources are dynamically loaded and added to the
 > page as necessary, usually in response to user actions.
+
 https://en.wikipedia.org/wiki/Single-page_application
 
 ---
@@ -43,6 +44,7 @@ https://en.wikipedia.org/wiki/Single-page_application
 ---
 # Static Assets in Flask
 Flask has built-in support for serving static assets, so we'll use that: https://flask.palletsprojects.com/en/2.0.x/tutorial/static/
+
 ### From Exercise 5:
 - [create_room.html](https://github.com/UChicagoWebDev/exercise-5/blob/main/app.py#L78-L87)
 - [script.js](https://github.com/UChicagoWebDev/exercise-5/blob/main/templates/index.html#L14)
@@ -143,4 +145,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
 
 # Watch Party 2:
 ### The Single Page Experience
-https://github.com/UChicagoWebDev/course_materials/assignments/exercise_6
+https://github.com/UChicagoWebDev/exercise-6
