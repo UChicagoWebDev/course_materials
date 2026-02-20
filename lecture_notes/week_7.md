@@ -19,11 +19,9 @@ class: agenda
 As discussed, while earlier versions of this course featured a final project, 
 I have recently switched to simply having regular-sized weekly assignments 
 through the end:
-- Exercise 7, out today, is due next week on Friday Nov 21.
-- Execise 8 goes out on the 21st, but because of the Thanksgiving break is not 
-  due until two weeks later, on Friday December 5
-- Exercise 9 goes out on Dec 5, which is our last day of class. It is due at 
-  the usual time on Friday December 12, which is the last day of finals week.
+- Exercise 7, out today, is due next week on Friday Feb 27.
+- Exercise 8 is due Friday March 6
+- Exercise 9 is due Friday March 13.
 ---
 
 # Introduction to React
