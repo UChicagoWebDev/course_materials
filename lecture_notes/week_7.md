@@ -20,8 +20,8 @@ As discussed, while earlier versions of this course featured a final project,
 I have recently switched to simply having regular-sized weekly assignments 
 through the end:
 - Exercise 7, out today, is due next week on Friday Feb 27.
-- Exercise 8 is due Friday March 6
-- Exercise 9 is due Friday March 13.
+- Exercise 8 is due Friday March 6, which is our last day of class.
+- Exercise 9 is due Friday March 13. That's during finals week, and there is no lecture that day.
 ---
 
 # Introduction to React
