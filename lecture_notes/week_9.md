@@ -135,7 +135,7 @@ library, but the most commonly used framework is an external library called
 ## https://docs.pytest.org/en/latest/
 ---
 
-# Lab: Add Tests to Password App
+# Adding Tests to Password App
 ## https://github.com/UChicagoWebDev/course_lectures/tree/master/examples/week_9/passwords_with_tests
 ---
 
@@ -169,6 +169,8 @@ while subsidizing the rest of the business to the tune of $2.4B.
 > operating income of $5.3 billion in fourth quarter 2021.
 
 ## https://ir.aboutamazon.com/news-release/news-release-details/2023/Amazon.com-Announces-Fourth-Quarter-Results/default.aspx
+
+In the 4th quarter of 2025, AWS was no longer subsidizing the rest of Amazon, but had also increased to $12.5 billion
 ---
 
 # Deployment to Cloud Hosting
