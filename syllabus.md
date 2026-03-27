@@ -1,4 +1,4 @@
-# Syllabus for Web Development - Winter 2026
+# Syllabus for Web Development - Spring 2026
 
 ## Course Description
 This course is intended to prepare students with a general programming background to work on teams producing modern web applications. Students will learn a strong foundation of core web technologies and protocols, an overview of the major design patterns in the history of web development, and a detailed introduction to the current industry standard. We will have an emphasis on learning from publicly-available documentation, so that students are equipped to learn new techniques and frameworks in this rapidly-evolving field.
@@ -30,9 +30,7 @@ TAs
 - Abhyas Mall (mailto:abhyas@uchicago.edu)
 
 ## Office Hours
-- Monday 4-6 (Abhyas)
-- Tuesday 11-noon (Trevor)
-- Thursday 11-noon (Trevor)
+- To be decided soon
 
 Video links for hours are in the Zoom Tab on Canvas
 
