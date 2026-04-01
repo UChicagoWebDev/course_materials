@@ -56,7 +56,7 @@ abhyas@uchicago.edu
 ---
 
 # In-Class Exercise 1
-Let's get started on Canvas: https://canvas.uchicago.edu/courses/67344/assignments/733746
+Let's get started on Canvas: https://canvas.uchicago.edu/courses/71107/assignments/860058
 ---
 
 # Objectives
