@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Lecture Notes | Web Development{% endblock %}
+
+{% block content %}
+<div class="lecture-index">
+    <h1>Lecture Notes</h1>
+    <p>
+        Lecture notes are written in
+        <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a>
+        and can also be found
+        <a href="https://github.com/UChicagoWebDev/course_materials/tree/main/lecture_notes">in the Course Materials repo on GitHub</a>.
+    </p>
+    <ul>
+        {% for week in weeks %}
+        <li><a href="/lecture_notes/week_{{ week }}/1/">Week {{ week }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

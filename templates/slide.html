@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Week {{ week }} — Slide {{ slide_num }} | Web Development{% endblock %}
+
+{% block content %}
+<div class="slide-container {{ classes|join(' ') }}"
+     data-prev="{{ prev_url }}"
+     data-next="{{ next_url }}"
+     data-first="{{ first_url }}"
+     data-slide-num="{{ slide_num }}"
+     data-total-slides="{{ total_slides }}"
+     data-week="{{ week }}">
+
+    <div class="slide-nav">
+        {% if prev_url %}
+        <a href="{{ prev_url }}" class="nav-prev" aria-label="Previous slide">&larr;</a>
+        {% else %}
+        <span class="nav-prev disabled">&larr;</span>
+        {% endif %}
+
+        <span class="slide-info">Week {{ week }} &mdash; {{ slide_num }} / {{ total_slides }}</span>
+
+        {% if next_url %}
+        <a href="{{ next_url }}" class="nav-next" aria-label="Next slide">&rarr;</a>
+        {% else %}
+        <span class="nav-next disabled">&rarr;</span>
+        {% endif %}
+    </div>
+
+    <div class="slide-content">
+        {{ content }}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/navigation.js"></script>
+{% endblock %}

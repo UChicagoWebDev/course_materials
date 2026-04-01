@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Web Development{% endblock %}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav id="header">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lecture_notes/">Lectures</a></li>
+            <li><a href="/syllabus/">Syllabus</a></li>
+            <li><a href="/examples/">Examples</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
