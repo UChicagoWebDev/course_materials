@@ -1,4 +1,4 @@
-from preprocessor import split_slides
+from preprocessor import split_slides, strip_class_directive
 
 
 def test_split_slides_basic():
@@ -21,3 +21,24 @@ def test_split_slides_trims_whitespace():
     slides = split_slides(md)
     assert slides[0].strip() == "# Slide 1"
     assert slides[1].strip() == "# Slide 2"
+
+
+def test_strip_class_directive_basic():
+    slide = "class: center, middle\n# Title"
+    content, classes = strip_class_directive(slide)
+    assert content.strip() == "# Title"
+    assert classes == ["center", "middle"]
+
+
+def test_strip_class_directive_none():
+    slide = "# No class here"
+    content, classes = strip_class_directive(slide)
+    assert content.strip() == "# No class here"
+    assert classes == []
+
+
+def test_strip_class_directive_single():
+    slide = "class: agenda\n# Agenda Items"
+    content, classes = strip_class_directive(slide)
+    assert content.strip() == "# Agenda Items"
+    assert classes == ["agenda"]
