@@ -1,5 +1,7 @@
 import re
 
+import markdown
+
 
 def split_slides(markdown: str) -> list[str]:
     """Split markdown on --- slide boundaries, ignoring --- inside fenced code blocks."""
@@ -139,3 +141,34 @@ def _convert_inline_wrappers(text: str) -> str:
     # Match .classname[content] handling nested brackets
     pattern = r"\.(\w[\w-]*)\[((?:[^\[\]]*|\[(?:[^\[\]]*|\[[^\[\]]*\])*\])*)\]"
     return re.sub(pattern, replace_match, text)
+
+
+def process_slide(slide_md: str) -> tuple[str, list[str]]:
+    """Full preprocessing pipeline for a single slide.
+
+    Returns (rendered_html, css_classes).
+    """
+    # 1. Extract class directive
+    content, classes = strip_class_directive(slide_md)
+
+    # 2. Strip presenter notes
+    content = strip_presenter_notes(content)
+
+    # 3. Strip incremental reveals
+    content = strip_incremental_reveals(content)
+
+    # 4. Convert .classname[] wrappers
+    content = convert_class_wrappers(content)
+
+    # 5. Render markdown to HTML
+    # md_in_html extension allows markdown inside <div markdown="1"> blocks
+    # produced by convert_class_wrappers for block-level .classname[] usage
+    md = markdown.Markdown(
+        extensions=["fenced_code", "codehilite", "tables", "md_in_html"],
+        extension_configs={
+            "codehilite": {"css_class": "highlight", "guess_lang": False}
+        },
+    )
+    html = md.convert(content)
+
+    return html, classes

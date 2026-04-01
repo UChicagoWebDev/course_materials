@@ -1,4 +1,4 @@
-from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals, convert_class_wrappers
+from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals, convert_class_wrappers, process_slide
 
 
 def test_split_slides_basic():
@@ -121,3 +121,24 @@ def test_no_class_wrappers():
     text = "Just normal markdown"
     result = convert_class_wrappers(text)
     assert result == "Just normal markdown"
+
+
+def test_process_slide_full():
+    slide = """class: center, middle
+# Title
+.big[**Important**]
+
+--
+
+More content
+
+???
+
+Speaker notes here"""
+    html_content, classes = process_slide(slide)
+    assert classes == ["center", "middle"]
+    assert "Speaker notes" not in html_content
+    assert "Important" in html_content
+    assert "More content" in html_content
+    assert "???" not in html_content
+    assert '<span class="big">' in html_content or '<div class="big">' in html_content
