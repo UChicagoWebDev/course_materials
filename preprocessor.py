@@ -74,3 +74,68 @@ def strip_incremental_reveals(slide: str) -> str:
         result.append(line)
 
     return "\n".join(result)
+
+
+def convert_class_wrappers(text: str) -> str:
+    """Convert .classname[content] remark syntax to HTML elements.
+
+    Block-level usage (line starts with .classname[) becomes <div class="...">.
+    Inline usage becomes <span class="...">.
+    Handles nested brackets (e.g., markdown links inside wrappers).
+    Handles multiline blocks where ] is on a subsequent line.
+    """
+    result = _convert_multiline_wrappers(text)
+    result = _convert_inline_wrappers(result)
+    return result
+
+
+def _convert_multiline_wrappers(text: str) -> str:
+    """Handle .classname[...] that spans multiple lines."""
+    lines = text.split("\n")
+    result = []
+    i = 0
+
+    while i < len(lines):
+        match = re.match(r"^\.(\w[\w-]*)\[\s*$", lines[i].strip())
+        if match:
+            classname = match.group(1)
+            inner_lines = []
+            i += 1
+            while i < len(lines) and lines[i].strip() != "]":
+                inner_lines.append(lines[i])
+                i += 1
+            inner = "\n".join(inner_lines).strip()
+            result.append(f'<div class="{classname}" markdown="1">\n\n{inner}\n\n</div>')
+            i += 1  # Skip the closing ]
+        else:
+            result.append(lines[i])
+            i += 1
+
+    return "\n".join(result)
+
+
+def _convert_inline_wrappers(text: str) -> str:
+    """Handle .classname[...] on a single line."""
+    def replace_match(match):
+        classname = match.group(1)
+        content = match.group(2)
+        line_before = match.string[:match.start()]
+        line_after = match.string[match.end():]
+
+        # Block-level only if .classname[...] is the entire line content:
+        # nothing before it (on this line) and nothing after it (on this line)
+        last_newline = line_before.rfind("\n")
+        line_start = line_before[last_newline + 1:] if last_newline >= 0 else line_before
+
+        next_newline = line_after.find("\n")
+        line_end = line_after[:next_newline] if next_newline >= 0 else line_after
+
+        if line_start.strip() == "" and line_end.strip() == "":
+            # Block-level: use markdown="1" so python-markdown renders inner content
+            return f'<div class="{classname}" markdown="1">\n\n{content}\n\n</div>'
+        else:
+            return f'<span class="{classname}">{content}</span>'
+
+    # Match .classname[content] handling nested brackets
+    pattern = r"\.(\w[\w-]*)\[((?:[^\[\]]*|\[(?:[^\[\]]*|\[[^\[\]]*\])*\])*)\]"
+    return re.sub(pattern, replace_match, text)

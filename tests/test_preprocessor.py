@@ -1,4 +1,4 @@
-from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals
+from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals, convert_class_wrappers
 
 
 def test_split_slides_basic():
@@ -77,3 +77,47 @@ def test_strip_incremental_reveals_ignores_code_block():
     slide = "```\n--\n```"
     result = strip_incremental_reveals(slide)
     assert "--" in result
+
+
+def test_convert_class_wrappers_inline():
+    text = "Some .big[**bold text**] here"
+    result = convert_class_wrappers(text)
+    assert result == 'Some <span class="big">**bold text**</span> here'
+
+
+def test_convert_class_wrappers_line_start_with_trailing_text():
+    """A .classname[] at line start with trailing text is inline, not block."""
+    text = ".big[**0.1 second**] is about the limit for the user"
+    result = convert_class_wrappers(text)
+    assert result == '<span class="big">**0.1 second**</span> is about the limit for the user'
+
+
+def test_convert_class_wrappers_block_whole_line():
+    text = ".half[![Image](foo.png)]"
+    result = convert_class_wrappers(text)
+    assert result == '<div class="half" markdown="1">\n\n![Image](foo.png)\n\n</div>'
+
+
+def test_convert_class_wrappers_credit():
+    text = ".credit[https://xkcd.com/327/]"
+    result = convert_class_wrappers(text)
+    assert result == '<div class="credit" markdown="1">\n\nhttps://xkcd.com/327/\n\n</div>'
+
+
+def test_convert_class_wrappers_multiline():
+    text = ".animate[\n![Phil](images/phil.jpeg)\n]"
+    result = convert_class_wrappers(text)
+    assert '<div class="animate"' in result
+    assert "![Phil](images/phil.jpeg)" in result
+
+
+def test_convert_class_wrappers_nested_brackets():
+    text = ".big[text with [link](url)]"
+    result = convert_class_wrappers(text)
+    assert "[link](url)" in result
+
+
+def test_no_class_wrappers():
+    text = "Just normal markdown"
+    result = convert_class_wrappers(text)
+    assert result == "Just normal markdown"
