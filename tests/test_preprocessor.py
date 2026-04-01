@@ -1,4 +1,4 @@
-from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals, convert_class_wrappers, process_slide
+from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals, convert_class_wrappers, process_slide, rewrite_image_paths
 
 
 def test_split_slides_basic():
@@ -142,3 +142,27 @@ Speaker notes here"""
     assert "More content" in html_content
     assert "???" not in html_content
     assert '<span class="big">' in html_content or '<div class="big">' in html_content
+
+
+def test_rewrite_relative_image_paths():
+    html = '<img alt="Photo" src="images/photo.png" />'
+    result = rewrite_image_paths(html)
+    assert 'src="/lecture_notes/images/photo.png"' in result
+
+
+def test_rewrite_leaves_absolute_paths():
+    html = '<img alt="Photo" src="/examples/week_1/image.png" />'
+    result = rewrite_image_paths(html)
+    assert 'src="/examples/week_1/image.png"' in result
+
+
+def test_rewrite_leaves_external_urls():
+    html = '<img alt="Comic" src="https://imgs.xkcd.com/comics/exploits.png" />'
+    result = rewrite_image_paths(html)
+    assert 'src="https://imgs.xkcd.com/comics/exploits.png"' in result
+
+
+def test_rewrite_does_not_touch_script_src():
+    html = '<script src="navigation.js"></script>'
+    result = rewrite_image_paths(html)
+    assert result == html
