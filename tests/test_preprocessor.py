@@ -1,4 +1,4 @@
-from preprocessor import split_slides, strip_class_directive
+from preprocessor import split_slides, strip_class_directive, strip_presenter_notes, strip_incremental_reveals
 
 
 def test_split_slides_basic():
@@ -42,3 +42,38 @@ def test_strip_class_directive_single():
     content, classes = strip_class_directive(slide)
     assert content.strip() == "# Agenda Items"
     assert classes == ["agenda"]
+
+
+def test_strip_presenter_notes_basic():
+    slide = "# Slide\nContent\n\n???\n\nThese are notes"
+    result = strip_presenter_notes(slide)
+    assert "Content" in result
+    assert "notes" not in result
+    assert "???" not in result
+
+
+def test_strip_presenter_notes_no_notes():
+    slide = "# Slide\nContent"
+    result = strip_presenter_notes(slide)
+    assert result == slide
+
+
+def test_strip_presenter_notes_ignores_code_block():
+    slide = "# Slide\n```\n???\n```\nMore content"
+    result = strip_presenter_notes(slide)
+    assert "???" in result
+    assert "More content" in result
+
+
+def test_strip_incremental_reveals():
+    slide = "# Slide\nFirst point\n\n--\n\nSecond point"
+    result = strip_incremental_reveals(slide)
+    assert "First point" in result
+    assert "Second point" in result
+    assert "\n--\n" not in result
+
+
+def test_strip_incremental_reveals_ignores_code_block():
+    slide = "```\n--\n```"
+    result = strip_incremental_reveals(slide)
+    assert "--" in result
