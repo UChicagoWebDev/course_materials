@@ -52,7 +52,7 @@ abhyas@uchicago.edu
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
 - Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Canvas: https://canvas.uchicago.edu/courses/67482
+- Canvas: https://canvas.uchicago.edu/courses/71107
 ---
 
 # In-Class Exercise 1

@@ -4,9 +4,9 @@
 This course is intended to prepare students with a general programming background to work on teams producing modern web applications. Students will learn a strong foundation of core web technologies and protocols, an overview of the major design patterns in the history of web development, and a detailed introduction to the current industry standard. We will have an emphasis on learning from publicly-available documentation, so that students are equipped to learn new techniques and frameworks in this rapidly-evolving field.
 
 Specifically, the course will cover content layout and styling with HTML and CSS, dynamically generating page content on the web server, interacting with databases, interacting with remote resources using HTTP and REST, client-side interactivity with modern Javascript, and the creation of single-page applications.
-This course uses agile software techniques to build real, working software each week. We will work as closely as possible to how software is developed in industry, and all work is asynchronous, open-note and open-internet. Students make indivual submissions to assignments, but encouraged to discuss them amongst themselves.
+This course uses agile software techniques to build real, working software each week. We will work as closely as possible to how software is developed in industry, and all work is asynchronous, open-note and open-internet. Students make individual submissions to assignments, but encouraged to discuss them amongst themselves.
 
-We have a GitHub Organization for the course at https://github.com/UChicagoWebDev. I will be posting lecture notes and slaides there, at https://github.com/UChicagoWebDev/course_materials.
+We have a GitHub Organization for the course at https://github.com/UChicagoWebDev. I will be posting lecture notes and slides there, at https://github.com/UChicagoWebDev/course_materials.
 
 We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-uchicago.slack.com) for the course that everyone should join and use. That's the best place to ask questions about course content, so that the whole class can benefit from the answers.
 
@@ -43,10 +43,10 @@ Video links for hours are in the Zoom Tab on Canvas
 - React Documentation: https://reactjs.org/docs/getting-started.html
 
 ## Assignments and Grading
-Students will be expected to complete small assignments in class ("Labs") and more substantial take home exercises ("Exercises") due the next week before class. There are 9 weekly take-home exercsies, with the last one due on the last day of finals week: https://canvas.uchicago.edu/courses/67482/assignments. There is no final project or final exam.
+Students will be expected to complete small assignments in class ("Labs") and more substantial take home exercises ("Exercises") due the next week before class. There are 9 weekly take-home exercises, with the last one due on the last day of finals week: https://canvas.uchicago.edu/courses/71107/assignments. There is no final project or final exam.
 
 ## Grading Policy
-Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentge of all possible points students have earned on their labs and exercises:
+Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentage of all possible points students have earned on their labs and exercises:
 - 90.0/93.0%: A-/A
 - 80.0/83.0/87.0: B-/B/B+
 - 70.0/73.0/77.0: C-/C/C+
@@ -107,7 +107,7 @@ Week 7 (2/22/25):
 
 Week 8 (3/1/25):
 - Node
-- Javscriupt Modules
+- Javscript Modules
 - Typescript
 - CORS
 - Exercise #8: Watch Party 4: Just My Type
