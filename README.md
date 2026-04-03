@@ -1,5 +1,5 @@
 # Lectures
-Notes, slides, and in-class exercises for MPCS 52553 - Web Development, as taught Winter Quarter 2026
+Notes, slides, and in-class exercises for MPCS 52553 - Web Development, as taught Spring Quarter 2026
 
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)

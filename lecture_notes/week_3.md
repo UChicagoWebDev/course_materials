@@ -99,7 +99,7 @@ Content-Type: text/html; charset=UTF-8
     <body>
         <titlebar>
             <h1>Web Development</h1>
-            <h3>MPCS 52553 - Winter Quarter 2025</h3>
+            <h3>MPCS 52553 - Spring Quarter 2026</h3>
         </titlebar>
         <main>
             <ul>

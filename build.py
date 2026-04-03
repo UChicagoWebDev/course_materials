@@ -8,6 +8,41 @@ from jinja2 import Environment, FileSystemLoader
 import markdown
 
 from preprocessor import split_slides, process_slide, rewrite_image_paths
+import site_config
+
+QUARTER_PATTERN = re.compile(
+    r"(Winter|Spring|Fall|Autumn|Summer)(\s+Quarter)?\s+\d{4}"
+)
+CANVAS_COURSE_PATTERN = re.compile(r"canvas\.uchicago\.edu/courses/\d+")
+
+
+def apply_config(text: str) -> str:
+    """Replace quarter and Canvas course ID references with current config values."""
+    season, year = site_config.QUARTER.split()
+
+    def replace_quarter(match):
+        quarter_word = match.group(2) or ""
+        return f"{season}{quarter_word} {year}"
+
+    text = QUARTER_PATTERN.sub(replace_quarter, text)
+    text = CANVAS_COURSE_PATTERN.sub(
+        f"canvas.uchicago.edu/courses/{site_config.CANVAS_COURSE_ID}", text
+    )
+    return text
+
+
+def update_source_files(root: Path):
+    """Update source files in place with current config values."""
+    files = [root / "README.md", root / "syllabus.md"]
+    files.extend(sorted((root / "lecture_notes").glob("week_*.md")))
+
+    for filepath in files:
+        if not filepath.exists():
+            continue
+        content = filepath.read_text()
+        updated = apply_config(content)
+        if updated != content:
+            filepath.write_text(updated)
 
 
 def build_site(output_dir: str = "_site", base_url: str = ""):
@@ -19,6 +54,9 @@ def build_site(output_dir: str = "_site", base_url: str = ""):
     root = Path(__file__).parent
     out = Path(output_dir)
 
+    # Update source files with current config values
+    update_source_files(root)
+
     # Clean output
     if out.exists():
         shutil.rmtree(out)
@@ -28,6 +66,8 @@ def build_site(output_dir: str = "_site", base_url: str = ""):
     # with pre-rendered HTML and this is a static site generator, not a web app
     env = Environment(loader=FileSystemLoader(root / "templates"), autoescape=False)
     env.globals["base_url"] = base_url
+    env.globals["quarter"] = site_config.QUARTER
+    env.globals["canvas_url"] = f"https://canvas.uchicago.edu/courses/{site_config.CANVAS_COURSE_ID}"
 
     # Copy static assets
     shutil.copytree(root / "static" / "css", out / "css")

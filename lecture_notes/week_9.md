@@ -1,5 +1,5 @@
 class: center, middle
-# Web Development Winter 2026
+# Web Development Spring 2026
 ## Week 9: Security, WebSockets, and Deployment
 ---
 

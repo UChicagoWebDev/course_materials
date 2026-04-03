@@ -1,6 +1,6 @@
 class: center, middle
 # Web Development
-## Winter 2026
+## Spring 2026
 MPCS 52553
 ---
 
@@ -56,7 +56,7 @@ abhyas@uchicago.edu
 ---
 
 # In-Class Exercise 1
-Let's get started on Canvas: https://canvas.uchicago.edu/courses/71107/assignments/860058
+Let's get started on Canvas: https://canvas.uchicago.edu/courses/71107/assignments
 ---
 
 # Objectives
@@ -203,5 +203,5 @@ https://www.w3.org/History/1989/proposal.html
 ---
 
 # Take-Home Exercise 1: Resume Styling
-- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/57047/assignments)
+- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/71107/assignments)
 - Get the code to get started on [GitHub](https://classroom.github.com/a/-zZ8uRTP)
