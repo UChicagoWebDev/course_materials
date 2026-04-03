@@ -2,3 +2,5 @@
 apikey.js
 *.pyc
 */__pycache__/*
+.worktrees/
+_site/

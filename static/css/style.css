@@ -1,0 +1,183 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+/* Base */
+body {
+    font-family: "Droid Serif", serif;
+    background-color: white;
+    margin: 0;
+    min-width: 15em;
+}
+
+/* Navigation header */
+#header {
+    background-color: #333;
+    font-family: "Droid Sans", sans-serif;
+    padding: 0;
+}
+#header ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#header li {
+    padding: 0.25em 0.75em;
+}
+#header a, #header a:visited {
+    color: white;
+    text-decoration: none;
+}
+#header a:hover {
+    color: #ccc;
+}
+
+/* Slide navigation bar */
+.slide-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    gap: 1em;
+    font-family: "Droid Sans", sans-serif;
+    border-bottom: 1px solid #eee;
+}
+.slide-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+}
+.slide-nav .disabled {
+    color: #ccc;
+}
+.slide-info {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Slide content area */
+.slide-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+.slide-content {
+    padding: 1em 0;
+}
+
+/* Page content (syllabus, etc.) */
+.page-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+/* Homepage */
+.homepage {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* Lecture index */
+.lecture-index {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: normal;
+}
+
+/* Remark class ports */
+.center { text-align: center; }
+.middle { display: flex; flex-direction: column; justify-content: center; min-height: 60vh; }
+
+.big { font-size: xx-large; font-family: "Yanone Kaffeesatz", sans-serif; }
+.fancyStrong strong { font-size: xx-large; font-family: "Yanone Kaffeesatz", sans-serif; }
+
+.credit {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 0.25em;
+}
+.credit a { color: #aaa; }
+
+.half img { max-width: 40%; max-height: 40%; }
+
+.split ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+.split ul li {
+    width: auto;
+    max-width: 70%;
+}
+.split ul li img { max-width: 100%; }
+
+.agenda h1 { margin-bottom: 0; }
+.agenda ul { margin-block-start: 0; color: #666; }
+
+.overlay p { position: relative; z-index: 1; padding: 1em; background: rgba(255,255,255,0.8); }
+.overlay p:has(img) { z-index: 0; width: 100%; float: right; margin-bottom: -100%; }
+
+.gallery p:has(img) { display: flex; flex-wrap: wrap; justify-content: center; }
+.gallery p:has(img) img { height: 8em; margin: 1em; }
+
+.gallery-big p:has(img) { display: flex; flex-wrap: wrap; justify-content: center; }
+.gallery-big p:has(img) img { height: 16em; margin: 1em; }
+
+.animate img {
+    width: 210px;
+    animation-duration: 3s;
+    animation-name: rise;
+}
+@keyframes rise {
+    from { margin-top: 60%; margin-left: 100%; }
+    to { margin-top: 0%; }
+}
+
+.highlight-third-code-line .highlight pre code .line:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Blockquotes */
+blockquote p {
+    border-left: 0.5em solid lightgray;
+    padding-left: 0.5em;
+}
+blockquote footer {
+    font-size: small;
+    color: gray;
+}
+
+/* Code blocks */
+code, pre {
+    font-family: "Ubuntu Mono", monospace;
+}
+code {
+    background-color: lightblue;
+    padding: 2px 5px;
+}
+pre code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+}

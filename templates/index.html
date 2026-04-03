@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Web Development — MPCS 52553{% endblock %}
+
+{% block content %}
+<div class="homepage">
+    <h1>Web Development</h1>
+    <h3>MPCS 52553 — Spring 2026</h3>
+    <ul>
+        <li><a href="{{ base_url }}/syllabus/">Syllabus</a></li>
+        <li><a href="{{ base_url }}/lecture_notes/">Lecture Notes</a></li>
+        <li><a href="{{ base_url }}/examples/">Examples &amp; Labs</a></li>
+    </ul>
+    <p>
+        Course materials are on
+        <a href="https://github.com/UChicagoWebDev">GitHub</a>.
+        Join <strong>#web-development</strong> on
+        <a href="https://cs-uchicago.slack.com/">UChicago CS Slack</a>.
+    </p>
+</div>
+{% endblock %}
