@@ -1,5 +1,3 @@
-import os
-import shutil
 from pathlib import Path
 from build import build_site
 
@@ -37,3 +35,24 @@ def test_build_no_week_8_old(tmp_path, monkeypatch):
     build_site(output_dir=str(tmp_path / "_site"))
 
     assert not (tmp_path / "_site" / "lecture_notes" / "week_8_old").exists()
+
+
+def test_build_base_url(tmp_path, monkeypatch):
+    """base_url is prefixed on all internal links."""
+    monkeypatch.chdir(Path(__file__).parent.parent)
+    build_site(output_dir=str(tmp_path / "_site"), base_url="/course_materials")
+    site = tmp_path / "_site"
+
+    # Homepage links use base_url
+    homepage = (site / "index.html").read_text()
+    assert 'href="/course_materials/syllabus/"' in homepage
+
+    # Slide navigation uses base_url
+    slide = (site / "lecture_notes" / "week_1" / "2" / "index.html").read_text()
+    assert 'data-prev="/course_materials/lecture_notes/week_1/1/"' in slide
+    assert "/course_materials/js/navigation.js" in slide
+    assert "/course_materials/css/style.css" in slide
+
+    # Lecture index uses base_url
+    lecture_index = (site / "lecture_notes" / "index.html").read_text()
+    assert "/course_materials/lecture_notes/week_1/1/" in lecture_index

@@ -1,5 +1,5 @@
+import argparse
 import glob
-import os
 import re
 import shutil
 from pathlib import Path
@@ -10,8 +10,12 @@ import markdown
 from preprocessor import split_slides, process_slide, rewrite_image_paths
 
 
-def build_site(output_dir: str = "_site"):
-    """Build the entire static site."""
+def build_site(output_dir: str = "_site", base_url: str = ""):
+    """Build the entire static site.
+
+    base_url: path prefix for project sites (e.g., "/course_materials").
+              Empty string for sites served at the domain root.
+    """
     root = Path(__file__).parent
     out = Path(output_dir)
 
@@ -23,6 +27,7 @@ def build_site(output_dir: str = "_site"):
     # Set up Jinja2 — autoescape=False since templates use {{ content }}
     # with pre-rendered HTML and this is a static site generator, not a web app
     env = Environment(loader=FileSystemLoader(root / "templates"), autoescape=False)
+    env.globals["base_url"] = base_url
 
     # Copy static assets
     shutil.copytree(root / "static" / "css", out / "css")
@@ -48,11 +53,11 @@ def build_site(output_dir: str = "_site"):
 
         for i, slide_md in enumerate(slide_strings, 1):
             html_content, classes = process_slide(slide_md)
-            html_content = rewrite_image_paths(html_content)
+            html_content = rewrite_image_paths(html_content, base_url)
 
-            prev_url = f"/lecture_notes/week_{week_num}/{i - 1}/" if i > 1 else ""
-            next_url = f"/lecture_notes/week_{week_num}/{i + 1}/" if i < total_slides else ""
-            first_url = f"/lecture_notes/week_{week_num}/1/"
+            prev_url = f"{base_url}/lecture_notes/week_{week_num}/{i - 1}/" if i > 1 else ""
+            next_url = f"{base_url}/lecture_notes/week_{week_num}/{i + 1}/" if i < total_slides else ""
+            first_url = f"{base_url}/lecture_notes/week_{week_num}/1/"
 
             slide_html = env.get_template("slide.html").render(
                 content=html_content,
@@ -97,4 +102,11 @@ def build_site(output_dir: str = "_site"):
 
 
 if __name__ == "__main__":
-    build_site()
+    parser = argparse.ArgumentParser(description="Build the static site.")
+    parser.add_argument(
+        "--base-url",
+        default="",
+        help="URL path prefix for project sites (e.g., /course_materials)",
+    )
+    args = parser.parse_args()
+    build_site(base_url=args.base_url.rstrip("/"))

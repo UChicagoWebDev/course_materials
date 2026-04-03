@@ -174,7 +174,7 @@ def process_slide(slide_md: str) -> tuple[str, list[str]]:
     return html, classes
 
 
-def rewrite_image_paths(html: str) -> str:
+def rewrite_image_paths(html: str, base_url: str = "") -> str:
     """Rewrite relative image src paths to absolute /lecture_notes/ paths.
     Only affects <img> tags, not <script> or other elements.
     """
@@ -183,6 +183,6 @@ def rewrite_image_paths(html: str) -> str:
         src = match.group(2)
         if src.startswith(("http://", "https://", "/")):
             return match.group(0)
-        return f'<img{prefix}src="/lecture_notes/{src}"'
+        return f'<img{prefix}src="{base_url}/lecture_notes/{src}"'
 
     return re.sub(r'<img([^>]*)src="([^"]*)"', replace_img_src, html)

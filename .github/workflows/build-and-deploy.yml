@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python build.py
+      - run: python build.py --base-url "/${{ github.event.repository.name }}"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
