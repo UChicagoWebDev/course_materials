@@ -72,7 +72,7 @@ Selectors can be combined to make them more specific or to create interactions l
 
 Those are sadly not the most intuitive symbols. There are also to less-used exotic ones you may see
 in the wild. Normalize looking these up on 
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators.
+<https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators>.
 ---
 
 # Lab 2: CSS Diner
@@ -97,7 +97,7 @@ without any javascruipt code.
 ***
 
 And many more! Normalize looking them up if you are trying to do something specific:
-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
+<https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes>
 ---
 
 # Act Break
