@@ -6,6 +6,7 @@ Notes, slides, and in-class exercises for MPCS 52553 - Web Development, as taugh
 - [Abhyas Mall](mailto:abhyas@uchicago.edu) (TA)
 
 ### Useful Links
+- [Course Website](https://uchicagowebdev.github.io/course_materials/)
 - Course Syllabus on [GitHub](syllabus.md) and [Canvas](https://canvas.uchicago.edu/courses/71107)
 - Submit Exercises [also on Canvas](https://canvas.uchicago.edu/courses/71107/assignments)
 - Collaborate in the #web-development channel on the [UChicago CS Slack](https://cs-uchicago.slack.com)
