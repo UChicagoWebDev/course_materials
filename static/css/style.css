@@ -45,7 +45,8 @@ body {
     font-family: "Droid Sans", sans-serif;
     border-bottom: 1px solid #eee;
 }
-.slide-nav a {
+.slide-nav a,
+.slide-nav .disabled {
     text-decoration: none;
     color: #333;
     font-size: 1.5em;
