@@ -1,0 +1,197 @@
+<html>
+<head>
+    <title>Arrow Functions vs Regular Functions</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        body { max-width: 800px; margin: 2em auto; padding: 0 1em; font-family: sans-serif; }
+        section { border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 6px; }
+        button { padding: 0.5em 1em; margin: 0.25em 0.25em 0.25em 0; }
+        pre { background: #f5f5f5; padding: 0.75em; overflow-x: auto; }
+        .out { background: #111; color: #0f0; padding: 0.5em; min-height: 1.5em; font-family: monospace; white-space: pre-wrap; }
+        h2 { margin-bottom: 0.25em; }
+        .note { color: #555; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<h1>Arrow Functions vs Regular Functions</h1>
+<p>Open the console and click the buttons. Each section highlights one behavioral difference between
+<code>function</code> declarations and arrow functions (<code>=&gt;</code>).</p>
+
+<!-- ========================================================= -->
+<section>
+    <h2>1. <code>this</code> binding</h2>
+    <p class="note">Regular functions get their own <code>this</code> based on how they are called.
+    Arrow functions capture <code>this</code> from the enclosing scope.</p>
+    <pre>const obj = {
+  name: "Widget",
+  regular: function () { return this; },  // `this` === obj
+  arrow:   () =&gt; this,                     // `this` === outer scope (window)
+};</pre>
+    <button id="thisRegular">Call regular</button>
+    <button id="thisArrow">Call arrow</button>
+    <div class="out" id="thisOut"></div>
+</section>
+
+<!-- ========================================================= -->
+<section>
+    <h2>2. <code>this</code> inside a callback</h2>
+    <p class="note">A classic bug: a regular function passed as a callback loses its <code>this</code>.
+    An arrow function inherits it from the surrounding method, so it just works.</p>
+    <pre>class Counter {
+  constructor() { this.count = 0; }
+
+  startBroken() {
+    setInterval(function () { this.count++; }, 500);   // `this` is window, not the Counter
+  }
+
+  startFixed() {
+    setInterval(() =&gt; { this.count++; }, 500);          // `this` is the Counter
+  }
+}</pre>
+    <button id="startBroken">Start broken (regular fn)</button>
+    <button id="startFixed">Start fixed (arrow fn)</button>
+    <button id="stopTimers">Stop</button>
+    <div class="out" id="counterOut"></div>
+</section>
+
+<!-- ========================================================= -->
+<section>
+    <h2>3. <code>arguments</code> object</h2>
+    <p class="note">Regular functions have a special <code>arguments</code> variable. Arrow functions
+    do not — referencing it either errors or falls through to an outer scope.</p>
+    <pre>function regular() { return arguments.length; }
+const arrow = () =&gt; arguments.length;   // ReferenceError (in a module)</pre>
+    <button id="argsRegular">regular(1, 2, 3)</button>
+    <button id="argsArrow">arrow(1, 2, 3)</button>
+    <div class="out" id="argsOut"></div>
+</section>
+
+<!-- ========================================================= -->
+<section>
+    <h2>4. Constructors</h2>
+    <p class="note">Regular functions can be called with <code>new</code>. Arrow functions cannot.</p>
+    <pre>function Person(name) { this.name = name; }
+const PersonArrow = (name) =&gt; { this.name = name; };
+
+new Person("Ada");        // works
+new PersonArrow("Ada");   // TypeError: PersonArrow is not a constructor</pre>
+    <button id="newRegular">new Person("Ada")</button>
+    <button id="newArrow">new PersonArrow("Ada")</button>
+    <div class="out" id="newOut"></div>
+</section>
+
+<!-- ========================================================= -->
+<section>
+    <h2>5. Hoisting</h2>
+    <p class="note">Function declarations are hoisted — you can call them before the line that defines them.
+    Arrow functions are assigned to variables, so they follow <code>const</code>/<code>let</code> rules.</p>
+    <pre>hoisted();     // works
+notHoisted();  // ReferenceError
+
+function hoisted() { return "I'm up here early"; }
+const notHoisted = () =&gt; "I'm only available after this line";</pre>
+    <button id="hoistBtn">Run hoisting demo</button>
+    <div class="out" id="hoistOut"></div>
+</section>
+
+<script>
+    function log(id, msg) {
+        const el = document.getElementById(id);
+        el.textContent += msg + "\n";
+        console.log(msg);
+    }
+    function clear(id) { document.getElementById(id).textContent = ""; }
+
+    // 1. `this` binding ------------------------------------------------
+    const obj = {
+        name: "Widget",
+        regular: function () { return this; },
+        arrow: () => this,
+    };
+    document.getElementById("thisRegular").onclick = () => {
+        clear("thisOut");
+        const t = obj.regular();
+        log("thisOut", "regular() -> this.name = " + (t && t.name));
+        log("thisOut", "this === obj? " + (t === obj));
+    };
+    document.getElementById("thisArrow").onclick = () => {
+        clear("thisOut");
+        const t = obj.arrow();
+        log("thisOut", "arrow() -> this === window? " + (t === window));
+        log("thisOut", "this.name = " + (t && t.name));  // undefined
+    };
+
+    // 2. `this` in a callback ------------------------------------------
+    class Counter {
+        constructor() { this.count = 0; this.timer = null; }
+        startBroken() {
+            this.stop();
+            this.timer = setInterval(function () {
+                // `this` here is window, so this.count is undefined
+                log("counterOut", "broken: this.count = " + this.count);
+            }, 500);
+        }
+        startFixed() {
+            this.stop();
+            this.count = 0;
+            this.timer = setInterval(() => {
+                this.count++;
+                log("counterOut", "fixed: this.count = " + this.count);
+            }, 500);
+        }
+        stop() { if (this.timer) { clearInterval(this.timer); this.timer = null; } }
+    }
+    const counter = new Counter();
+    document.getElementById("startBroken").onclick = () => { clear("counterOut"); counter.startBroken(); };
+    document.getElementById("startFixed").onclick  = () => { clear("counterOut"); counter.startFixed(); };
+    document.getElementById("stopTimers").onclick  = () => counter.stop();
+
+    // 3. `arguments` ---------------------------------------------------
+    function regularArgs() { return Array.from(arguments); }
+    const arrowArgs = () => {
+        try { return Array.from(arguments); }
+        catch (e) { return "Error: " + e.message; }
+    };
+    document.getElementById("argsRegular").onclick = () => {
+        clear("argsOut");
+        log("argsOut", "regularArgs(1, 2, 3) = " + JSON.stringify(regularArgs(1, 2, 3)));
+    };
+    document.getElementById("argsArrow").onclick = () => {
+        clear("argsOut");
+        const result = arrowArgs(1, 2, 3);
+        log("argsOut", "arrowArgs(1, 2, 3) = " + JSON.stringify(result));
+        log("argsOut", "(Arrow functions inherit `arguments` from the enclosing scope,");
+        log("argsOut", " so use rest params instead: const f = (...args) => args;)");
+    };
+
+    // 4. Constructors --------------------------------------------------
+    function Person(name) { this.name = name; }
+    const PersonArrow = (name) => { this.name = name; };
+    document.getElementById("newRegular").onclick = () => {
+        clear("newOut");
+        const p = new Person("Ada");
+        log("newOut", "new Person('Ada') -> " + JSON.stringify(p));
+    };
+    document.getElementById("newArrow").onclick = () => {
+        clear("newOut");
+        try { new PersonArrow("Ada"); }
+        catch (e) { log("newOut", "TypeError: " + e.message); }
+    };
+
+    // 5. Hoisting ------------------------------------------------------
+    document.getElementById("hoistBtn").onclick = () => {
+        clear("hoistOut");
+        // Inside this handler we simulate top-level ordering by using eval-free tricks.
+        // Declarations are hoisted within this function body too.
+        log("hoistOut", "hoisted() returns: " + hoisted());
+        try { log("hoistOut", "notHoisted() returns: " + notHoisted()); }
+        catch (e) { log("hoistOut", "notHoisted() threw: " + e.message); }
+
+        function hoisted() { return "I'm up here early"; }
+        const notHoisted = () => "I'm only available after this line";
+    };
+</script>
+
+</body>
+</html>
