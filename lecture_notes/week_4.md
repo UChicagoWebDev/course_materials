@@ -1,4 +1,3 @@
-uchicagowebdevclass: center, middle
 # MPCS 52553: Web Development
 ## Week 4: Javascript and REST APIs
 ---
@@ -24,6 +23,9 @@ class: agenda
 # Why We Javascript
 ## "Competition is a click away."
 [Google Response to Antitrust Concerns, 2009 (NYT)](https://www.nytimes.com/2009/06/29/technology/companies/29google.html)
+
+![New York Times headline: Google Makes a Case That It Isn't So Big](images/google-antitrust-headline.png "Google Antitrust Headline")
+![Google's Senior Competition Counsel says the company is not a monopoly because "the competition is a click away."](images/google-antitrust-lede.png "Google Antitrust Article Beginning")
 ---
 
 # Why We Javascript
@@ -61,7 +63,8 @@ spending hundreds or thousands of milliseconds.
 > Netscape quickly realized that the Web needed to become more dynamic. Even if
 you simply wanted to check that users entered correct values in a form, you
 needed to send the data to the server in order to give feedback.
-<footer>Speaking JS <cite>O'Reilly Media, http://speakingjs.com/es5/ch04.html</cite></footer>
+
+Speaking JavaScript *O'Reilly Media*, [https://exploringjs.com/es5/ch04.html](https://exploringjs.com/es5/ch04.html)
 ---
 
 # Classical Javascript
@@ -80,8 +83,8 @@ needed to send the data to the server in order to give feedback.
 - onfocus
 
 ## Examples
-- [Alert Example](http://uchicagowebdev.com/examples/week_4/alert.html)
-- [Console Log Example](http://uchicagowebdev.com/examples/week_4/console.html)
+- [Alert Example](https://uchicagowebdev.github.io/course_materials/examples/week_4/alert)
+- [Console Log Example](https://uchicagowebdev.github.io/course_materials/examples/week_4/console)
 ---
 
 # Lab 4-1: Logging events to the Console
@@ -108,7 +111,7 @@ function increment() {
 
 # Lab 4-2: Buttons to change the styling of a `<div>`
 
-https://github.com/UChicagoWebDev/lab-4
+[Lab 4-2 on GitHub](https://github.com/UChicagoWebDev/lab-4)
 
 ```
 <div id="testing_ground">Watch me change colors!</div>
@@ -134,7 +137,7 @@ function recolor(id) {
 
 # Lab 4-3: Buttons to Add New Page Elements 
 
-https://github.com/UChicagoWebDev/lab-4
+[Lab 4-3 on GitHub](https://github.com/UChicagoWebDev/lab-4)
 
 ---
 
@@ -173,6 +176,6 @@ Good explanation why the above weird behaviors happen.
 
 # Exercise 4
 
-[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/71107/assignments)
+[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/71107/assignments/860053)
 
 [Exercise 4 on GitHub](https://github.com/UChicagoWebDev/exercise-4)
