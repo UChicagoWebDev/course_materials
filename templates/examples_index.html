@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | Web Development{% endblock %}
+
+{% block content %}
+<div class="lecture-index">
+    <h1>{{ title }}</h1>
+    {% if crumbs %}
+    <p class="breadcrumbs">
+        {% for crumb in crumbs %}{% if not loop.last %}<a href="{{ crumb.url }}">{{ crumb.name }}</a> / {% else %}{{ crumb.name }}{% endif %}{% endfor %}
+    </p>
+    {% endif %}
+    {% if parent_url %}
+    <p><a href="{{ parent_url }}">← Up</a></p>
+    {% endif %}
+    {% if dirs %}
+    <h2>Directories</h2>
+    <ul>
+        {% for d in dirs %}
+        <li><a href="{{ d.url }}">{{ d.name }}/</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if files %}
+    <h2>Files</h2>
+    <ul>
+        {% for f in files %}
+        <li><a href="{{ f.url }}">{{ f.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}
