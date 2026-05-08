@@ -55,6 +55,8 @@ Because of our focus on writing working applications, this course can be a lot o
 ## Late Policy
 In-class exercises and quizzes are due at 8:30 pm. Take-home exercises are due at 5:00pm on the day of the next class session. Work that is submitted after the deadline without an extension is subject to a 1 point penalty per day. **Start early**. Extensions must be granted before the deadline, and requests will be regarded more favorably the sooner they are made and the earlier your git history for the assignment begins.
 
+Submitting on Canvas tells the grading team that you are done with the assignment, so you may push your code to GitHub as you work, even past the deadline, without fear that incomplete work will be graded. If you push to GitHub on time but forget to submit on Canvas, we will use the GitHub timestamp as the official submission and not penalize you.
+
 ## Extra Credit
 1 point per course session of extra credit may be awarded at the instructor's discretion for significant contributions to in-class discussion.
 
