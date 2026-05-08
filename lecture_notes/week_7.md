@@ -19,6 +19,7 @@ class: agenda
 As discussed, while earlier versions of this course featured a final project, 
 I have recently switched to simply having regular-sized weekly assignments 
 through the end:
+
 - Exercise 7, out today, is due next week on Friday Feb 27.
 - Exercise 8 is due Friday March 6, which is our last day of class.
 - Exercise 9 is due Friday March 13. That's during finals week, and there is no lecture that day.
@@ -33,7 +34,7 @@ manually, and trigger updates after each API callback.
 
 [React](https://reactjs.org/) is a framework for developing interactive web
 pages, and especially single-page applications, developed and released as open
-source by Meta (neé Facebook). The powerful thing about it (and competing frameworks like
+source by Meta (neé Facebook). The powerful thing about it (and competing frameworks like 
 [Vue](https://vuejs.org/) and [Svelte](https://svelte.dev/)) is it lets you
 define how the page should look in various states, and when you update the
 state, the framework updates the page automatically for you.
@@ -108,7 +109,7 @@ to make a starter project in `examples/week_7`. We'll start there and work
 through the tutorial with it.
 
 We'll be building a simple Tic Tac Toe game like this one:
-https://codesandbox.io/p/sandbox/4yq6fm?file=%2Fsrc%2FApp.js
+[https://codesandbox.io/p/sandbox/4yq6fm?file=%2Fsrc%2FApp.js](https://codesandbox.io/p/sandbox/4yq6fm?file=%2Fsrc%2FApp.js)
 ---
 
 # Lab 7: React Tic Tac Toe
@@ -142,7 +143,7 @@ documentation: https://reactjs.org/tutorial/tutorial.html
 ### Props
 - Calls a component's `render` method any time they change
 - Read-only to support one-directional data flow:
-  https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e
+  [https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e](https://medium.com/@lizdenhup/understanding-unidirectional-data-flow-in-react-3e3524c09d8e)
 
 ### State
 - `useState` makes a bargain with React: I promise to only update the state with the assigned setter method, and React promises to efficiently re-render my component and its children. 
@@ -159,7 +160,7 @@ React calls arrangement like `useState` "Hooks," because it's how you "hook into
 No, it is not a good metaphor. "Plugs" or "Deals" would have worked better.
 
 ![Fish Hooks](images/Fish_hooks.jpg)
-source: https://commons.wikimedia.org/wiki/File:Fish_hooks.jpg
+source: [https://commons.wikimedia.org/wiki/File:Fish_hooks.jpg]
 ---
 
 # Going Deep with useContext
@@ -172,4 +173,4 @@ https://react.dev/learn/passing-data-deeply-with-context
 
 Watch Party again, this time with React!
 
-https://github.com/UChicagoWebDev/exercise-7
+[https://github.com/UChicagoWebDev/exercise-7]
