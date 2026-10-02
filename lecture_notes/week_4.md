@@ -176,6 +176,6 @@ Good explanation why the above weird behaviors happen.
 
 # Exercise 4
 
-[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/71107/assignments/860053)
+[Exercise 4 on Canvas](https://canvas.uchicago.edu/courses/75391/assignments/860053)
 
 [Exercise 4 on GitHub](https://github.com/UChicagoWebDev/exercise-4)

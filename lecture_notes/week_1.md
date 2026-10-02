@@ -51,12 +51,12 @@ lztong@uchicago.edu
 
 # Important pages
 - GitHub: https://github.com/UChicagoWebDev
-- Slack: #web-development channel on https://cs-uchicago.slack.com/
-- Canvas: https://canvas.uchicago.edu/courses/71107
+- Slack: #web-development-autumn-2026 channel on https://cs-uchicago.slack.com/
+- Canvas: https://canvas.uchicago.edu/courses/{{CANVAS_COURSE_ID}}/
 ---
 
 # In-Class Exercise 1
-Let's get started on Canvas: https://canvas.uchicago.edu/courses/71107/assignments
+Let's get started on Canvas: https://canvas.uchicago.edu/courses/{{CANVAS_COURSE_ID}}/assignments
 ---
 
 # Objectives
@@ -203,5 +203,5 @@ https://www.w3.org/History/1989/proposal.html
 ---
 
 # Take-Home Exercise 1: Resume Styling
-- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/71107/assignments)
+- Assignment submissions are on [Canvas](https://canvas.uchicago.edu/courses/75391/assignments)
 - Get the code to get started on [GitHub](https://classroom.github.com/a/-zZ8uRTP)
