@@ -1,4 +1,4 @@
-# Syllabus for Web Development - Spring 2026
+# Syllabus for Web Development - Autumn 2026
 
 ## Course Description
 This course is intended to prepare students with a general programming background to work on teams producing modern web applications. Students will learn a strong foundation of core web technologies and protocols, an overview of the major design patterns in the history of web development, and a detailed introduction to the current industry standard. We will have an emphasis on learning from publicly-available documentation, so that students are equipped to learn new techniques and frameworks in this rapidly-evolving field.
@@ -27,14 +27,18 @@ Lecturer
 - Trevor Austin (trevoraustin@cs.uchicago.edu)
 
 TAs
-- Abhyas Mall (mailto:abhyas@uchicago.edu)
+- Zitong Li (mailto:lztong@uchicago.edu)
 
 ## Office Hours
 - To be decided soon
 
 Video links for hours are in the Zoom Tab on Canvas
 
-## Textbooks
+## Textbooks and Materials
+All students should have access to Anthropic's [Claude](https://www.anthropic.com/). MPCS students should all have Claude Pro accounts already. Others may need to purchase a subscription.
+
+All students should have a GitLab repository for the course, created for them automatically at https://gitlab.cs.uchicago.edu/courses/aut-26/mpcs52553. Speak to me if you have any trouble accessing it.
+
 - MDN Web Docs: https://developer.mozilla.org/en-US/
 - SQLite Documentation: https://www.sqlite.org/docs.html
 - Node Documentation: https://nodejs.org/en/docs/guides/
@@ -43,7 +47,9 @@ Video links for hours are in the Zoom Tab on Canvas
 - React Documentation: https://reactjs.org/docs/getting-started.html
 
 ## Assignments and Grading
-Students will be expected to complete small assignments in class ("Labs") and more substantial take home exercises ("Exercises") due the next week before class. There are 9 weekly take-home exercises, with the last one due on the last day of finals week: https://canvas.uchicago.edu/courses/71107/assignments. There is no final project or final exam.
+Students will be expected to complete small assignments in class ("Labs"), more substantial take home exercises ("Exercises") due the next week before class. AI use on Labs and Quizzes is unrestricted and encouraged, but students should be prepared to demonstrate their understanding of the material in in-class discussion.
+
+New this quarter, in light of the rapid development of AI tools, students will also complete pen and paper Quizzes in class, and a pen and paper Final Exam. No technology, including AI, will be allowed on the Quizzes or Final Exam.
 
 ## Grading Policy
 Because of our focus on writing working applications, this course can be a lot of work. But the material is accessible and the grading relatively generous. Grades are not curved in this class, and there is no reason every student could not receive an A. Instead they are based on the percentage of all possible points students have earned on their labs and exercises:
@@ -53,17 +59,12 @@ Because of our focus on writing working applications, this course can be a lot o
 - Below 70.0: Dealt with on a case-by-case basis
 
 ## Late Policy
-In-class exercises and quizzes are due at 8:30 pm. Take-home exercises are due at 5:00pm on the day of the next class session. Work that is submitted after the deadline without an extension is subject to a 1 point penalty per day. **Start early**. Extensions must be granted before the deadline, and requests will be regarded more favorably the sooner they are made and the earlier your git history for the assignment begins.
+In-class Labs are due at 8:30 pm. Take-home exercises are due at 5:00pm on the day of the next class session. Work that is submitted after the deadline without an extension is subject to a 1 point penalty per day. **Start early**. Extensions must be granted before the deadline, and requests will be regarded more favorably the sooner they are made and the earlier your git history for the assignment begins.
 
-Submitting on Canvas tells the grading team that you are done with the assignment, so you may push your code to GitHub as you work, even past the deadline, without fear that incomplete work will be graded. If you push to GitHub on time but forget to submit on Canvas, we will use the GitHub timestamp as the official submission and not penalize you.
+Submitting on Canvas tells the grading team that you are done with the assignment, so you may push your code to GitLab as you work, even past the deadline, without fear that incomplete work will be graded. If you push to GitHub on time but forget to submit on Canvas, we will use the GitLab timestamp as the official submission and not penalize you.
 
 ## Extra Credit
 1 point per course session of extra credit may be awarded at the instructor's discretion for significant contributions to in-class discussion.
-
-## Collaboration and AI Policy
-I **strongly** encourage students to collaborate on exercises together. Additionally, students may access any resources they find helpful, including online documentation, discussion boards, and generative AI models like ChatGPT or [PhoenixAI](https://phoenixai.uchicago.edu/). For maximum learning (and for consistency with the University's academic honesty policy), we have only two requirements:
-1. You must type in your own code yourself and submit it separately. All grades are individual. You simply won't learn anywhere near as much by copy and pasting as you will by typing it out yourself.
-1. Your submissions must list anyone you worked with and any sources you consulted (e.g. Stack Overflow, links to an external site, ChatGPT) in their README.md files.
 
 ## Tentative Weekly Schedule
 
