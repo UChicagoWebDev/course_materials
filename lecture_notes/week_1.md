@@ -4,13 +4,14 @@ class: center, middle
 MPCS 52553
 ---
 
-## First Page  
-## Introductions  
-## HTML5  
-## Tools  
-## The DOM  
-## CSS3  
-## References
+# Agenda
+- First Page  
+- Introductions  
+- HTML5  
+- Tools  
+- The DOM  
+- CSS3  
+- References
 ---
 
 # Build a Web Page
