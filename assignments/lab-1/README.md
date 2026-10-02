@@ -13,8 +13,8 @@ If you haven't already, create a local clone of your course GitLab repo from htt
 
 1. Create a new directory at the repository root called lab-1.
 2. Create a file in lab-1 called *yourname*.html. For example, mine would be `trevor.html`. 
-3. Commit and push your changes.
-4. Copy the URL of your GitLab repository and submit it on Canvas.
+3. Create a new file called CLAUDE.md in the root of your repository. Copy the contents of /assignments/STUDENT_CLAUDE.md into it.
+4. Commit and push your changes. Copy the URL of your GitLab repository and submit it on Canvas.
 5. Post a link to your lab-1 directory on GitLab in the #web-development channel on the [UChicago CS Slack](https://cs-uchicago.slack.com).
 
 #### Part 2
