@@ -14,6 +14,7 @@ QUARTER_PATTERN = re.compile(
     r"(Winter|Spring|Fall|Autumn|Summer)(\s+Quarter)?\s+\d{4}"
 )
 CANVAS_COURSE_PATTERN = re.compile(r"canvas\.uchicago\.edu/courses/\d+")
+TEMPLATE_VAR_PATTERN = re.compile(r"\{\{\s*([A-Z][A-Z0-9_]*)\s*\}\}")
 
 EXAMPLES_EXCLUDE_DIRS = {"__pycache__", "images"}
 EXAMPLES_EXCLUDE_SUFFIXES = {".pyc"}
@@ -101,6 +102,29 @@ def apply_config(text: str) -> str:
     return text
 
 
+def template_vars() -> dict:
+    """The quarterly values from site_config (its UPPERCASE names)."""
+    return {
+        name: str(value)
+        for name, value in vars(site_config).items()
+        if name.isupper()
+    }
+
+
+def fill_template_vars(text: str) -> str:
+    """Replace {{ NAME }} placeholders in Markdown with site_config values.
+
+    Only UPPERCASE names defined in site_config are replaced, so other
+    {{ ... }} text (e.g. Jinja or Vue code samples) is left untouched.
+    """
+    values = template_vars()
+
+    def replace(match):
+        return values.get(match.group(1), match.group(0))
+
+    return TEMPLATE_VAR_PATTERN.sub(replace, text)
+
+
 def update_source_files(root: Path):
     """Update source files in place with current config values."""
     files = [root / "README.md", root / "syllabus.md"]
@@ -138,6 +162,8 @@ def build_site(output_dir: str = "_site", base_url: str = ""):
     env.globals["base_url"] = base_url
     env.globals["quarter"] = site_config.QUARTER
     env.globals["canvas_url"] = f"https://canvas.uchicago.edu/courses/{site_config.CANVAS_COURSE_ID}"
+    # Same {{ NAME }} values that fill_template_vars puts into Markdown
+    env.globals.update(template_vars())
 
     # Copy static assets
     shutil.copytree(root / "static" / "css", out / "css")
@@ -155,7 +181,7 @@ def build_site(output_dir: str = "_site", base_url: str = ""):
         week_num = int(re.search(r"week_(\d+)", week_file).group(1))
         weeks.append(week_num)
 
-        md_content = Path(week_file).read_text()
+        md_content = fill_template_vars(Path(week_file).read_text())
         slide_strings = split_slides(md_content)
 
         total_slides = len(slide_strings)
@@ -191,7 +217,7 @@ def build_site(output_dir: str = "_site", base_url: str = ""):
     (lectures_dir / "index.html").write_text(lecture_index_html)
 
     # Syllabus
-    syllabus_md = (root / "syllabus.md").read_text()
+    syllabus_md = fill_template_vars((root / "syllabus.md").read_text())
     md_renderer = markdown.Markdown(
         extensions=["fenced_code", "codehilite", "tables"],
         extension_configs={

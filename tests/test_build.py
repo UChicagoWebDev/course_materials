@@ -56,3 +56,32 @@ def test_build_base_url(tmp_path, monkeypatch):
     # Lecture index uses base_url
     lecture_index = (site / "lecture_notes" / "index.html").read_text()
     assert "/course_materials/lecture_notes/week_1/1/" in lecture_index
+
+
+def test_fill_template_vars(monkeypatch):
+    """{{ NAME }} placeholders use site_config values; other braces are untouched."""
+    import site_config
+    from build import fill_template_vars
+
+    monkeypatch.setattr(site_config, "CANVAS_COURSE_ID", "12345")
+    text = (
+        "https://canvas.uchicago.edu/courses/{{CANVAS_COURSE_ID}}/ "
+        "{{ QUARTER }} {{ UNKNOWN_NAME }} {{ message }}"
+    )
+    assert fill_template_vars(text) == (
+        f"https://canvas.uchicago.edu/courses/12345/ "
+        f"{site_config.QUARTER} {{{{ UNKNOWN_NAME }}}} {{{{ message }}}}"
+    )
+
+
+def test_build_fills_markdown_template_vars(tmp_path, monkeypatch):
+    """Built slides contain site_config values, not raw placeholders."""
+    import site_config
+
+    monkeypatch.chdir(Path(__file__).parent.parent)
+    build_site(output_dir=str(tmp_path / "_site"))
+
+    week_dir = tmp_path / "_site" / "lecture_notes" / "week_1"
+    slides = "".join(p.read_text() for p in week_dir.glob("*/index.html"))
+    assert "{{CANVAS_COURSE_ID}}" not in slides
+    assert f"canvas.uchicago.edu/courses/{site_config.CANVAS_COURSE_ID}" in slides
