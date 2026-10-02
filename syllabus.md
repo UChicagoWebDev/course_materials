@@ -8,7 +8,7 @@ This course uses agile software techniques to build real, working software each 
 
 We have a GitHub Organization for the course at https://github.com/UChicagoWebDev. I will be posting lecture notes and slides there, at https://github.com/UChicagoWebDev/course_materials.
 
-We have a Slack channel #web-development on the [UChicago CS Slack](https://cs-uchicago.slack.com) for the course that everyone should join and use. That's the best place to ask questions about course content, so that the whole class can benefit from the answers.
+We have a Slack channel #web-development-autumn-2026 on the [UChicago CS Slack](https://cs-uchicago.slack.com) for the course that everyone should join and use. That's the best place to ask questions about course content, so that the whole class can benefit from the answers.
 
 ## Course Contents
 - Fundamentals of HTML5, CSS3, and JavaScript/ES6 for front-end programming
