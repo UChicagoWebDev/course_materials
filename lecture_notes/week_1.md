@@ -1,6 +1,6 @@
 class: center, middle
 # Web Development
-## Spring 2026
+## Autumn 2026
 MPCS 52553
 ---
 
@@ -44,8 +44,8 @@ In your browser, navigate to localhost:8000/yourname.html
 ## Trevor Austin (Lecturer)
 trevoraustin@uchicago.edu
 
-## Abhyas Mall (TA)
-abhyas@uchicago.edu
+## Zitong Li (TA)
+lztong@uchicago.edu
 
 ---
 
