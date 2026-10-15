@@ -31,7 +31,7 @@ TAs
 
 ## Office Hours
 - 11:00am–12:30 on Wednesdays (Trevor) [link](https://calendar.app.google/JXCjFwonPHD43KDd7)
-- 2:00pm–4:00 on Thursdays (Zitong)
+- 2:00pm–4:00 on Thursdays (Zitong) [link](https://meet.google.com/cty-zibn-mrw)
 - 11:00am–12:30 on Fridays (Trevor) [link](https://calendar.app.google/JXCjFwonPHD43KDd7)
 
 Video links for hours are in the Zoom Tab on Canvas
