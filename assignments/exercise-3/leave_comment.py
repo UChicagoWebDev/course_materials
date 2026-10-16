@@ -1,3 +1,23 @@
+import http_headers
+from http_headers import Method
+
+def comment_handler(request, method: Method, db_connection, query_params):
+    if method == Method.POST:
+        # TODO: get the comment out of the form data and insert it into the
+        #       comments table, remembering to sanitize your inputs
+        pass
+
+    # TODO: get the post we're commenting on and all the previous comments on it
+    # We get the post_id from query_params.get("post_id")
+    # SELECT ... FROM posts JOIN comments ...
+    post = {}
+
+    response = http_headers.write_headers()
+    response += http_headers.write_blank_line()
+    response += write_html(post)
+
+    request.wfile.write(response.encode("utf-8"))
+
 def write_html(post={}):
   # TODO: Update the h1 with your name
   # TODO: Display the post the user is commenting on, and the existing comments

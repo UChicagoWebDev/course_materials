@@ -1,3 +1,30 @@
+import http_headers
+from http_headers import Method
+
+def index_handler(request, method: Method, db_connection):
+    # TODO: get posts and comments from the database
+    # results = db_connection.execute("SELECT ...")
+    # HINT: re-shape your data in Python so each post object has a list of its comments
+    # e.g.  [
+    #           {
+    #               post_id: 1, 
+    #               comments: [{...}, {...}, ...],
+    #               ...
+    #           }, 
+    #           {
+    #               post_id: 2,
+    #               ...
+    #           },
+    #           ...
+    #       ]
+    posts_with_comments = []
+
+    response = http_headers.write_headers()
+    response += http_headers.write_blank_line()
+    response += write_html(posts_with_comments)
+
+    request.wfile.write(response.encode("utf-8"))
+
 def write_html(posts_with_comments=[]):
     # TODO: Update the h1 with your name
     # TODO: get all the posts and their comments

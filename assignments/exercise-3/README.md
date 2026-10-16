@@ -27,8 +27,12 @@ From there:
 1. You can connect to the SQLite3 database in `db/weblog.sqlite3`. It has
   already been set up to have tables for posts and comments by running the
   commands in `create_tables.sql`.
-1. Modify `weblog.py` to fetch posts and their associated comments from the
-    database and display them to visitors, and modify index_page.py to render the 
+1. `weblog.py` dispatches each request path to a handler function in the page's
+  own file: `index_handler` in `index_page.py`, `create_post_handler` in
+  `create_post.py`, and `comment_handler` in `leave_comment.py`. Each handler
+  writes its whole response (headers and body) out to `request.wfile`.
+1. Modify `index_handler` in `index_page.py` to fetch posts and their associated
+    comments from the database, and modify `write_html` to render the 
     posts and comments retreived from the database
     - Use no more than two queries to get the existing posts and their comments
       (note: it is possible to do this in one query).
@@ -41,8 +45,8 @@ From there:
       the [html.escape](https://docs.python.org/3/library/html.html#html.escape)
       function to make sure special characters like < and > render correctly in HTML.
     - Replace `<yourname>` with your name.
-1. Modify `weblog.py` to insert a new row in the `posts` table in response to an 
-    appropriate POST message.
+1. Modify `create_post_handler` in `create_post.py` to insert a new row in the
+    `posts` table in response to an appropriate POST message.
     - Be sure to add a secret password in the your code, and only add a row if the
       password the user entered matches! For ease in grading, use the password `phil`
     - Make the id of each post in the database the `id` attribute on your
@@ -58,8 +62,8 @@ From there:
       [sanitize your inputs](https://xkcd.com/327/) using placeholders to form the insert
       statements rather than creating queries with string concatenation.
       https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries.
-1. Modify `weblog.py` to enable users to leave comments on posts, and modify 
-  `leave_comment.py` to display the post the user is commenting on and any previous comments.
+1. Modify `comment_handler` in `leave_comment.py` to enable users to leave comments
+  on posts, and to display the post the user is commenting on and any previous comments.
     - We'll get a `post_id` as a query param. Fetch the post and any existing
       comments from the database in a single query (you'll have to use a `JOIN`).
     - We'll let any users post comments without authentication. It's become clear
