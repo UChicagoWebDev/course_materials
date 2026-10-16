@@ -1,6 +1,5 @@
 # weblog.py
 from functools import cached_property
-import html
 from http.cookies import SimpleCookie
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qsl, urlparse, unquote_plus
@@ -34,61 +33,33 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             self.index_handler(method)
         elif parsedUrl.path == '/mystery':
             self.mystery_handler(method)
-        elif parsedUrl.path.startswith('/files/'):
-            self.files_handler(method, parsedUrl.path)
-        elif parsedUrl.path == '/form':
-            self.form_handler(method)
+        # TODO: add more path handlers here
         else:
             self.not_found_handler()
 
-    def not_found_handler(self):
-        response = """HTTP/1.0 404 FILE NOT FOUND
-
-            """
-        self.wfile.write(response.encode("utf-8"))
-
     def index_handler(self, method: Method):
         # TODO: add the rest of the Response to return an index page
-        response =  """HTTP/1.1 200 OK
-            Content-Type: text/html
-            Nonense-Header: foobar
-
-            tiny index
-            """
-
-        self.wfile.write(response.encode("utf-8"))
+        self.wfile.write(
+"""
+""".encode("utf-8"))
 
     def files_handler(self, method: Method, path):
-        file_contents = None
-
-        fs_path = os.getcwd() + unquote_plus(path)
-
-        print(f"FS PATH: {fs_path}")
-
-        if os.path.exists(fs_path):
-            if os.path.isfile(fs_path):
-                with open(fs_path, 'rb') as f:
-                    file_contents = f.read()
-
-        if file_contents is None:
-            self.not_found_handler()
-            return
-
         # TODO
-        response = "HTTP/1.1 200 OK\r\n"
-        response += "\r\n"
         
-        response = response.encode("utf-8") + file_contents
-
-        self.wfile.write(response)
-        
+        self.not_found_handler()
 
     def mystery_handler(self, method: Method):
-        #TODO https://en.wikipedia.org/wiki/Mystery_Spot
-        response = ""
-        
+        #TODO
+        self.wfile.write(
+"""
+""".encode("utf-8"))
 
-        self.wfile.write(response.encode("utf-8"))
+    def files_index_handler(self, path):
+        # TODO
+        self.wfile.write(
+f"""HTTP/1.0 200 OK
+
+{"\r\n".join(os.listdir(path[1:]))}""".encode("utf-8"))
 
     def form_handler(self, method: Method):
         print("FORM")
@@ -101,44 +72,16 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             print("Form Data:", form_data)
 
         with open('form.html', 'rb') as f:
-            content = f.read()
-            print(f"FILE CONTENT: {content}")
+            template = f.read().decode()
 
-            page_template = content.decode('utf-8')
+            # TODO
 
-            if method == Method.POST:
-                u = html.escape(form_data.get("username", ""))
-                
-                page_template = page_template.replace("{username}", u)
+            self.wfile.write(
+f"""
+""".encode("utf-8"))
 
-                # TODO: set a cookie with the username
-                headers = "HTTP/1.0 200 OK\r\n" \
-                    "content-type: text/html\r\n" \
-                    "Set-Cookie: username={}\r\n".format(u) + \
-                    "\r\n"
-                
-                response = (headers + page_template).encode("utf-8")
-                self.wfile.write(response)
-                
-            else:
-                username = None
-
-                # TODO: get the username from the cookie if it exists
-                cookie_header = self.headers.get('Cookie')
-                if cookie_header:
-                    cookie = SimpleCookie(cookie_header)
-                    if 'username' in cookie:
-                        username = cookie['username'].value
-                
-                if username:
-                    page_template = page_template.replace("{username}", html.escape(username))
-                
-                headers = "HTTP/1.0 200 OK\r\n" \
-                    "content-type: text/html\r\n" \
-                    "\r\n"
-                
-                response = (headers + page_template).encode("utf-8")
-                self.wfile.write(response)
+    def not_found_handler(self):
+        self.wfile.write("HTTP/1.0 404 FILE NOT FOUND\r\n".encode("utf-8"))
 
 if __name__ == "__main__":
     print("Starting web server at http://localhost:8000")
