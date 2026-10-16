@@ -50,11 +50,19 @@ class WebRequestHandler(BaseHTTPRequestHandler):
     def index_handler(self, method: Method):
         # TODO: add the rest of the Response to return an index page
         response =  """HTTP/1.1 200 OK
-            Content-Type: text/html
-            Nonense-Header: foobar
+Content-Type: text/html
+Nonense-Header: foobar
 
-            tiny index
-            """
+<html>
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>Welcome to the Index Page</h1>
+    <p>This is a simple web server built using Python's http.server module.</p>
+</body>
+</html>
+"""
 
         self.wfile.write(response.encode("utf-8"))
 
@@ -85,7 +93,9 @@ class WebRequestHandler(BaseHTTPRequestHandler):
 
     def mystery_handler(self, method: Method):
         #TODO https://en.wikipedia.org/wiki/Mystery_Spot
-        response = ""
+        response = """HTTP/1.1 302 Found
+Location: https://en.wikipedia.org/wiki/Mystery_Spot
+"""
         
 
         self.wfile.write(response.encode("utf-8"))
