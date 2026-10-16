@@ -3,7 +3,7 @@ Notes, slides, and in-class exercises for MPCS 52553 - Web Development, as taugh
 
 ### Teaching Team
 - [Trevor Austin](mailto:trevoraustin@cs.uchicago.edu) (Lecturer)
-- [Ziton Li](mailto:lztong@uchicago.edu) (TA)
+- [Zitong Li](mailto:lztong@uchicago.edu) (TA)
 
 ### Useful Links
 - [Course Website](https://uchicagowebdev.github.io/course_materials/)
