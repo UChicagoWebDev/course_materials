@@ -4,3 +4,4 @@ apikey.js
 */__pycache__/*
 .worktrees/
 _site/
+.private
