@@ -1,3 +1,9 @@
+from enum import Enum
+
+class Method(Enum):
+    GET = 1
+    POST = 2
+
 def write_headers():
     return  "" \
 f"""HTTP/1.0 200 OK

@@ -118,7 +118,7 @@ Content-Type: text/html; charset=UTF-8
 
 # Lab 3-1: Writing HTTP Responses with Python
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Web Servers: Apache
@@ -157,7 +157,7 @@ If no, send a 404 Response
 
 # Lab 3-2: Serving Static Files
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Forms and Submissions
@@ -173,7 +173,7 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/
 
 # Lab 3-3: Receiving Form Data
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Sanitizing User Input
@@ -187,7 +187,7 @@ We have to be careful with user input though! Try POSTing:
 If we are going to include user input in our response, we have to make sure any 
 HTML is escaped and can't be interpreted by the browser as HTML. 
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Cookies
@@ -208,7 +208,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies
 
 # Lab 3-4: Cookies
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Server-Side Rendering
@@ -345,9 +345,9 @@ Imagine that we have a student, SBF, who got an F. What happens if he enters his
 
 # Lab 3-5: POSTing to the Wall
 
-https://github.com/UChicagoWebDev/lab-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-3
 ---
 
 # Exercise 3: A Web Journal
 
-https://github.com/UChicagoWebDev/exercise-3
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/exercise-3

@@ -1,3 +1,30 @@
+import http_headers
+from http_headers import Method
+
+SECRET_PASSWORD = "phil"
+
+def create_post_handler(request, method: Method, db_connection):
+    message = ""
+
+    if method == Method.POST:
+        # TODO: get the title, body, and password out of the form data
+        # password = form_data.get("password")
+
+        # If the password doesn't match the secret password on our server,
+        # return the page with an error message:
+        # message = "rejected"
+
+        # TODO: otherwise, the password matches, so we need to update the database
+        # with our new post, remembering to sanitize your inputs
+        # message = "success"
+        pass
+
+    response = http_headers.write_headers()
+    response += http_headers.write_blank_line()
+    response += write_html(message)
+
+    request.wfile.write(response.encode("utf-8"))
+
 def write_html(message=""):
   # TODO: Update the h1 with your name
   html = f"""<html>
