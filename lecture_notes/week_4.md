@@ -166,14 +166,109 @@ Good explanation why the above weird behaviors happen.
 - [`let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
 - New methods on [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
-  and [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 - Promises (for next week)
+---
+
+# ES6 New Features: `const`
+The `const` keyword creates a read-only reference to a value. 
+It does not mean the value it holds is immutable, 
+just that the variable identifier cannot be reassigned.
+
+```
+var x = 1;
+const y = 2;
+const z = {a: 1, b: 2};
+...
+x=0;  // ok
+y=4;  // error
+z.a = 3;  // ok
+```
+---
+
+# ES6 New Features: `let`
+The `let` keyword declares a block-scoped local variable, 
+instead of a global variable (like `var`).
+
+```
+for (var i = 0; i < 3; i++) setTimeout(() => console.log(i), 0);  // 3 3 3
+for (let i = 0; i < 3; i++) setTimeout(() => console.log(i), 0);  // 0 1 2
+```
+---
+
+# ES6 New Features: Arrow Functions
+Arrow functions are a more concise syntax for writing function expressions.
+
+```
+let sum = function(x, y) { return x + y; };
+let add = (x, y) => x + y;
+
+sum(1, 2);  // 3
+add(1, 2);  // 3
+```
+---
+
+# ES6 New Features: Arrow Functions
+Arrow functions do not have their own `this` context,
+so they are useful for callbacks and event handlers.
+
+```
+class Timer {
+  constructor() { this.seconds = 0; }
+  start() {
+    setInterval(function () { this.seconds++; }, 1000); // 'this' is not the Timer: NaN or a TypeError
+    setInterval(() => { this.seconds++; }, 1000);        // works
+  }
+}
+```
+---
+
+# ES6 New Features: Array Methods
+- [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+- [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [findIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+- [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+- [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+- [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+- [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+---
+
+# ES6 New Features: Sets
+A `Set` is a collection of unique values. 
+Javascript will automatically remove duplicates when you add them to a `Set`.
+
+```
+let s = new Set();
+s.add(1);
+s.add(1);
+s.add(2);
+console.log(s);  // Set { 1, 2 }
+```
 ---
 
 # AJAX and REST APIs
 ### [Using XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 ### [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+Think of a Request as an object you are building, like a little boat or a wind-up toy. 
+You can set its properties, like the URL and the HTTP method, 
+and then you can send it off to the server. 
+When the server responds, you can handle the response in a callback function.
+
+```
+function reqListener() {
+  console.log(this.responseText);
+}
+
+const req = new XMLHttpRequest();
+req.addEventListener("load", reqListener);
+req.open("GET", "http://www.example.org/example.txt");
+req.send();
+```
 ---
 
 # Exercise 4
