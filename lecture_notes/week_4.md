@@ -25,6 +25,7 @@ class: agenda
 [Google Response to Antitrust Concerns, 2009 (NYT)](https://www.nytimes.com/2009/06/29/technology/companies/29google.html)
 
 ![New York Times headline: Google Makes a Case That It Isn't So Big](images/google-antitrust-headline.png "Google Antitrust Headline")
+
 ![Google's Senior Competition Counsel says the company is not a monopoly because "the competition is a click away."](images/google-antitrust-lede.png "Google Antitrust Article Beginning")
 ---
 
@@ -48,6 +49,7 @@ waiting for the computer to finish, so they should be given feedback indicating
 when the computer expects to be done. Feedback during the delay is especially
 important if the response time is likely to be highly variable, since users will
 then not know what to expect.
+
 [Response Times: The 3 Important Limits (Nielsen Norman Group)](https://www.nngroup.com/articles/response-times-3-important-limits/)
 ---
 
@@ -89,7 +91,7 @@ Speaking JavaScript *O'Reilly Media*, [https://exploringjs.com/es5/ch04.html](ht
 
 # Lab 4-1: Logging events to the Console
 
-https://github.com/UChicagoWebDev/lab-4
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-4
 
 ```
 <script>
@@ -111,7 +113,7 @@ function increment() {
 
 # Lab 4-2: Buttons to change the styling of a `<div>`
 
-[Lab 4-2 on GitHub](https://github.com/UChicagoWebDev/lab-4)
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-4
 
 ```
 <div id="testing_ground">Watch me change colors!</div>
@@ -137,7 +139,7 @@ function recolor(id) {
 
 # Lab 4-3: Buttons to Add New Page Elements 
 
-[Lab 4-3 on GitHub](https://github.com/UChicagoWebDev/lab-4)
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-4
 
 ---
 
