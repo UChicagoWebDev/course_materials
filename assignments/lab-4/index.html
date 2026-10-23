@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Lab 4</title>
+    <script>
+        // TODO
+    </script>
+    <style>
+        body {
+            width: 1000px;
+            margin: 20px auto;
+        }
+
+        #bingo_board {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            background-color: lightgray;
+            width: 600px;
+            height: 600px;
+        }
+
+        .bingo_square {
+            background-color: white;
+        }
+
+        #free_space {
+            background-color: lightblue;
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>4-1: Logging to Console</h2>
+    <ul>
+        <li>
+            <h3>clicking the "+1" button increaseses a counter and logs it to the console</h3>
+
+            <button id="plus_one" onclick="increment()">+1</button>
+        </li>
+        <li>
+            <h3>hitting shift+enter in the text box logs the contents to the console and clears the box</h3>
+
+            <textarea id="text_box" onkeypress="shift_enter(event)"></textarea>
+        </li>
+
+    <h2>4-2: Modifying Attributes and Style</h2>
+    <ul>
+        <li>
+            <h3>clicking the "Recolor" button sets the word "Rainbow" to a random color</h3>
+
+            <h3 id="rainbow">RAINBOW</h3>
+
+            <button id="recolor">Recolor</button>
+        </li>
+    </ul>
+
+    <h2>4-3: Modifying DOM Structure</h2>
+
+    <h3>Bingo Board:</h3>
+    <div id="bingo_board">
+        <div class="bingo_square" id="free_space">
+            Free Space
+            <a href="#" class="delete">x</a>
+        </div>
+    </div>
+    <input id="bingo_input">
+    <button id="bingo_add">Add</button>
+
+    <ul>
+        <li>
+            <h3>clicking the "Add" button adds a bingo square</h3>
+        </li>
+        <li>
+            <h3>clicking the "x" icon in a bingo square deletes it</h3>
+        </li>
+    </ul>
+
+    <script>
+    </script>
+
+</body>
+</html>
