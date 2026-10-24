@@ -3,6 +3,75 @@
     <title>Lab 4</title>
     <script>
         // TODO
+        counter = 0;
+
+        function increment() {
+            counter = counter + 1
+            console.log(counter)
+        }
+
+        function shift_enter(e) {
+            if(e.key == "Enter" && e.shiftKey == true) {
+                contents = document.getElementById("text_box").value
+                console.log(contents)
+                document.getElementById("text_box").value = ""
+                e.preventDefault()
+            }
+        }
+
+        var rainbow = function(e, some_other_variable) {
+            console.log("rainbow!")
+            // change the color of the element #rainbow to a random color
+            var red = Math.floor(Math.random() * 256) // [0,1) 
+            var blue = Math.floor(Math.random() * 256) // [0,1) 
+            var green = Math.floor(Math.random() * 256) // [0,1) 
+        
+            newColor = "rgb("+red+","+blue+","+green+")"
+
+            var r = document.querySelector("#rainbow")
+            r.setAttribute("style", "color: "+newColor)
+        }
+
+        var deleteBingoSquare = function(e) {
+            link = e.target
+            square = link.parentElement
+            console.log(square)
+            square.remove()
+            e.preventDefault()
+        }
+
+        var addBingoSquare = function() {
+            newText = document.querySelector("#bingo_input").value
+
+            newSquare = document.createElement("div")
+            newSquare.classList.add("bingo_square")
+            t = document.createTextNode(newText+" ")
+            newSquare.append(t)
+
+            deleteLink = document.createElement("a")
+            deleteLink.classList.add("delete")
+            deleteLink.setAttribute("href", "#")
+            deleteLink.addEventListener("click", deleteBingoSquare)
+            x = document.createTextNode("x")
+            deleteLink.append(x)
+            newSquare.append(deleteLink)
+
+            document.querySelector("#bingo_board").append(newSquare)
+            document.querySelector("#bingo_input").value = ""
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // if you click on the add button:
+            var btn = document.querySelector("#bingo_add")
+            btn.addEventListener("click", addBingoSquare)
+
+            // make new div
+            // put text in it
+            // make a new a tag
+            // put text in the a tag
+            // add a listener to the new a tag to delete the square
+        })
+
     </script>
     <style>
         body {
@@ -79,6 +148,9 @@
     </ul>
 
     <script>
+        // id = "recolor"
+        var recolorBtn = document.querySelector("#recolor")
+        recolorBtn.addEventListener("click",rainbow)
     </script>
 
 </body>
