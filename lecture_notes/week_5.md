@@ -21,7 +21,7 @@ class: agenda
 ---
 
 # Asynchronous Javascript
-![Time Turner from Harry Potter](images/time_turner.jpeg)
+![Time Turner from Harry Potter](images/turning_time.webp)
 
 ???
 
