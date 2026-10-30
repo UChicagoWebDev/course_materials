@@ -104,6 +104,9 @@ function increment() {
 ```
 ---
 
+# Act Break
+---
+
 # DOM Manipulation
 ### [DOM Element API](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 - [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
