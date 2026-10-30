@@ -3,9 +3,41 @@ let fnAButton, fnBButton, fnCButton, sequenceButton = null
 const sequence = () => {
     console.log("starting sequence...")
     // TODO
-    fnA();
-    fnB();
-    fnC();
+
+    const d = 1+4*Math.random()
+    console.log(`fnA waiting ${d} seconds`)
+    setTimeout(()=>{
+        console.log("... fnA done")
+        fnAButton.classList.add("ready")
+        
+        // do fnB
+        if(fnAButton.classList.contains("error") || !fnAButton.classList.contains("ready")) {
+            fnBButton.classList.add("error")
+            return
+        }
+        const d = 1+4*Math.random()
+        console.log(`fnB waiting ${d} seconds`)
+        setTimeout(()=>{
+            console.log("... fnB done")
+            fnBButton.classList.add("ready")
+
+            // do fnC
+            if(fnBButton.classList.contains("error") || !fnBButton.classList.contains("ready")) {
+                fnCButton.classList.add("error")
+                return
+            }
+            const d = 1+4*Math.random()
+            console.log(`fnC waiting ${d} seconds`)
+            setTimeout(()=>{
+                console.log("... fnC done")
+                fnCButton.classList.add("ready")
+            }, d*1000)
+
+
+        }, d*1000)
+
+    }, d*1000)
+    
 
     if (fnAButton.classList.contains("error") ||
         fnBButton.classList.contains("error") ||
