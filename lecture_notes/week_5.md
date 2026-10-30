@@ -84,7 +84,7 @@ Hello!
 
 # Lab: Egg Timer
 
-https://github.com/UChicagoWebDev/lab-5
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-5
 
 Make a page with a text entry field and a button called 'Set Timer'. When a user
 puts a number in the field and clicks the button, wait that many seconds then
