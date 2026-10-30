@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Lab 5</title>
+    <script src="eggTimer.js"></script>
+    <script src="sequence.js"></script>
+    <script src="randomWalk.js"></script>
+    <script src="randomWalkWithAsync.js"></script>
+    <style>
+        button {
+            padding-inline: 0.6em;
+            padding-block: 0.2em;
+            background-color: #EEE;
+            border: 1px solid gray;
+            border-radius: 4px;
+        }
+        .buttonContainer {
+            min-height: 1.4em;
+            margin: 0.4em 0;
+            display: flex;
+            gap: 0.2em;
+        }
+        .ready {background-color: #CFC}
+        .error {background-color: #FCC}
+    </style>
+</head>
+<body>
+    <h1>Lab 5</h1>
+
+    <h2>5-1: Egg Timer</h2>
+    <input id="delayInput" />
+    <button id="timerButton">Set Timer</button>
+    <div class="buttonContainer" id="timerContainer"></div>
+
+    <h2>5-2: Sequential Asynchronous Functions</h2>
+    <div class="buttonContainer">
+        <button id="fnAButton">fnA</button>
+        <button id="fnBButton">fnB</button>
+        <button id="fnCButton">fnC</button>
+        |
+        <button id="resetButton">Reset</button>
+        <button id="sequenceButton">fnA + fnB + fnC</button>
+    </div>
+    <!-- TODO -->
+
+    <h2>5-3 and 5-4: Random Walk</h2>
+    <input id="walkInput">
+    <div class="buttonContainer">
+        <button id="walkFive">Walk 5</button>
+        <button id="walkFiveAsync">With Async Keyword</button>
+        |
+        <button id="walkReset">Reset</button>
+    </div>
+    <ol id="results"></ol>
+    <!-- TODO -->
+</body>
+</html>
