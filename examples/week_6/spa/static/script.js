@@ -24,6 +24,15 @@ function makeBest(animal) {
 function loadAnimal() {
   // TODO: Check the URL bar on load so e.g. /cat makes cat best
 }
+document.addEventListener("DOMContentLoaded", () => {
+  // Register a click handler on each animal instead of using onclick="..."
+  // attributes in the HTML.
+  ["cat", "dog", "bear"].forEach((animal) => {
+    document.querySelector(".animal." + animal).addEventListener("click", () => {
+      makeBest(animal);
+    });
+  });
+});
 window.addEventListener("load", ()=>{
   console.log("load");
   // TODO
