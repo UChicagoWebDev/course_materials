@@ -9,14 +9,32 @@ async function getRelatedSearchesWithAsync(query) {
     method: "GET",
     headers: walkHeaders,
   };
-  // TODO
-  return data;
+  let response = await fetch(queryurl, myInit)
+  data = await response.json()
+  return data.map(r=>r.word)
 }
+
 function pickRandomSuggestionWithAsync(suggestions) {
   let random = Math.floor(Math.random() * suggestions.length);
-  let selected = suggestions[random].word;
+  let selected = suggestions[random];
   // TODO
+  return selected
 }
+
 async function walkFiveWithAsync(query) {
-  // TODO
+
+  for(let i=0; i<15; i++) {
+  suggestions = await getRelatedSearchesWithAsync(query)
+  nextWord = pickRandomSuggestionWithAsync(suggestions)
+  console.log(nextWord)
+  query = nextWord
+  }
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.querySelector("#walkFiveAsync").addEventListener("click", ()=>{
+    // get the value from input field
+    let v = document.querySelector("#walkInput").value
+    walkFiveWithAsync(v)
+  })
+})
