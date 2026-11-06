@@ -46,9 +46,9 @@ https://en.wikipedia.org/wiki/Single-page_application
 Flask has built-in support for serving static assets, so we'll use that: https://flask.palletsprojects.com/en/2.0.x/tutorial/static/
 
 ### From Exercise 5:
-- [create_room.html](https://github.com/UChicagoWebDev/exercise-5/blob/main/app.py#L78-L87)
-- [script.js](https://github.com/UChicagoWebDev/exercise-5/blob/main/templates/index.html#L14)
-- [tv.jpeg](https://github.com/UChicagoWebDev/exercise-5/blob/main/templates/index.html#L27)
+- [create_room.html](https://github.com/UChicagoWebDev/course_materials/blob/main/assignments/exercise-5/app.py#L86-L100)
+- [script.js](https://github.com/UChicagoWebDev/course_materials/blob/main/assignments/exercise-5/templates/index.html#L14)
+- [tv.jpeg](https://github.com/UChicagoWebDev/course_materials/blob/main/assignments/exercise-5/templates/index.html#L27)
 
 We can send explicitly with https://flask.palletsprojects.com/en/2.2.x/api/#flask.Flask.send_static_file, or let Flask handle it by default by putting them in our `static/` directory.
 ---
@@ -92,7 +92,7 @@ correct animal is identified as best.
 # Lab: Who is Best?
 ![](/examples/week_6/spa/static/happy_cat.jpeg)
 
-Modify the example app in https://github.com/UChicagoWebDev/lab-6 so that the animal we pick as best goes into
+Modify the example app in https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-6 so that the animal we pick as best goes into
 our browser history. Make sure that if we load the page with that URL, the
 correct animal is identified as best.
 
@@ -145,4 +145,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
 
 # Watch Party 2:
 ### The Single Page Experience
-https://github.com/UChicagoWebDev/exercise-6
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/exercise-6
