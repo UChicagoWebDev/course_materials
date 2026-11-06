@@ -26,10 +26,10 @@ function loadAnimal() {
 }
 document.addEventListener("DOMContentLoaded", () => {
   // Register a click handler on each animal instead of using onclick="..."
-  // attributes in the HTML. The animal's name comes from its data-animal attribute.
-  document.querySelectorAll(".animal").forEach((div) => {
-    div.addEventListener("click", () => {
-      makeBest(div.dataset.animal);
+  // attributes in the HTML.
+  ["cat", "dog", "bear"].forEach((animal) => {
+    document.querySelector(".animal." + animal).addEventListener("click", () => {
+      makeBest(animal);
     });
   });
 });
