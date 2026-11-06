@@ -1,7 +1,7 @@
 # Exercise #6: Watch Party 2: The Single Page Experience
 10 points
 
-**DUE: Friday, November 14 by 5:00pm**
+**DUE: Friday, November 13 by 5:00pm**
 
 ### Instructions
 For this exercise, we will build a _single-page_ group chat web application with
