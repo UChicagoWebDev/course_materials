@@ -114,7 +114,8 @@ https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/Wh
 # Review: Fragments
 ![](images/mdn-url-anchor%40x2.png)
 
-Review: fragments are used to make a table of contents. 
+Review: fragments are used to make a table of contents.
+
 - On page loads and clicks, the browser will scroll to an element with an `id` equal to the fragment, if one exists
 - They also trigger the `:target` pseudo-class
 - Fragments go into the history, so the Back and Forward buttons will cause the page to scroll, but do not cause the page to reload
@@ -125,14 +126,18 @@ https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/Wh
 # Cookies
 
 Review: A cookie is a small piece of information left on a visitor's computer by a website, via a web browser.
+
 Cookies are used to personalize a user's web experience with a website. It may contain the user's preferences or inputs when accessing that website. A user can customize their web browser to accept, reject, or delete cookies.
+
 Cookies can be set and modified at the server level using the Set-Cookie HTTP header, or with JavaScript using document.cookie.
 
 https://developer.mozilla.org/en-US/docs/Glossary/Cookie
 ---
 
 # SessionStorage and LocalStorage
+
 `sessionStorage` maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores).
+
 - Stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
 - Data is never transferred to the server.
 - Storage limit is larger than a cookie (at most 5MB).
