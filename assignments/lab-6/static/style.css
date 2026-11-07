@@ -35,6 +35,18 @@ h2 {
   filter: grayscale(60%);
 }
 
+.spa .happy {
+  display: none;
+}
+
+.spa .best .happy {
+  display: block;
+}
+
+.spa .best .sad {
+  display: none;
+}
+
 .footer {
   margin: 3em auto;
   text-align: center;
