@@ -20,9 +20,12 @@ As discussed, while earlier versions of this course featured a final project,
 I have recently switched to simply having regular-sized weekly assignments 
 through the end:
 
-- Exercise 7, out today, is due next week on Friday Feb 27.
-- Exercise 8 is due Friday March 6, which is our last day of class.
-- Exercise 9 is due Friday March 13. That's during finals week, and there is no lecture that day.
+- Exercise 7, out today, is due next week on Friday November 20.
+- There is no class Friday November 27, during Thanksgiving Break.
+- Exercise 8, out November 20, is due Friday December 4, which is our last day of class.
+- Exercise 9, out December 4, is due Friday December 11. That's during finals week, and there is no lecture that day.
+- Labs are still due by the end of class (8:30pm) on the day they're assigned: Lab 7 today,
+  Lab 8 on November 20, and Lab 9 on December 4.
 ---
 
 # Introduction to React
