@@ -23,7 +23,8 @@ through the end:
 - Exercise 7, out today, is due next week on Friday November 20.
 - There is no class Friday November 27, during Thanksgiving Break.
 - Exercise 8, out November 20, is due Friday December 4, which is our last day of class.
-- Exercise 9, out December 4, is due Friday December 11. That's during finals week, and there is no lecture that day.
+- Exercise 9, out December 4, is due Friday December 11. That's during finals week, so there is no lecture that day.
+- The final exam is Friday December 11 at 5:30pm in our usual classroom, Crerar 011.
 - Labs are still due by the end of class (8:30pm) on the day they're assigned: Lab 7 today,
   Lab 8 on November 20, and Lab 9 on December 4.
 ---
