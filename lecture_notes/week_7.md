@@ -113,9 +113,9 @@ We'll be building a simple Tic Tac Toe game like this one:
 ---
 
 # Lab 7: React Tic Tac Toe
-We'll need a local server to host our React application. Create a fork of Lab 7 from https://github.com/UChicagoWebDev/lab-7.
+We'll need a local server to host our React application. Copy the starter code for Lab 7 from https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-7.
 
-From the root of your clone, run:
+From that folder, run:
 
 `python3 -m http.server`
 
@@ -173,4 +173,4 @@ https://react.dev/learn/passing-data-deeply-with-context
 
 Watch Party again, this time with React!
 
-[https://github.com/UChicagoWebDev/exercise-7]
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/exercise-7
