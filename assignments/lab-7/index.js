@@ -7,9 +7,10 @@ function Square() {
   // parent.append(b)
   return <button className="square"></button>
 }
+
 function Board() {
   return (
-    <>
+    <React.Fragment>
     <div className="board-row">
       <Square />
       <Square />
@@ -25,7 +26,7 @@ function Board() {
       <Square />
       <Square />
     </div>
-    </>
+    </React.Fragment>
   );
 }
 // ========================================
