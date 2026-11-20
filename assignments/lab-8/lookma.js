@@ -1,0 +1,1 @@
+// log "look ma, no hands!" to the console

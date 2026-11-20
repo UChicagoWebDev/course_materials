@@ -54,7 +54,7 @@ Let's jump in and install:
 ---
 
 # Lab 8-1
-https://github.com/UChicagoWebDev/lab-8
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-8
 
 Make a file called lookma.js:
 
@@ -80,7 +80,7 @@ Today, all modern browsers have native support for JavaScript modules without re
 ---
 
 # Lab 8-2: Modules
-https://github.com/UChicagoWebDev/lab-8
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-8
 ---
 
 # Type Checking
@@ -90,13 +90,13 @@ https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
 ---
 
 # Lab 8-3
-https://github.com/UChicagoWebDev/lab-8
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/lab-8
 ---
 
 # Exercise 8
 
 ## Watch Party 4: Just My Type
-https://github.com/UChicagoWebDev/exercise-8
+https://github.com/UChicagoWebDev/course_materials/tree/main/assignments/exercise-8
 ---
 
 # CORS
