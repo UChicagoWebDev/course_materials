@@ -25,3 +25,5 @@ function createReportList(wrapperId) {
 
   return list.id;
 }
+
+export { create, createReportList }
